@@ -78,8 +78,18 @@ wget -O kali-terminal.zip "https://disk.yandex.ru/d/pHHBM2kRgeHhfw"
 unzip kali-terminal.zip
 cd kali-terminal
 
+
+
+
+
 # Автоматическая установка зависимостей
 python3 kali-terminal.py --install
+
+
+demo: 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/53883113-4993-49e7-90b0-c4c55145b7d8" />
+
 
 # Запустить терминал
 python3 kali-terminal.py
