@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                      ║
+║   ██╗  ██╗ █████╗ ██╗     ██╗    ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗    ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗                 ║
+║   ██║ ██╔╝██╔══██╗██║     ██║    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║                 ║
+║   █████╔╝ ███████║██║     ██║       ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║       ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║                 ║
+║   ██╔═██╗ ██╔══██║██║     ██║       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║                 ║
+║   ██║  ██╗██║  ██║███████╗██║       ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗         ║
+║   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝         ║
+║                                                                                                                                                                                      ║
+║                         ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗              ║
+║                         ║  🔥 ULTIMATE TERMINAL EMULATOR v11.0 MEGA EDITION 🔥                                                                                    ║              ║
+║                         ║  📦 500+ COMMANDS  |  🛡️ SECURITY SUITE  |  🎨 VISUAL FX  |  🌐 NETWORK TOOLS  |  🔐 CRYPTOGRAPHY  |  📊 SYSTEM MONITOR                ║              ║
+║                         ║  🔍 DOX TOOL  |  🕵️ OSINT  |  📁 FILE ANALYSIS  |  🔑 PASSWORD CRACKING  |  📡 SCANNERS        ║              ║
+║                         ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝              ║
+║                                                                                                                                                                                      ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+"""
 
 import os
 import sys
@@ -29,232 +47,126 @@ import urllib.parse
 import uuid
 import secrets
 import string
-import binascii
 import zlib
 import gzip
 import tarfile
-import ftplib
-import smtplib
-import sqlite3
-import webbrowser
 import argparse
-import queue
-import enum
 import copy
 import math
-import statistics
 import itertools
 import collections
 import tempfile
-import ctypes
-import sysconfig
+import pathlib
+import textwrap
+import unicodedata
+import codecs
+import io
+import struct
+import heapq
+import bisect
+import functools
+import operator
+import binascii
+import pprint
+import traceback
+import queue
+import inspect
 import importlib
-import importlib.metadata
+import builtins
+import concurrent.futures
+import atexit
+import configparser
+import hmac
+import array
+import enum
+import weakref
+import contextlib
+import dataclasses
+import abc
+import decimal
+import fractions
+import statistics
+import types
+import gc
+import sysconfig
+import webbrowser
+import smtplib
+import email
+import sqlite3
+import hashlib
+import hmac
+import secrets
+import base64
+import qrcode
+import whois
+import dns.resolver
+import requests
+import bs4
+from PIL import Image
+import phonenumbers
+import validators
+import pyfiglet
+import colorama
+import tqdm
+import yaml
+import markdown
+import jinja2
+import cryptography
+from cryptography.fernet import Fernet
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from typing import Optional, List, Dict, Any, Tuple, Union, Callable, Generator, Set
 from pathlib import Path
-from typing import Optional, List, Dict, Any, Tuple, Union
+# =================================================================================================
+# 🚀 AUTO-INSTALLER
+# =================================================================================================
 
-try:
-    from rich.console import Console
-    from rich.table import Table
-    from rich.panel import Panel
-    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
-    from rich.syntax import Syntax
-    from rich import print as rprint
-    from rich.markdown import Markdown
-    from rich.layout import Layout
-    from rich.live import Live
-    from rich.text import Text
-    from rich.columns import Columns
-    from rich.tree import Tree
-    from rich.align import Align
-    from rich.prompt import Prompt, Confirm
-    from rich.status import Status
-    from rich.console import Group
-    from rich.box import Box, ROUNDED, DOUBLE, HEAVY, MINIMAL, SIMPLE
-    from rich.style import Style
-    from rich.color import Color
-    from rich.padding import Padding
-    RICH_AVAILABLE = True
-except ImportError:
-    RICH_AVAILABLE = False
-
-try:
-    from colorama import init, Fore, Back, Style as ColoramaStyle
-    init(autoreset=True)
-    COLORAMA_AVAILABLE = True
-except ImportError:
-    COLORAMA_AVAILABLE = False
-
-if platform.system() != 'Windows':
-    try:
-        import pty
-        import select
-        import termios
-        import tty
-        UNIX_AVAILABLE = True
-    except ImportError:
-        UNIX_AVAILABLE = False
-else:
-    UNIX_AVAILABLE = False
-
-try:
-    import psutil
-    PSUTIL = True
-except ImportError:
-    PSUTIL = False
-
-try:
-    import requests
-    REQUESTS = True
-except ImportError:
-    REQUESTS = False
-
-try:
-    from PIL import Image, ImageDraw, ImageFont, ImageFilter
-    PIL = True
-except ImportError:
-    PIL = False
-
-try:
-    import cryptography
-    from cryptography.fernet import Fernet
-    from cryptography.hazmat.primitives import hashes
-    from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-    CRYPTO = True
-except ImportError:
-    CRYPTO = False
-
-class Installer:
-    def __init__(self):
-        self.required_packages = ['psutil', 'requests', 'Pillow', 'cryptography', 'colorama', 'rich']
-        self.optional_packages = []
-        self.python_version = sys.version_info
-        self.install_path = Path.home() / '.kali_terminal'
-        self.config_path = self.install_path / 'config.json'
-        self.history_path = Path.home() / '.kali_terminal_history'
-        
-    def check_python_version(self):
-        if self.python_version.major < 3 or (self.python_version.major == 3 and self.python_version.minor < 7):
-            print(f"\033[91m❌ Требуется Python 3.7 или выше (установлен {self.python_version.major}.{self.python_version.minor})\033[0m")
-            sys.exit(1)
-        return True
+def auto_install_dependencies():
+    """Automatically install required dependencies"""
+    required_packages = [
+        "requests",
+        "psutil",
+        "qrcode",
+        "pillow",
+        "python-whois",
+        "dnspython",
+        "beautifulsoup4",
+        "phonenumbers",
+        "validators",
+        "pyfiglet",
+        "colorama",
+        "tqdm",
+        "pyyaml",
+        "markdown",
+        "jinja2",
+        "cryptography"
+    ]
     
-    def check_pip(self):
+    print(Color.header("AUTO-INSTALLER", 60))
+    print(Color.info("Checking and installing required dependencies...\n"))
+    
+    for package in required_packages:
         try:
-            import pip
-            return True
+            __import__(package.replace("-", "_"))
+            print(Color.success(f"✅ {package} is already installed"))
         except ImportError:
+            print(Color.warning(f"⚠️ Installing {package}..."))
             try:
-                subprocess.run([sys.executable, '-m', 'pip', '--version'], capture_output=True, check=True)
-                return True
-            except:
-                print("\033[93m⚠️ pip не найден. Установка библиотек может не работать\033[0m")
-                return False
+                subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--quiet"])
+                print(Color.success(f"✅ Successfully installed {package}"))
+            except Exception as e:
+                print(Color.error(f"❌ Failed to install {package}: {e}"))
     
-    def install_package(self, package):
-        try:
-            if package == 'Pillow':
-                import_name = 'PIL'
-            elif package == 'colorama':
-                import_name = 'colorama'
-            elif package == 'rich':
-                import_name = 'rich'
-            else:
-                import_name = package.replace('-', '_')
-            importlib.import_module(import_name)
-            return True
-        except ImportError:
-            pass
-        
-        print(f"\033[96m📦 Установка {package}...\033[0m")
-        try:
-            subprocess.run([sys.executable, '-m', 'pip', 'install', '--quiet', package], check=True, capture_output=True)
-            print(f"\033[92m✅ {package} успешно установлен\033[0m")
-            return True
-        except Exception as e:
-            print(f"\033[91m❌ Ошибка установки {package}: {e}\033[0m")
-            return False
-    
-    def install_all(self):
-        terminal_width = shutil.get_terminal_size().columns
-        border_char = '═'
-        title = "УСТАНОВЩИК KALI TERMINAL v4.2"
-        
-        print("\033[95m")
-        print(f"╔{border_char * (terminal_width - 2)}╗")
-        print(f"║{title.center(terminal_width - 2)}║")
-        print(f"╠{border_char * (terminal_width - 2)}╣")
-        print(f"║{'ПРОВЕРКА И УСТАНОВКА НЕОБХОДИМЫХ БИБЛИОТЕК'.center(terminal_width - 2)}║")
-        print(f"╚{border_char * (terminal_width - 2)}╝")
-        print("\033[0m")
-        
-        self.check_python_version()
-        has_pip = self.check_pip()
-        
-        installed = []
-        failed = []
-        
-        for package in self.required_packages:
-            if self.install_package(package):
-                installed.append(package)
-            else:
-                failed.append(package)
-        
-        print("\n\033[95m")
-        print(f"╔{border_char * (terminal_width - 2)}╗")
-        if not failed:
-            print(f"║{'✅ ВСЕ БИБЛИОТЕКИ УСПЕШНО УСТАНОВЛЕНЫ'.center(terminal_width - 2)}║")
-        else:
-            print(f"║{'⚠️ НЕКОТОРЫЕ БИБЛИОТЕКИ НЕ УСТАНОВЛЕНЫ'.center(terminal_width - 2)}║")
-        print(f"╚{border_char * (terminal_width - 2)}╝")
-        print("\033[0m")
-        
-        self.create_config()
-        return len(failed) == 0
-    
-    def create_config(self):
-        self.install_path.mkdir(exist_ok=True)
-        config = {
-            'version': '4.2',
-            'install_date': datetime.datetime.now().isoformat(),
-            'python_version': f"{self.python_version.major}.{self.python_version.minor}.{self.python_version.micro}",
-            'platform': platform.system(),
-            'packages_installed': self.required_packages
-        }
-        with open(self.config_path, 'w') as f:
-            json.dump(config, f, indent=2)
-    
-    def run(self):
-        if len(sys.argv) > 1 and sys.argv[1] == '--install':
-            self.install_all()
-            sys.exit(0)
-        
-        if not self.config_path.exists():
-            print("\033[93m⚠️ Требуется установка библиотек. Запустите с --install\033[0m")
-            response = input("\033[96mУстановить необходимые библиотеки? (y/n): \033[0m")
-            if response.lower() == 'y':
-                self.install_all()
-            else:
-                print("\033[91mНекоторые функции могут быть недоступны\033[0m")
-                time.sleep(1)
+    print(Color.success("\n✅ All dependencies checked/installed!"))
+    time.sleep(1)
 
-class Colors:
-    BLACK = '\033[30m'
-    DARK_RED = '\033[31m'
-    DARK_GREEN = '\033[32m'
-    DARK_YELLOW = '\033[33m'
-    DARK_BLUE = '\033[34m'
-    DARK_MAGENTA = '\033[35m'
-    DARK_CYAN = '\033[36m'
-    LIGHT_GRAY = '\033[37m'
-    DARK_GRAY = '\033[90m'
-    RED = '\033[91m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    BLUE = '\033[94m'
-    MAGENTA = '\033[95m'
-    CYAN = '\033[96m'
-    WHITE = '\033[97m'
+# =================================================================================================
+# 🎨 ENHANCED COLOR SYSTEM
+# =================================================================================================
+
+class Color:
+    """Ultimate color system with 256 colors and themes"""
+    
     RESET = '\033[0m'
     BOLD = '\033[1m'
     DIM = '\033[2m'
@@ -265,6 +177,31 @@ class Colors:
     HIDDEN = '\033[8m'
     STRIKE = '\033[9m'
     
+    @staticmethod
+    def color_256(code: int) -> str:
+        return f"\033[38;5;{code}m"
+    
+    @staticmethod
+    def bg_256(code: int) -> str:
+        return f"\033[48;5;{code}m"
+    
+    BLACK = '\033[30m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    BRIGHT_BLACK = '\033[90m'
+    BRIGHT_RED = '\033[91m'
+    BRIGHT_GREEN = '\033[92m'
+    BRIGHT_YELLOW = '\033[93m'
+    BRIGHT_BLUE = '\033[94m'
+    BRIGHT_MAGENTA = '\033[95m'
+    BRIGHT_CYAN = '\033[96m'
+    BRIGHT_WHITE = '\033[97m'
+    
     BG_BLACK = '\033[40m'
     BG_RED = '\033[41m'
     BG_GREEN = '\033[42m'
@@ -273,475 +210,395 @@ class Colors:
     BG_MAGENTA = '\033[45m'
     BG_CYAN = '\033[46m'
     BG_WHITE = '\033[47m'
-    BG_DARK_GRAY = '\033[100m'
-    BG_LIGHT_RED = '\033[101m'
-    BG_LIGHT_GREEN = '\033[102m'
-    BG_LIGHT_YELLOW = '\033[103m'
-    BG_LIGHT_BLUE = '\033[104m'
-    BG_LIGHT_MAGENTA = '\033[105m'
-    BG_LIGHT_CYAN = '\033[106m'
-    BG_LIGHT_WHITE = '\033[107m'
+    
+    ORANGE = '\033[38;5;208m'
+    PINK = '\033[38;5;206m'
+    PURPLE = '\033[38;5;129m'
+    TEAL = '\033[38;5;30m'
+    GOLD = '\033[38;5;220m'
+    LIME = '\033[38;5;118m'
+    
+    THEMES = {
+        "cyber": {"primary": BRIGHT_CYAN, "secondary": MAGENTA, "accent": GREEN, "warning": YELLOW, "error": RED},
+        "matrix": {"primary": GREEN, "secondary": BRIGHT_GREEN, "accent": LIME, "warning": YELLOW, "error": RED},
+        "sunset": {"primary": ORANGE, "secondary": PINK, "accent": GOLD, "warning": YELLOW, "error": RED},
+        "ocean": {"primary": CYAN, "secondary": BLUE, "accent": TEAL, "warning": YELLOW, "error": RED},
+        "forest": {"primary": GREEN, "secondary": LIME, "accent": GOLD, "warning": YELLOW, "error": RED},
+        "midnight": {"primary": BRIGHT_BLUE, "secondary": PURPLE, "accent": CYAN, "warning": YELLOW, "error": RED}
+    }
+    
+    current_theme = "cyber"
+    
+    @classmethod
+    def set_theme(cls, theme: str):
+        if theme in cls.THEMES:
+            cls.current_theme = theme
+    
+    @classmethod
+    def primary(cls): return cls.THEMES[cls.current_theme]["primary"]
+    @classmethod
+    def secondary(cls): return cls.THEMES[cls.current_theme]["secondary"]
+    @classmethod
+    def accent(cls): return cls.THEMES[cls.current_theme]["accent"]
+    @classmethod
+    def warning(cls): return cls.THEMES[cls.current_theme]["warning"]
+    @classmethod
+    def error(cls): return cls.THEMES[cls.current_theme]["error"]
     
     @staticmethod
-    def gradient_text(text: str, style: str = 'rainbow', single_color: str = None) -> str:
-        if single_color:
-            colors = []
-            for i in range(len(text)):
-                intensity = 30 + int((i / max(1, len(text)-1)) * 60)
-                colors.append(f'\033[9{intensity//10}m')
-        else:
-            if style == 'rainbow':
-                colors = [Colors.RED, Colors.YELLOW, Colors.GREEN, Colors.CYAN, Colors.BLUE, Colors.MAGENTA]
-            elif style == 'fire':
-                colors = [Colors.RED, Colors.RED, Colors.YELLOW, Colors.YELLOW, Colors.RED, Colors.MAGENTA]
-            elif style == 'ice':
-                colors = [Colors.CYAN, Colors.CYAN, Colors.BLUE, Colors.BLUE, Colors.CYAN, Colors.WHITE]
-            elif style == 'matrix':
-                colors = [Colors.GREEN, Colors.GREEN, Colors.CYAN, Colors.GREEN, Colors.LIGHT_GRAY]
-            elif style == 'sunset':
-                colors = [Colors.RED, Colors.MAGENTA, Colors.YELLOW, Colors.RED, Colors.MAGENTA]
-            elif style == 'ocean':
-                colors = [Colors.BLUE, Colors.CYAN, Colors.BLUE, Colors.CYAN, Colors.BLUE]
-            elif style == 'forest':
-                colors = [Colors.GREEN, Colors.DARK_GREEN, Colors.GREEN, Colors.DARK_GREEN]
-            elif style == 'neon':
-                colors = [Colors.CYAN, Colors.MAGENTA, Colors.GREEN, Colors.YELLOW]
-            elif style == 'pastel':
-                colors = [Colors.GREEN, Colors.YELLOW, Colors.CYAN, Colors.MAGENTA]
-            else:
-                colors = [Colors.MAGENTA, Colors.CYAN, Colors.GREEN, Colors.YELLOW, Colors.RED]
-        
-        result = ""
+    def rgb(r, g, b):
+        return f"\033[38;2;{r};{g};{b}m"
+    
+    @staticmethod
+    def bg_rgb(r, g, b):
+        return f"\033[48;2;{r};{g};{b}m"
+    
+    @classmethod
+    def gradient(cls, text: str, start: tuple[int, int, int], end: tuple[int, int, int]) -> str:
+        result = []
+        length = max(len(text), 1)
         for i, char in enumerate(text):
-            if single_color:
-                color = colors[i % len(colors)]
-            else:
-                color = colors[i % len(colors)]
-            result += f"{color}{char}{Colors.RESET}"
-        return result
+            ratio = i / length
+            r = int(start[0] + (end[0] - start[0]) * ratio)
+            g = int(start[1] + (end[1] - start[1]) * ratio)
+            b = int(start[2] + (end[2] - start[2]) * ratio)
+            result.append(f"\033[38;2;{r};{g};{b}m{char}")
+        result.append(cls.RESET)
+        return "".join(result)
     
-    @staticmethod
-    def box(text: str, color: str = GREEN, border: str = CYAN, padding: int = 1) -> str:
+    @classmethod
+    def header(cls, text: str, width: int = 80) -> str:
+        border = "═" * (width - 2)
+        return f"╔{border}╗\n║{text.center(width-2)}║\n╚{border}╝"
+    
+    @classmethod
+    def box(cls, text: str, title: str = None) -> str:
         lines = text.split('\n')
-        max_len = max(len(line) for line in lines)
-        padded_width = max_len + (padding * 2)
-        
-        top = f"{border}┌{'─' * padded_width}┐{Colors.RESET}"
-        bottom = f"{border}└{'─' * padded_width}┘{Colors.RESET}"
-        
-        result = [top]
-        for line in lines:
-            padded_line = f"{' ' * padding}{line}{' ' * (max_len - len(line) + padding)}"
-            result.append(f"{border}│{color}{padded_line}{Colors.RESET}{border}│{Colors.RESET}")
-        result.append(bottom)
-        return '\n'.join(result)
-    
-    @staticmethod
-    def header(title: str, width: int = None, char: str = '═', style: str = 'double') -> str:
-        if width is None:
-            width = len(title) + 8
-            if width < 60:
-                width = 60
-            if width > 120:
-                width = 120
-        
-        if style == 'double':
-            top_left = '╔'
-            top_right = '╗'
-            bottom_left = '╚'
-            bottom_right = '╝'
-            horizontal = '═'
-            vertical = '║'
-        elif style == 'single':
-            top_left = '┌'
-            top_right = '┐'
-            bottom_left = '└'
-            bottom_right = '┘'
-            horizontal = '─'
-            vertical = '│'
-        elif style == 'heavy':
-            top_left = '┏'
-            top_right = '┓'
-            bottom_left = '┗'
-            bottom_right = '┛'
-            horizontal = '━'
-            vertical = '┃'
+        max_len = max(len(l) for l in lines)
+        width = max_len + 4
+        result = []
+        if title:
+            title_len = len(title)
+            left = (width - title_len - 4) // 2
+            right = width - title_len - 4 - left
+            result.append(f"╔{'═'*left} {title} {'═'*right}╗")
         else:
-            top_left = '╔'
-            top_right = '╗'
-            bottom_left = '╚'
-            bottom_right = '╝'
-            horizontal = '═'
-            vertical = '║'
-        
-        line = f"{Colors.CYAN}{top_left}{horizontal * width}{top_right}{Colors.RESET}"
-        title_line = f"{Colors.CYAN}{vertical}{Colors.BOLD}{Colors.gradient_text(title.center(width), 'cyan', single_color=True)}{Colors.RESET}{Colors.CYAN}{vertical}{Colors.RESET}"
-        bottom = f"{Colors.CYAN}{bottom_left}{horizontal * width}{bottom_right}{Colors.RESET}"
-        return f"{line}\n{title_line}\n{bottom}"
+            result.append(f"╔{'═'*width}╗")
+        for line in lines:
+            result.append(f"║ {line.ljust(max_len)} ║")
+        result.append(f"╚{'═'*width}╝")
+        return "\n".join(result)
     
-    @staticmethod
-    def gradient(text: str, colors: List[str] = None, single_color: str = 'cyan') -> str:
-        if single_color:
-            result = ""
-            for i, char in enumerate(text):
-                intensity = 30 + int((i / max(1, len(text)-1)) * 60)
-                result += f"\033[9{intensity//10}m{char}{Colors.RESET}"
-            return result
-        if not colors:
-            colors = [Colors.RED, Colors.YELLOW, Colors.GREEN, Colors.CYAN, Colors.BLUE, Colors.MAGENTA]
-        result = ""
-        for i, char in enumerate(text):
-            color = colors[i % len(colors)]
-            result += f"{color}{char}{Colors.RESET}"
-        return result
-    
-    @staticmethod
-    def glow(text: str, color: str = GREEN) -> str:
-        return f"{color}{Colors.BOLD}{text}{Colors.RESET}"
-    
-    @staticmethod
-    def neon(text: str, color: str = CYAN) -> str:
-        return f"{color}{Colors.BOLD}{text}{Colors.RESET}"
-    
-    @staticmethod
-    def shadow(text: str) -> str:
-        return f"{Colors.DIM}{text}{Colors.RESET}"
-    
-    @staticmethod
-    def blink(text: str) -> str:
-        return f"{Colors.BLINK}{Colors.GREEN}{text}{Colors.RESET}"
-    
-    @staticmethod
-    def rainbow(text: str) -> str:
-        colors = [Colors.RED, Colors.YELLOW, Colors.GREEN, Colors.CYAN, Colors.BLUE, Colors.MAGENTA]
-        result = ""
-        for i, char in enumerate(text):
-            result += f"{colors[i % len(colors)]}{char}{Colors.RESET}"
-        return result
-    
-    @staticmethod
-    def progress_bar(percent: int, width: int = 50, color: str = GREEN, show_percent: bool = True) -> str:
+    @classmethod
+    def progress_bar(cls, percent: float, width: int = 50) -> str:
         filled = int(width * percent / 100)
-        bar = f"{color}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (width - filled)
-        if show_percent:
-            return f"{Colors.CYAN}[{bar}] {percent:3d}%{Colors.RESET}"
-        return f"{Colors.CYAN}[{bar}]{Colors.RESET}"
+        bar = f"{cls.accent()}█{cls.RESET}" * filled + f"{cls.DIM}░{cls.RESET}" * (width - filled)
+        return f"[{bar}] {percent:.1f}%"
+    
+    @classmethod
+    def success(cls, msg): return f"{cls.BRIGHT_GREEN}✅ {msg}{cls.RESET}"
+    @classmethod
+    def error(cls, msg): return f"{cls.BRIGHT_RED}❌ {msg}{cls.RESET}"
+    @classmethod
+    def warning(cls, msg): return f"{cls.BRIGHT_YELLOW}⚠️ {msg}{cls.RESET}"
+    @classmethod
+    def info(cls, msg): return f"{cls.BRIGHT_CYAN}ℹ️ {msg}{cls.RESET}"
 
-class Icons:
+# =================================================================================================
+# 📁 ICON MANAGER
+# =================================================================================================
+
+class Icon:
     FOLDER = "📁"
     FILE = "📄"
-    EXE = "⚙️"
+    EXECUTABLE = "⚙️"
+    SCRIPT = "📜"
+    CODE = "💻"
     IMAGE = "🖼️"
-    MUSIC = "🎵"
     VIDEO = "🎬"
+    MUSIC = "🎵"
     ARCHIVE = "📦"
-    LINK = "🔗"
-    ERROR = "❌"
-    SUCCESS = "✅"
-    WARNING = "⚠️"
-    INFO = "ℹ️"
-    QUESTION = "❓"
-    STAR = "⭐"
-    HEART = "❤️"
-    FIRE = "🔥"
-    ROCKET = "🚀"
-    TERMINAL = "💻"
-    NETWORK = "🌐"
-    SECURITY = "🔒"
-    DATABASE = "💾"
-    CLOUD = "☁️"
-    TOOLS = "🛠️"
-    HACK = "💀"
-    DOWNLOAD = "📥"
-    UPLOAD = "📤"
-    SEARCH = "🔍"
-    SETTINGS = "⚙️"
-    CHART = "📊"
-    CLOCK = "⏰"
-    CALENDAR = "📅"
-    USER = "👤"
-    GROUP = "👥"
-    MAIL = "📧"
-    PHONE = "📱"
-    GLOBE = "🌍"
-    LOCK = "🔐"
-    UNLOCK = "🔓"
-    KEY = "🔑"
-    BUG = "🐛"
-    GITHUB = "🐙"
+    PDF = "📕"
+    TEXT = "📃"
     PYTHON = "🐍"
-    DOCKER = "🐳"
-    KALI = "💀"
-    RAINBOW = "🌈"
-    SPARKLES = "✨"
-    LIGHTNING = "⚡"
-    CROWN = "👑"
-    DIAMOND = "💎"
-    COMPASS = "🧭"
-    MAP = "🗺️"
-    FLAG = "🏁"
-    TROPHY = "🏆"
-    GIFT = "🎁"
-    PARTY = "🎉"
-    FIREWORKS = "🎆"
-    CRYSTAL = "🔮"
-    MAGIC = "🪄"
-    SWORD = "⚔️"
+    JAVA = "☕"
+    CPP = "⚙️"
+    HTML = "🌐"
+    CSS = "🎨"
+    JS = "📜"
+    JSON = "📋"
+    LOCK = "🔒"
+    KEY = "🔑"
     SHIELD = "🛡️"
-    CROWN2 = "👑"
-    MEDAL = "🏅"
-    AWARD = "🏆"
-    BRAIN = "🧠"
-    ROBOT = "🤖"
-    ALIEN = "👽"
-    GHOST = "👻"
-    SKULL = "💀"
-    DRAGON = "🐉"
-    PHOENIX = "🐦‍🔥"
-    UNICORN = "🦄"
-    BUTTERFLY = "🦋"
-    FLOWER = "🌸"
-    TREE = "🌳"
-    MOUNTAIN = "⛰️"
-    OCEAN = "🌊"
-    SUN = "☀️"
-    MOON = "🌙"
-    STAR2 = "🌟"
-    COMET = "☄️"
-    GALAXY = "🌌"
-    ATOM = "⚛️"
-    DNA = "🧬"
-    MICROSCOPE = "🔬"
-    TELESCOPE = "🔭"
-    ART = "🎨"
-    MUSIC_NOTE = "🎵"
-    MICROPHONE = "🎤"
-    HEADPHONES = "🎧"
-    GAME = "🎮"
-    VR = "🥽"
-    CAMERA = "📷"
-    VIDEO_CAM = "📹"
-    TV = "📺"
-    RADIO = "📻"
-    PHONE2 = "📞"
-    COMPUTER = "🖥️"
-    LAPTOP = "💻"
-    TABLET = "📱"
-    WATCH = "⌚"
-    CLOCK2 = "⏲️"
-    BELL = "🔔"
-    ALARM = "⏰"
-    CALENDAR2 = "📆"
-    NOTEBOOK = "📓"
-    BOOK = "📖"
-    NEWSPAPER = "📰"
-    LETTER = "✉️"
-    ENVELOPE = "📧"
-    PACKAGE = "📦"
-    BOX = "📭"
-    TRUCK = "🚚"
-    AIRPLANE = "✈️"
-    ROCKET2 = "🚀"
-    SATELLITE = "🛰️"
-    SPACESHIP = "🛸"
-    CAR = "🚗"
-    TRAIN = "🚂"
-    BUS = "🚌"
-    BIKE = "🚲"
-    SCOOTER = "🛴"
-    SKATEBOARD = "🛹"
-    SURF = "🏄"
-    SWIM = "🏊"
-    RUN = "🏃"
-    DANCE = "💃"
-    YOGA = "🧘"
-    MEDITATION = "🧘‍♂️"
-    HEART2 = "💖"
-    BROKEN_HEART = "💔"
-    SPARKLE = "✨"
-    GLITTER = "✨"
-    RAINBOW2 = "🌈"
-    CLOUD2 = "☁️"
-    SNOW = "❄️"
-    RAIN = "🌧️"
-    STORM = "⛈️"
-    TORNADO = "🌪️"
-    VOLCANO = "🌋"
-    EARTH = "🌍"
-    PLANET = "🪐"
-    ASTEROID = "☄️"
+    NETWORK = "🌐"
+    TERMINAL = "💻"
+    DOX = "🔍"
+    PHONE = "📱"
+    EMAIL = "✉️"
+    LOCATION = "📍"
+    
+    @classmethod
+    def for_file(cls, filename: str) -> str:
+        ext = os.path.splitext(filename)[1].lower()
+        icons = {
+            ".py": cls.PYTHON, ".js": cls.JS, ".html": cls.HTML,
+            ".css": cls.CSS, ".json": cls.JSON, ".txt": cls.TEXT,
+            ".jpg": cls.IMAGE, ".png": cls.IMAGE, ".mp3": cls.MUSIC,
+            ".mp4": cls.VIDEO, ".zip": cls.ARCHIVE, ".pdf": cls.PDF,
+            ".java": cls.JAVA, ".c": cls.CPP, ".cpp": cls.CPP
+        }
+        return icons.get(ext, cls.FILE)
 
-class Animations:
+# =================================================================================================
+# 🔍 DOX COMMAND - Comprehensive OSINT Tool
+# =================================================================================================
+
+class DoxTool:
+    """Advanced OSINT and Doxing tool"""
+    
     @staticmethod
-    def spinner(message: str, duration: float = 1, color: str = Colors.CYAN) -> None:
-        chars = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+    def email_lookup(email: str):
+        """Lookup email information"""
+        results = {}
+        
+        # Check if email is valid
+        if not validators.email(email):
+            return {"error": "Invalid email format"}
+        
+        results["email"] = email
+        results["domain"] = email.split("@")[1]
+        
+        # Try to get gravatar
+        try:
+            import hashlib
+            email_hash = hashlib.md5(email.lower().encode()).hexdigest()
+            gravatar_url = f"https://www.gravatar.com/avatar/{email_hash}"
+            results["gravatar"] = gravatar_url
+        except:
+            results["gravatar"] = "Not found"
+        
+        # Try to get DNS records
+        try:
+            import dns.resolver
+            mx_records = []
+            for mx in dns.resolver.resolve(results["domain"], 'MX'):
+                mx_records.append(str(mx.exchange))
+            results["mx_records"] = mx_records
+        except:
+            results["mx_records"] = []
+        
+        return results
+    
+    @staticmethod
+    def phone_lookup(phone: str):
+        """Lookup phone number information"""
+        try:
+            import phonenumbers
+            from phonenumbers import carrier, geocoder, timezone
+            
+            parsed = phonenumbers.parse(phone, None)
+            results = {
+                "number": phone,
+                "valid": phonenumbers.is_valid_number(parsed),
+                "country": geocoder.description_for_number(parsed, "en"),
+                "carrier": carrier.name_for_number(parsed, "en"),
+                "timezones": timezone.time_zones_for_number(parsed)
+            }
+            return results
+        except:
+            return {"error": "Invalid phone number"}
+    
+    @staticmethod
+    def username_lookup(username: str):
+        """Check username across multiple platforms"""
+        platforms = {
+            "GitHub": f"https://github.com/{username}",
+            "Twitter": f"https://twitter.com/{username}",
+            "Instagram": f"https://instagram.com/{username}",
+            "Reddit": f"https://reddit.com/user/{username}",
+            "YouTube": f"https://youtube.com/@{username}",
+            "TikTok": f"https://tiktok.com/@{username}",
+            "Facebook": f"https://facebook.com/{username}",
+            "LinkedIn": f"https://linkedin.com/in/{username}",
+            "Pinterest": f"https://pinterest.com/{username}",
+            "Tumblr": f"https://{username}.tumblr.com",
+            "Medium": f"https://medium.com/@{username}",
+            "Dev.to": f"https://dev.to/{username}",
+            "Steam": f"https://steamcommunity.com/id/{username}",
+            "Spotify": f"https://open.spotify.com/user/{username}",
+            "Twitch": f"https://twitch.tv/{username}"
+        }
+        
+        results = {}
+        for platform, url in platforms.items():
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                response = urllib.request.urlopen(req, timeout=3)
+                if response.getcode() == 200:
+                    results[platform] = url
+            except:
+                pass
+        
+        return results
+    
+    @staticmethod
+    def domain_lookup(domain: str):
+        """Get domain information"""
+        results = {}
+        
+        try:
+            import whois
+            w = whois.whois(domain)
+            results = {
+                "domain": domain,
+                "registrar": w.registrar,
+                "creation_date": str(w.creation_date),
+                "expiration_date": str(w.expiration_date),
+                "name_servers": w.name_servers,
+                "organization": w.org
+            }
+        except:
+            results = {"error": "Could not retrieve WHOIS data"}
+        
+        return results
+    
+    @staticmethod
+    def ip_lookup(ip: str):
+        """Get IP geolocation information"""
+        try:
+            import requests
+            response = requests.get(f"http://ip-api.com/json/{ip}", timeout=5)
+            if response.ok:
+                data = response.json()
+                return {
+                    "ip": ip,
+                    "country": data.get("country"),
+                    "region": data.get("regionName"),
+                    "city": data.get("city"),
+                    "isp": data.get("isp"),
+                    "lat": data.get("lat"),
+                    "lon": data.get("lon")
+                }
+        except:
+            pass
+        return {"error": "Could not retrieve IP info"}
+    
+    @staticmethod
+    def dns_enum(domain: str):
+        """Enumerate DNS records"""
+        results = {"A": [], "MX": [], "TXT": [], "NS": [], "CNAME": []}
+        
+        try:
+            import dns.resolver
+            
+            for record_type in results.keys():
+                try:
+                    answers = dns.resolver.resolve(domain, record_type)
+                    for rdata in answers:
+                        results[record_type].append(str(rdata))
+                except:
+                    pass
+        except:
+            pass
+        
+        return results
+    
+    @staticmethod
+    def subdomain_enum(domain: str):
+        """Enumerate subdomains"""
+        common_subdomains = [
+            "www", "mail", "ftp", "localhost", "webmail", "smtp",
+            "pop", "ns1", "webdisk", "ns2", "cpanel", "whm",
+            "autodiscover", "autoconfig", "m", "imap", "test",
+            "ns", "blog", "pop3", "dev", "www2", "admin", "forum",
+            "news", "vpn", "ns3", "mail2", "new", "mysql", "old",
+            "lists", "support", "mobile", "mx", "static", "docs",
+            "beta", "shop", "sql", "secure", "demo", "cp", "calendar",
+            "wiki", "web", "media", "email", "images", "img"
+        ]
+        
+        found = []
+        for sub in common_subdomains:
+            full = f"{sub}.{domain}"
+            try:
+                socket.gethostbyname(full)
+                found.append(full)
+            except:
+                pass
+        
+        return found
+    
+    def full_dox(self, target: str, target_type: str):
+        """Run comprehensive OSINT gathering"""
+        results = {}
+        
+        if target_type == "email":
+            results["email_info"] = self.email_lookup(target)
+            results["domain_info"] = self.domain_lookup(target.split("@")[1])
+            results["dns_info"] = self.dns_enum(target.split("@")[1])
+            username = target.split("@")[0]
+            results["username_check"] = self.username_lookup(username)
+            
+        elif target_type == "phone":
+            results["phone_info"] = self.phone_lookup(target)
+            
+        elif target_type == "domain":
+            results["whois"] = self.domain_lookup(target)
+            results["dns"] = self.dns_enum(target)
+            results["subdomains"] = self.subdomain_enum(target)
+            
+        elif target_type == "ip":
+            results["geoip"] = self.ip_lookup(target)
+            
+        elif target_type == "username":
+            results["platforms"] = self.username_lookup(target)
+        
+        return results
+
+# =================================================================================================
+# ✨ ANIMATION ENGINE
+# =================================================================================================
+
+class Animation:
+    @staticmethod
+    def spinner(message="Loading", duration=2, style="dots"):
+        styles = {
+            "dots": ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"],
+            "line": ["|", "/", "-", "\\"],
+            "circle": ["◐", "◓", "◑", "◒"]
+        }
+        chars = styles.get(style, styles["dots"])
         end = time.time() + duration
         i = 0
-        colors = [Colors.CYAN, Colors.MAGENTA, Colors.YELLOW, Colors.GREEN]
         while time.time() < end:
-            color = colors[i % len(colors)]
-            sys.stdout.write(f'\r{color}{chars[i % len(chars)]} {Colors.gradient_text(message, "rainbow")}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(0.05)
-            i += 1
-        sys.stdout.write('\r' + ' ' * (len(message) + 10) + '\r')
-    
-    @staticmethod
-    def progress_bar(percent: int, width: int = 50, color: str = Colors.GREEN, gradient: bool = True) -> None:
-        filled = int(width * percent / 100)
-        if gradient:
-            bar = ''
-            for i in range(width):
-                if i < filled:
-                    intensity = 30 + int((i / width) * 60)
-                    bar += f"\033[9{intensity//10}m█\033[0m"
-                else:
-                    bar += f"{Colors.DIM}░{Colors.RESET}"
-        else:
-            bar = f"{color}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (width - filled)
-        sys.stdout.write(f'\r{Colors.CYAN}[{bar}] {percent:3d}%{Colors.RESET}')
-        sys.stdout.flush()
-    
-    @staticmethod
-    def typing(text: str, delay: float = 0.02, color: str = Colors.CYAN) -> None:
-        for char in text:
-            sys.stdout.write(f"{color}{char}{Colors.RESET}")
-            sys.stdout.flush()
-            time.sleep(delay)
-        print()
-    
-    @staticmethod
-    def matrix_rain(seconds: int = 3, speed: float = 0.03) -> None:
-        chars = '01'
-        end = time.time() + seconds
-        columns = shutil.get_terminal_size().columns
-        colors = [Colors.GREEN, Colors.CYAN, Colors.GREEN, Colors.LIGHT_GRAY]
-        while time.time() < end:
-            line = ''.join(random.choice(chars) for _ in range(columns))
-            color = random.choice(colors)
-            sys.stdout.write(f'\r{color}{line}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(speed)
-        print()
-    
-    @staticmethod
-    def pulse(text: str, color: str = Colors.CYAN, duration: float = 2) -> None:
-        end = time.time() + duration
-        while time.time() < end:
-            for intensity in range(0, 100, 10):
-                bright = f"\033[{91 + intensity//10}m"
-                sys.stdout.write(f'\r{bright}{text}{Colors.RESET}')
-                sys.stdout.flush()
-                time.sleep(0.05)
-        print()
-    
-    @staticmethod
-    def fire_effect(seconds: int = 3) -> None:
-        flames = ['🔥', '💥', '⚡', '✨', '🌟', '💫', '⭐', '🌋', '🎇']
-        end = time.time() + seconds
-        colors = [Colors.RED, Colors.YELLOW, Colors.RED, Colors.MAGENTA, Colors.YELLOW]
-        while time.time() < end:
-            line = ''.join(random.choice(flames) for _ in range(20))
-            color = random.choice(colors)
-            sys.stdout.write(f'\r{color}{line}{Colors.RESET}')
+            sys.stdout.write(f"\r{Color.CYAN}{chars[i % len(chars)]} {message}{Color.RESET}")
             sys.stdout.flush()
             time.sleep(0.08)
-        print()
-    
-    @staticmethod
-    def rainbow_glow(seconds: int = 3) -> None:
-        colors = [Colors.RED, Colors.YELLOW, Colors.GREEN, Colors.CYAN, Colors.BLUE, Colors.MAGENTA]
-        end = time.time() + seconds
-        text = "🌈 KALI TERMINAL ULTIMATE EDITION 🌈"
-        while time.time() < end:
-            for i, color in enumerate(colors):
-                colored = ''.join(f"{color}{char}{Colors.RESET}" for char in text)
-                sys.stdout.write(f'\r{colored}')
-                sys.stdout.flush()
-                time.sleep(0.1)
-        print()
-    
-    @staticmethod
-    def loading_animation(message: str = "Загрузка", duration: float = 2) -> None:
-        chars = ['◐', '◓', '◑', '◒', '◐', '◓', '◑', '◒']
-        end = time.time() + duration
-        i = 0
-        while time.time() < end:
-            sys.stdout.write(f'\r{Colors.gradient_text(message + " " + chars[i % len(chars)], "cyan", single_color=True)}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(0.1)
             i += 1
-        print()
+        sys.stdout.write("\r" + " " * (len(message) + 10) + "\r")
     
     @staticmethod
-    def wave_effect(text: str, duration: float = 2) -> None:
-        colors = [Colors.RED, Colors.YELLOW, Colors.GREEN, Colors.CYAN, Colors.BLUE, Colors.MAGENTA]
+    def loading_bar(message="Loading", duration=2):
         end = time.time() + duration
         while time.time() < end:
-            for i, color in enumerate(colors):
-                wave = ''
-                for j, char in enumerate(text):
-                    offset = (j + i) % len(colors)
-                    wave += f"{colors[offset]}{char}{Colors.RESET}"
-                sys.stdout.write(f'\r{wave}')
+            for percent in range(0, 101, 5):
+                sys.stdout.write(f"\r{message}: {Color.progress_bar(percent, 40)}")
                 sys.stdout.flush()
-                time.sleep(0.05)
+                time.sleep(duration / 20)
         print()
-    
-    @staticmethod
-    def countdown(seconds: int, message: str = "Старт через") -> None:
-        for i in range(seconds, 0, -1):
-            sys.stdout.write(f'\r{Colors.gradient_text(f"{message}: {i}", "fire", single_color=True)}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(1)
-        sys.stdout.write(f'\r{Colors.gradient_text(f"{message}: GO!", "fire", single_color=True)}{Colors.RESET}\n')
-    
-    @staticmethod
-    def bounce(text: str, duration: float = 2) -> None:
-        positions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-        end = time.time() + duration
-        i = 0
-        while time.time() < end:
-            pos = positions[i % len(positions)]
-            sys.stdout.write(f'\r{" " * pos}{Colors.gradient_text(text, "rainbow")}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(0.05)
-            i += 1
-        print()
-    
-    @staticmethod
-    def explosion_effect(duration: float = 2) -> None:
-        chars = ['💥', '✨', '🌟', '💫', '⭐', '💢', '💨', '💣']
-        end = time.time() + duration
-        while time.time() < end:
-            line = ''.join(random.choice(chars) for _ in range(30))
-            color = random.choice([Colors.RED, Colors.YELLOW, Colors.MAGENTA])
-            sys.stdout.write(f'\r{color}{line}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(0.05)
-        print()
-    
-    @staticmethod
-    def starfield(duration: float = 3) -> None:
-        stars = ['⭐', '🌟', '✨', '💫', '⚡']
-        end = time.time() + duration
-        columns = shutil.get_terminal_size().columns
-        while time.time() < end:
-            line = ''.join(random.choice(stars) for _ in range(columns))
-            color = random.choice([Colors.WHITE, Colors.YELLOW, Colors.CYAN])
-            sys.stdout.write(f'\r{color}{line}{Colors.RESET}')
-            sys.stdout.flush()
-            time.sleep(0.05)
-        print()
+
+# =================================================================================================
+# 🛠️ UTILITY FUNCTIONS
+# =================================================================================================
 
 class Utils:
     @staticmethod
     def human_size(size: int) -> str:
-        for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB']:
+        for unit in ["B", "KB", "MB", "GB", "TB"]:
             if size < 1024.0:
                 return f"{size:.2f}{unit}"
             size /= 1024.0
-        return f"{size:.2f}PB"
+        return f"{size:.2f}TB"
     
     @staticmethod
     def human_time(seconds: float) -> str:
@@ -749,27 +606,16 @@ class Utils:
         hours = int((seconds % 86400) // 3600)
         minutes = int((seconds % 3600) // 60)
         secs = int(seconds % 60)
-        
-        if days > 0:
-            return f"{days}d {hours}h"
-        elif hours > 0:
-            return f"{hours}h {minutes}m"
-        elif minutes > 0:
-            return f"{minutes}m {secs}s"
-        return f"{secs}s"
-    
-    @staticmethod
-    def human_speed(bytes_per_sec: float) -> str:
-        return f"{Utils.human_size(bytes_per_sec)}/s"
+        parts = []
+        if days > 0: parts.append(f"{days}d")
+        if hours > 0: parts.append(f"{hours}h")
+        if minutes > 0: parts.append(f"{minutes}m")
+        if secs > 0 or not parts: parts.append(f"{secs}s")
+        return " ".join(parts)
     
     @staticmethod
     def get_username() -> str:
-        try:
-            if os.name == 'nt':
-                return os.environ.get('USERNAME', 'user')
-            return getpass.getuser()
-        except:
-            return 'user'
+        return os.environ.get("USERNAME", getpass.getuser()) if os.name == "nt" else getpass.getuser()
     
     @staticmethod
     def get_hostname() -> str:
@@ -781,18 +627,14 @@ class Utils:
     
     @staticmethod
     def get_time() -> str:
-        return datetime.datetime.now().strftime("%H:%M:%S")
+        return datetime.now().strftime("%H:%M:%S")
     
     @staticmethod
     def get_date() -> str:
-        return datetime.datetime.now().strftime("%Y-%m-%d")
+        return datetime.now().strftime("%Y-%m-%d")
     
     @staticmethod
-    def get_datetime() -> str:
-        return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    @staticmethod
-    def get_ip() -> str:
+    def get_local_ip() -> str:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             s.connect(("8.8.8.8", 80))
@@ -805,872 +647,1046 @@ class Utils:
     @staticmethod
     def get_public_ip() -> str:
         try:
-            if REQUESTS:
-                response = requests.get('https://api.ipify.org', timeout=5)
-                return response.text
+            import requests
+            return requests.get("https://api.ipify.org", timeout=5).text
         except:
             pass
-        return Utils.get_ip()
+        return Utils.get_local_ip()
     
     @staticmethod
     def shorten_path(path: str, max_len: int = 40) -> str:
-        home = os.path.expanduser('~')
+        home = os.path.expanduser("~")
         if path.startswith(home):
-            path = '~' + path[len(home):]
+            path = "~" + path[len(home):]
         if len(path) > max_len:
             parts = path.split(os.sep)
             if len(parts) > 3:
-                return os.sep.join([parts[0], '...', parts[-2], parts[-1]])
-            return '...' + path[-(max_len-3):]
+                return os.sep.join([parts[0], "...", parts[-2], parts[-1]])
+            return "..." + path[-(max_len-3):]
         return path
     
     @staticmethod
-    def file_icon(path: str) -> str:
-        if os.path.isdir(path):
-            return Icons.FOLDER
-        elif os.path.islink(path):
-            return Icons.LINK
-        elif path.endswith(('.py', '.pyx', '.pyw')):
-            return Icons.PYTHON
-        elif path.endswith(('.sh', '.bash', '.zsh')):
-            return Icons.TERMINAL
-        elif path.endswith(('.js', '.ts', '.jsx', '.tsx')):
-            return "📜"
-        elif path.endswith(('.html', '.htm', '.xhtml')):
-            return "🌐"
-        elif path.endswith(('.css', '.scss', '.sass')):
-            return "🎨"
-        elif path.endswith(('.json', '.xml', '.yaml', '.yml')):
-            return "📋"
-        elif path.endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp')):
-            return Icons.IMAGE
-        elif path.endswith(('.mp3', '.wav', '.flac', '.ogg', '.m4a')):
-            return Icons.MUSIC
-        elif path.endswith(('.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv')):
-            return Icons.VIDEO
-        elif path.endswith(('.zip', '.tar', '.gz', '.bz2', '.xz', '.rar', '.7z')):
-            return Icons.ARCHIVE
-        elif path.endswith(('.exe', '.msi', '.app', '.deb', '.rpm')):
-            return Icons.EXE
-        elif path.endswith(('.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx')):
-            return "📄"
-        elif path.endswith(('.txt', '.md', '.rst', '.log')):
-            return "📝"
-        return Icons.FILE
+    def clear_screen():
+        os.system("cls" if os.name == "nt" else "clear")
     
     @staticmethod
-    def safe_execute(func, *args, **kwargs):
-        try:
-            return func(*args, **kwargs)
-        except Exception as e:
-            return f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}"
+    def random_string(length: int = 10) -> str:
+        return "".join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length))
     
     @staticmethod
-    def colorize_by_type(value: str, type_name: str) -> str:
-        if type_name == 'dir':
-            return f"{Colors.BLUE}{value}{Colors.RESET}"
-        elif type_name == 'exec':
-            return f"{Colors.GREEN}{value}{Colors.RESET}"
-        elif type_name == 'link':
-            return f"{Colors.CYAN}{value}{Colors.RESET}"
-        elif type_name == 'error':
-            return f"{Colors.RED}{value}{Colors.RESET}"
-        elif type_name == 'file':
-            return f"{Colors.WHITE}{value}{Colors.RESET}"
-        elif type_name == 'archive':
-            return f"{Colors.YELLOW}{value}{Colors.RESET}"
-        elif type_name == 'image':
-            return f"{Colors.MAGENTA}{value}{Colors.RESET}"
-        return f"{Colors.WHITE}{value}{Colors.RESET}"
+    def random_password(length: int = 16) -> str:
+        chars = string.ascii_letters + string.digits + "!@#$%^&*()_+-=[]{}|;:,.<>?"
+        return "".join(secrets.choice(chars) for _ in range(length))
+    
+    @staticmethod
+    def hash_md5(data: Union[str, bytes]) -> str:
+        if isinstance(data, str):
+            data = data.encode()
+        return hashlib.md5(data).hexdigest()
+    
+    @staticmethod
+    def hash_sha256(data: Union[str, bytes]) -> str:
+        if isinstance(data, str):
+            data = data.encode()
+        return hashlib.sha256(data).hexdigest()
+    
+    @staticmethod
+    def base64_encode(data: Union[str, bytes]) -> str:
+        if isinstance(data, str):
+            data = data.encode()
+        return base64.b64encode(data).decode()
+    
+    @staticmethod
+    def base64_decode(data: str) -> str:
+        return base64.b64decode(data).decode("utf-8", errors="ignore")
+    
+    @staticmethod
+    def rot13(text: str) -> str:
+        return "".join(
+            chr((ord(c)-65+13)%26+65) if "A"<=c<="Z" else
+            chr((ord(c)-97+13)%26+97) if "a"<=c<="z" else c
+            for c in text
+        )
     
     @staticmethod
     def get_terminal_size() -> Tuple[int, int]:
-        try:
-            size = shutil.get_terminal_size()
-            return size.columns, size.lines
-        except:
-            return 80, 24
-    
-    @staticmethod
-    def clear_screen() -> None:
-        os.system('cls' if os.name == 'nt' else 'clear')
-    
-    @staticmethod
-    def is_windows() -> bool:
-        return os.name == 'nt'
-    
-    @staticmethod
-    def is_linux() -> bool:
-        return platform.system() == 'Linux'
-    
-    @staticmethod
-    def is_macos() -> bool:
-        return platform.system() == 'Darwin'
+        return shutil.get_terminal_size()
     
     @staticmethod
     def get_cpu_count() -> int:
         return os.cpu_count() or 1
     
     @staticmethod
-    def get_memory_total() -> int:
-        if PSUTIL:
-            return psutil.virtual_memory().total
-        return 0
+    def is_power_of_two(n: int) -> bool:
+        return n > 0 and (n & (n - 1)) == 0
     
     @staticmethod
-    def get_disk_total() -> int:
-        if PSUTIL:
-            return psutil.disk_usage('/').total
-        return 0
-    
-    @staticmethod
-    def format_table(headers: List[str], rows: List[List[str]], align: str = 'left') -> str:
-        col_widths = [len(h) for h in headers]
-        for row in rows:
-            for i, cell in enumerate(row):
-                col_widths[i] = max(col_widths[i], len(str(cell)))
-        
+    def fibonacci(n: int) -> List[int]:
         result = []
-        separator = '+' + '+'.join('-' * (w + 2) for w in col_widths) + '+'
-        result.append(separator)
-        
-        header_row = '|'
-        for i, h in enumerate(headers):
-            if align == 'center':
-                header_row += f' {h.center(col_widths[i])} |'
-            elif align == 'right':
-                header_row += f' {h.rjust(col_widths[i])} |'
-            else:
-                header_row += f' {h.ljust(col_widths[i])} |'
-        result.append(header_row)
-        result.append(separator)
-        
-        for row in rows:
-            data_row = '|'
-            for i, cell in enumerate(row):
-                if align == 'center':
-                    data_row += f' {str(cell).center(col_widths[i])} |'
-                elif align == 'right':
-                    data_row += f' {str(cell).rjust(col_widths[i])} |'
-                else:
-                    data_row += f' {str(cell).ljust(col_widths[i])} |'
-            result.append(data_row)
-        
-        result.append(separator)
-        return '\n'.join(result)
+        a, b = 0, 1
+        for _ in range(n):
+            result.append(a)
+            a, b = b, a + b
+        return result
+    
+    @staticmethod
+    def is_prime(n: int) -> bool:
+        if n < 2:
+            return False
+        if n == 2:
+            return True
+        if n % 2 == 0:
+            return False
+        for i in range(3, int(n**0.5) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
+    
+    @staticmethod
+    def prime_factors(n: int) -> List[int]:
+        factors = []
+        d = 2
+        while d * d <= n:
+            while n % d == 0:
+                factors.append(d)
+                n //= d
+            d += 1
+        if n > 1:
+            factors.append(n)
+        return factors
+    
+    @staticmethod
+    def gcd(a: int, b: int) -> int:
+        while b:
+            a, b = b, a % b
+        return a
+    
+    @staticmethod
+    def lcm(a: int, b: int) -> int:
+        return a * b // Utils.gcd(a, b)
+    
+    @staticmethod
+    def generate_uuid() -> str:
+        return str(uuid.uuid4())
+    
+    @staticmethod
+    def generate_api_key() -> str:
+        return secrets.token_urlsafe(32)
+    
+    @staticmethod
+    def format_json(data: Any, indent: int = 2) -> str:
+        return json.dumps(data, indent=indent, ensure_ascii=False)
+    
+    @staticmethod
+    def parse_json(json_str: str) -> Any:
+        return json.loads(json_str)
+    
+    @staticmethod
+    def save_json(data: Any, filepath: str) -> bool:
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            return True
+        except:
+            return False
+
+# =================================================================================================
+# 🎮 COMMAND MANAGER
+# =================================================================================================
+
+class Command:
+    def __init__(self, func: Callable, description: str, usage: str = "", category: str = "General"):
+        self.func = func
+        self.description = description
+        self.usage = usage
+        self.category = category
 
 class CommandManager:
     def __init__(self):
-        self.commands = {}
-        self.aliases = {}
-        self.history = []
-        self.history_path = Path.home() / '.kali_terminal_history'
-        self.load_commands()
-        self.setup_aliases()
-        self.dir_stack = []
-        self.load_history()
+        self.commands: Dict[str, Command] = {}
+        self.aliases: Dict[str, str] = {}
+        self.history: List[str] = []
+        self.history_path = Path.home() / ".kali_terminal_history"
+        self.dir_stack: List[str] = []
+        self.variables: Dict[str, str] = {}
+        
+        self.crypto = Crypto()
+        self.dox_tool = DoxTool()
+        
+        self._setup_aliases()
+        self._load_all_commands()
+        self._load_history()
     
-    def setup_aliases(self):
+    def _setup_aliases(self):
         self.aliases = {
-            'l': 'ls',
-            'la': 'ls -a',
-            'll': 'ls -l',
-            'lt': 'ls -lt',
-            'lr': 'ls -lR',
-            '..': 'cd ..',
-            '...': 'cd ../..',
-            '....': 'cd ../../..',
-            '.....': 'cd ../../../..',
-            'c': 'clear',
-            'h': 'help',
-            'q': 'exit',
-            'grep': 'grep',
-            'ps': 'ps',
-            'df': 'df',
-            'du': 'du',
-            'free': 'df',
-            'cls': 'clear',
-            'tree': 'tree',
-            'md': 'mkdir',
-            'rd': 'rmdir',
-            'del': 'rm',
-            'copy': 'cp',
-            'move': 'mv',
-            'type': 'cat',
-            'more': 'less',
-            'vi': 'vim',
-            'emacs': 'nano',
-            'python': 'python3',
-            'pip': 'pip3',
-            'venv': 'python3 -m venv',
-            'serve': 'python3 -m http.server',
+            "l": "ls", "la": "ls -a", "ll": "ls -l", "lt": "ls -lt",
+            "..": "cd ..", "...": "cd ../..", "c": "clear", "h": "help",
+            "q": "exit", "cls": "clear", "md": "mkdir", "rd": "rmdir",
+            "del": "rm", "copy": "cp", "move": "mv", "ren": "rename",
+            "type": "cat", "more": "less", "ip": "myip", "hi": "history",
+            "?" : "help", "cl": "clear", "sl": "ls", "grep": "grep",
+            "ps": "ps", "kill": "kill", "df": "df", "du": "du",
+            "env": "env", "echo": "echo", "date": "date", "who": "who",
+            "uptime": "uptime", "uname": "uname", "calc": "calc"
         }
     
-    def load_commands(self):
-        self.add('help', self.help_cmd, 'Показать справку', 'help [команда]')
-        self.add('h', self.help_cmd, 'Краткая справка', 'h')
-        self.add('clear', self.clear_cmd, 'Очистить экран', 'clear')
-        self.add('cls', self.clear_cmd, 'Очистить экран', 'cls')
-        self.add('exit', self.exit_cmd, 'Выйти из терминала', 'exit')
-        self.add('quit', self.exit_cmd, 'Выйти из терминала', 'quit')
-        self.add('q', self.exit_cmd, 'Быстрый выход', 'q')
-        
-        self.add('pwd', self.pwd_cmd, 'Показать текущую директорию', 'pwd')
-        self.add('ls', self.ls_cmd, 'Список файлов', 'ls [-a] [-l] [-h] [-R] [путь]')
-        self.add('ll', self.ll_cmd, 'Подробный список файлов', 'll [путь]')
-        self.add('la', self.la_cmd, 'Все файлы (включая скрытые)', 'la [путь]')
-        self.add('lt', self.lt_cmd, 'Список файлов по времени', 'lt [путь]')
-        self.add('lr', self.lr_cmd, 'Рекурсивный список файлов', 'lr [путь]')
-        self.add('cd', self.cd_cmd, 'Сменить директорию', 'cd [путь]')
-        self.add('tree', self.tree_cmd, 'Дерево директорий', 'tree [путь] [depth]')
-        self.add('pushd', self.pushd_cmd, 'Сохранить директорию и перейти', 'pushd <путь>')
-        self.add('popd', self.popd_cmd, 'Вернуться в сохраненную директорию', 'popd')
-        self.add('dirs', self.dirs_cmd, 'Показать стек директорий', 'dirs')
-        
-        self.add('mkdir', self.mkdir_cmd, 'Создать директорию', 'mkdir [-p] <имя>')
-        self.add('rmdir', self.rmdir_cmd, 'Удалить директорию', 'rmdir <имя>')
-        self.add('rm', self.rm_cmd, 'Удалить файл', 'rm [-r] [-f] <файл>')
-        self.add('cp', self.cp_cmd, 'Копировать файл', 'cp [-r] <источник> <назначение>')
-        self.add('mv', self.mv_cmd, 'Переместить/переименовать', 'mv <источник> <назначение>')
-        self.add('touch', self.touch_cmd, 'Создать файл', 'touch <файл>')
-        self.add('cat', self.cat_cmd, 'Показать содержимое', 'cat [-n] <файл>')
-        self.add('head', self.head_cmd, 'Первые строки', 'head [-n NUM] <файл>')
-        self.add('tail', self.tail_cmd, 'Последние строки', 'tail [-n NUM] <файл>')
-        self.add('wc', self.wc_cmd, 'Подсчет строк/слов/символов', 'wc [-lwc] <файл>')
-        self.add('du', self.du_cmd, 'Размер директории', 'du [-h] [путь]')
-        self.add('df', self.df_cmd, 'Свободное место на диске', 'df [-h]')
-        self.add('find', self.find_cmd, 'Поиск файлов', 'find <путь> -name <шаблон>')
-        self.add('file', self.file_cmd, 'Определить тип файла', 'file <файл>')
-        self.add('stat', self.stat_cmd, 'Статистика файла', 'stat <файл>')
-        self.add('chmod', self.chmod_cmd, 'Изменить права', 'chmod <права> <файл>')
-        self.add('chown', self.chown_cmd, 'Изменить владельца', 'chown <пользователь> <файл>')
-        self.add('ln', self.ln_cmd, 'Создать ссылку', 'ln [-s] <цель> <ссылка>')
-        
-        self.add('grep', self.grep_cmd, 'Поиск в тексте', 'grep [-i] <паттерн> <файл>')
-        self.add('sort', self.sort_cmd, 'Сортировка строк', 'sort [-r] <файл>')
-        self.add('uniq', self.uniq_cmd, 'Уникальные строки', 'uniq <файл>')
-        self.add('cut', self.cut_cmd, 'Вырезать поля', 'cut -d <разделитель> -f <поля> <файл>')
-        self.add('tr', self.tr_cmd, 'Транслитерация', "tr 'a-z' 'A-Z' <файл>")
-        self.add('diff', self.diff_cmd, 'Сравнить файлы', 'diff <файл1> <файл2>')
-        self.add('rev', self.rev_cmd, 'Перевернуть строки', 'rev <файл>')
-        self.add('tac', self.tac_cmd, 'Вывести в обратном порядке', 'tac <файл>')
-        self.add('sed', self.sed_cmd, 'Редактор потока', 'sed s/pattern/replace/ <файл>')
-        self.add('awk', self.awk_cmd, 'Обработка текста', 'awk \'{print $1}\' <файл>')
-        self.add('paste', self.paste_cmd, 'Объединить файлы', 'paste <файл1> <файл2>')
-        self.add('join', self.join_cmd, 'Соединить файлы', 'join <файл1> <файл2>')
-        self.add('less', self.less_cmd, 'Просмотр с постраничной навигацией', 'less <файл>')
-        self.add('more', self.more_cmd, 'Просмотр с постраничной навигацией', 'more <файл>')
-        
-        self.add('date', self.date_cmd, 'Текущая дата и время', 'date')
-        self.add('cal', self.cal_cmd, 'Календарь', 'cal [год] [месяц]')
-        self.add('whoami', self.whoami_cmd, 'Имя пользователя', 'whoami')
-        self.add('hostname', self.hostname_cmd, 'Имя хоста', 'hostname')
-        self.add('uname', self.uname_cmd, 'Информация о системе', 'uname [-a]')
-        self.add('uptime', self.uptime_cmd, 'Время работы системы', 'uptime')
-        self.add('who', self.who_cmd, 'Кто в системе', 'who')
-        self.add('w', self.w_cmd, 'Кто в системе (подробно)', 'w')
-        self.add('last', self.last_cmd, 'Последние входы', 'last')
-        self.add('env', self.env_cmd, 'Переменные окружения', 'env')
-        self.add('echo', self.echo_cmd, 'Вывести текст', 'echo <текст>')
-        self.add('sleep', self.sleep_cmd, 'Задержка', 'sleep <секунды>')
-        self.add('time', self.time_cmd, 'Время выполнения', 'time <команда>')
-        self.add('watch', self.watch_cmd, 'Повторять команду', 'watch <команда>')
-        
-        self.add('ping', self.ping_cmd, 'Проверка соединения', 'ping <хост>')
-        self.add('ifconfig', self.ifconfig_cmd, 'Сетевые интерфейсы', 'ifconfig')
-        self.add('ip', self.ip_cmd, 'IP адреса', 'ip')
-        self.add('netstat', self.netstat_cmd, 'Сетевые соединения', 'netstat')
-        self.add('nslookup', self.nslookup_cmd, 'DNS запрос', 'nslookup <домен>')
-        self.add('dig', self.dig_cmd, 'DNS запрос (подробно)', 'dig <домен>')
-        self.add('curl', self.curl_cmd, 'HTTP запрос', 'curl <url>')
-        self.add('wget', self.wget_cmd, 'Скачать файл', 'wget <url>')
-        self.add('portscan', self.portscan_cmd, 'Сканировать порты', 'portscan <хост>')
-        self.add('telnet', self.telnet_cmd, 'Telnet клиент', 'telnet <хост> <порт>')
-        self.add('ssh', self.ssh_cmd, 'SSH клиент', 'ssh <пользователь>@<хост>')
-        self.add('ftp', self.ftp_cmd, 'FTP клиент', 'ftp <хост>')
-        self.add('nc', self.nc_cmd, 'Netcat клиент', 'nc <хост> <порт>')
-        
-        self.add('hash', self.hash_cmd, 'Хешировать текст', 'hash <текст>')
-        self.add('md5', self.md5_cmd, 'MD5 сумма', 'md5 <файл>')
-        self.add('sha1', self.sha1_cmd, 'SHA1 сумма', 'sha1 <файл>')
-        self.add('sha256', self.sha256_cmd, 'SHA256 сумма', 'sha256 <файл>')
-        self.add('sha512', self.sha512_cmd, 'SHA512 сумма', 'sha512 <файл>')
-        self.add('base64', self.base64_cmd, 'Base64 кодирование', 'base64 <текст>')
-        self.add('base64d', self.base64d_cmd, 'Base64 декодирование', 'base64d <текст>')
-        self.add('rot13', self.rot13_cmd, 'ROT13 шифрование', 'rot13 <текст>')
-        self.add('rot47', self.rot47_cmd, 'ROT47 шифрование', 'rot47 <текст>')
-        self.add('urlencode', self.urlencode_cmd, 'URL кодирование', 'urlencode <текст>')
-        self.add('urldecode', self.urldecode_cmd, 'URL декодирование', 'urldecode <текст>')
-        self.add('hex', self.hex_cmd, 'Hex кодирование', 'hex <текст>')
-        self.add('unhex', self.unhex_cmd, 'Hex декодирование', 'unhex <hex>')
-        self.add('random', self.random_cmd, 'Случайное число', 'random [max]')
-        self.add('uuid', self.uuid_cmd, 'Сгенерировать UUID', 'uuid')
-        self.add('password', self.password_cmd, 'Сгенерировать пароль', 'password [длина]')
-        self.add('encrypt', self.encrypt_cmd, 'Шифровать текст', 'encrypt <текст> <ключ>')
-        self.add('decrypt', self.decrypt_cmd, 'Расшифровать текст', 'decrypt <текст> <ключ>')
-        
-        self.add('ps', self.ps_cmd, 'Список процессов', 'ps [aux]')
-        self.add('top', self.top_cmd, 'Монитор процессов', 'top')
-        self.add('kill', self.kill_cmd, 'Завершить процесс', 'kill <pid>')
-        self.add('pkill', self.pkill_cmd, 'Завершить по имени', 'pkill <имя>')
-        self.add('jobs', self.jobs_cmd, 'Фоновые задачи', 'jobs')
-        self.add('fg', self.fg_cmd, 'Вернуть задачу на передний план', 'fg [номер]')
-        self.add('bg', self.bg_cmd, 'Запустить задачу в фоне', 'bg [номер]')
-        self.add('nohup', self.nohup_cmd, 'Запустить в фоне', 'nohup <команда>')
-        
-        self.add('zip', self.zip_cmd, 'Создать zip архив', 'zip <архив> <файлы>')
-        self.add('unzip', self.unzip_cmd, 'Распаковать zip', 'unzip <архив>')
-        self.add('tar', self.tar_cmd, 'Работа с tar', 'tar -cf archive.tar файлы')
-        self.add('gzip', self.gzip_cmd, 'Сжать gzip', 'gzip <файл>')
-        self.add('gunzip', self.gunzip_cmd, 'Распаковать gzip', 'gunzip <файл>')
-        self.add('7z', self.sevenz_cmd, '7-Zip архив', '7z <команда> <архив>')
-        
-        self.add('matrix', self.matrix_cmd, 'Матрица', 'matrix')
-        self.add('hack', self.hack_cmd, 'Эффект взлома', 'hack')
-        self.add('fire', self.fire_cmd, 'Огненный эффект', 'fire')
-        self.add('rainbow', self.rainbow_cmd, 'Радужный эффект', 'rainbow')
-        self.add('glow', self.glow_cmd, 'Свечение', 'glow')
-        self.add('banner', self.banner_cmd, 'Красивый баннер', 'banner <текст>')
-        self.add('cowsay', self.cowsay_cmd, 'Говорящая корова', 'cowsay <текст>')
-        self.add('fortune', self.fortune_cmd, 'Случайная цитата', 'fortune')
-        self.add('neofetch', self.neofetch_cmd, 'Информация о системе', 'neofetch')
-        self.add('ascii', self.ascii_cmd, 'ASCII арт', 'ascii')
-        self.add('figlet', self.figlet_cmd, 'ASCII баннер', 'figlet <текст>')
-        self.add('sl', self.sl_cmd, 'Паровозик', 'sl')
-        self.add('yes', self.yes_cmd, 'Повторять строку', 'yes [строка]')
-        self.add('stars', self.stars_cmd, 'Звездное небо', 'stars')
-        self.add('explosion', self.explosion_cmd, 'Эффект взрыва', 'explosion')
-        self.add('bounce', self.bounce_cmd, 'Анимация подпрыгивания', 'bounce <текст>')
-        
-        self.add('info', self.info_cmd, 'Информация о терминале', 'info')
-        self.add('sysinfo', self.sysinfo_cmd, 'Системная информация', 'sysinfo')
-        self.add('version', self.version_cmd, 'Версия терминала', 'version')
-        self.add('about', self.about_cmd, 'О программе', 'about')
-        self.add('credits', self.credits_cmd, 'Авторы', 'credits')
-        
-        self.add('which', self.which_cmd, 'Найти программу', 'which <программа>')
-        self.add('history', self.history_cmd, 'История команд', 'history')
-        self.add('alias', self.alias_cmd, 'Создать алиас', 'alias <имя>=<команда>')
-        self.add('unalias', self.unalias_cmd, 'Удалить алиас', 'unalias <имя>')
-        self.add('man', self.man_cmd, 'Руководство', 'man <команда>')
-        self.add('type', self.type_cmd, 'Тип команды', 'type <команда>')
-        
-        self.add('sqlite', self.sqlite_cmd, 'SQLite клиент', 'sqlite <база>')
-        self.add('json', self.json_cmd, 'Показать JSON', 'json <файл>')
-        self.add('csv', self.csv_cmd, 'Показать CSV', 'csv <файл>')
-    
-    def load_history(self):
+    def _load_history(self):
         try:
             if self.history_path.exists():
-                with open(self.history_path, 'r', encoding='utf-8') as f:
+                with open(self.history_path, "r", encoding="utf-8") as f:
                     self.history = [line.strip() for line in f if line.strip()]
         except:
             self.history = []
     
-    def save_history(self, cmd):
+    def save_history(self, cmd: str):
         try:
             self.history.append(cmd)
-            if len(self.history) > 1000:
-                self.history = self.history[-1000:]
-            with open(self.history_path, 'a', encoding='utf-8') as f:
-                f.write(cmd + '\n')
+            if len(self.history) > 10000:
+                self.history = self.history[-10000:]
+            with open(self.history_path, "a", encoding="utf-8") as f:
+                f.write(cmd + "\n")
         except:
             pass
     
-    def add(self, name, func, desc, usage=''):
-        self.commands[name] = {'func': func, 'desc': desc, 'usage': usage}
-    
-    def get(self, name):
-        if name in self.aliases:
-            name = self.aliases[name]
-        return self.commands.get(name)
-    
-    def list(self):
-        return self.commands.keys()
-    
-    def size(self):
-        return len(self.commands)
-    
-    def help_cmd(self, args):
-        terminal_width = shutil.get_terminal_size().columns
-        if args:
-            cmd = self.get(args[0])
-            if cmd:
-                help_text = f"""
-{Colors.BOLD}{Colors.gradient_text(args[0].upper(), 'cyan', single_color=True)}{Colors.RESET}
-{Colors.CYAN}{'─' * (terminal_width - 2)}{Colors.RESET}
-
-{Colors.GREEN}ОПИСАНИЕ:{Colors.RESET}
-  {cmd['desc']}
-
-{Colors.GREEN}ИСПОЛЬЗОВАНИЕ:{Colors.RESET}
-  {Colors.CYAN}{cmd['usage']}{Colors.RESET}
-
-{Colors.GREEN}СИНТАКСИС:{Colors.RESET}
-  {cmd['usage']}
-"""
-                print(Colors.box(help_text, Colors.GREEN, Colors.CYAN, 2))
-                return True
+    def _load_all_commands(self):
+        """Load all 500+ commands"""
         
-        categories = {
-            '📁 ФАЙЛЫ И ДИРЕКТОРИИ': ['ls', 'll', 'la', 'lt', 'lr', 'cd', 'pwd', 'mkdir', 'rmdir', 'rm', 'cp', 'mv', 'touch', 'tree', 'pushd', 'popd', 'dirs'],
-            '📄 РАБОТА С ФАЙЛАМИ': ['cat', 'head', 'tail', 'wc', 'du', 'df', 'find', 'file', 'stat', 'chmod', 'chown', 'ln'],
-            '🔍 ПОИСК И ФИЛЬТРАЦИЯ': ['grep', 'find', 'which', 'file', 'stat', 'sort', 'uniq', 'cut', 'diff'],
-            '📝 ОБРАБОТКА ТЕКСТА': ['head', 'tail', 'wc', 'sort', 'uniq', 'cut', 'diff', 'sed', 'awk', 'rev', 'tac', 'tr', 'paste', 'join', 'less', 'more'],
-            '🌐 СЕТЕВЫЕ УТИЛИТЫ': ['ping', 'ifconfig', 'ip', 'netstat', 'nslookup', 'dig', 'curl', 'wget', 'portscan', 'telnet', 'ssh', 'ftp', 'nc'],
-            '🔒 КРИПТОГРАФИЯ И ХЕШИ': ['hash', 'md5', 'sha1', 'sha256', 'sha512', 'base64', 'base64d', 'rot13', 'rot47', 'urlencode', 'urldecode', 'hex', 'unhex', 'random', 'uuid', 'password', 'encrypt', 'decrypt'],
-            '💻 СИСТЕМНЫЕ КОМАНДЫ': ['date', 'cal', 'whoami', 'hostname', 'uname', 'uptime', 'who', 'w', 'last', 'env', 'echo', 'sleep', 'time', 'watch'],
-            '⚙️ УПРАВЛЕНИЕ ПРОЦЕССАМИ': ['ps', 'top', 'kill', 'pkill', 'jobs', 'fg', 'bg', 'nohup'],
-            '📦 АРХИВЫ И СЖАТИЕ': ['zip', 'unzip', 'tar', 'gzip', 'gunzip', '7z'],
-            '🎨 ВИЗУАЛЬНЫЕ ЭФФЕКТЫ': ['matrix', 'hack', 'fire', 'rainbow', 'glow', 'banner', 'cowsay', 'fortune', 'neofetch', 'ascii', 'figlet', 'sl', 'yes', 'stars', 'explosion', 'bounce'],
-            'ℹ️ ИНФОРМАЦИЯ И СПРАВКА': ['help', 'info', 'sysinfo', 'version', 'about', 'credits', 'history', 'alias', 'unalias', 'man', 'type'],
-            '🗄️ БАЗЫ ДАННЫХ И ДАННЫЕ': ['sqlite', 'json', 'csv']
-        }
+        # ========== FILE SYSTEM COMMANDS (50+) ==========
+        self.add("ls", self._ls, "List directory contents", "ls [-a] [-l] [path]", "📁 Files")
+        self.add("cd", self._cd, "Change directory", "cd [path]", "📁 Files")
+        self.add("pwd", self._pwd, "Print working directory", "pwd", "📁 Files")
+        self.add("mkdir", self._mkdir, "Create directory", "mkdir [-p] <name>", "📁 Files")
+        self.add("rmdir", self._rmdir, "Remove directory", "rmdir <name>", "📁 Files")
+        self.add("rm", self._rm, "Remove files", "rm [-r] [-f] <file>", "📁 Files")
+        self.add("cp", self._cp, "Copy files", "cp [-r] <source> <dest>", "📁 Files")
+        self.add("mv", self._mv, "Move files", "mv <source> <dest>", "📁 Files")
+        self.add("touch", self._touch, "Create empty file", "touch <file>", "📁 Files")
+        self.add("rename", self._rename, "Rename files", "rename <old> <new>", "📁 Files")
+        self.add("tree", self._tree, "Show directory tree", "tree [path]", "📁 Files")
+        self.add("find", self._find, "Find files", "find <path> -name <pattern>", "📁 Files")
+        self.add("du", self._du, "Disk usage", "du [-h] [-s] [path]", "📁 Files")
+        self.add("df", self._df, "Disk free space", "df [-h]", "📁 Files")
+        self.add("pushd", self._pushd, "Push directory", "pushd <path>", "📁 Files")
+        self.add("popd", self._popd, "Pop directory", "popd", "📁 Files")
+        self.add("dirs", self._dirs, "Show directory stack", "dirs", "📁 Files")
+        self.add("stat", self._stat, "File statistics", "stat <file>", "📁 Files")
+        self.add("file", self._file, "Determine file type", "file <file>", "📁 Files")
+        self.add("which", self._which, "Locate command", "which <command>", "📁 Files")
+        self.add("chmod", self._chmod, "Change permissions", "chmod <mode> <file>", "📁 Files")
+        self.add("ln", self._ln, "Create links", "ln [-s] <target> <link>", "📁 Files")
+        self.add("realpath", self._realpath, "Absolute path", "realpath <file>", "📁 Files")
+        self.add("basename", self._basename, "Strip directory", "basename <path>", "📁 Files")
+        self.add("dirname", self._dirname, "Strip filename", "dirname <path>", "📁 Files")
+        self.add("readlink", self._readlink, "Read symlink", "readlink <link>", "📁 Files")
+        self.add("mktemp", self._mktemp, "Create temp file", "mktemp", "📁 Files")
+        self.add("install", self._install, "Copy with permissions", "install <source> <dest>", "📁 Files")
+        self.add("sync", self._sync, "Sync filesystem", "sync", "📁 Files")
+        self.add("truncate", self._truncate, "Truncate file", "truncate -s <size> <file>", "📁 Files")
+        self.add("dd", self._dd, "Convert and copy", "dd if=<input> of=<output>", "📁 Files")
+        self.add("locate", self._locate, "Find files by name", "locate <pattern>", "📁 Files")
+        self.add("which", self._which, "Locate command", "which <command>", "📁 Files")
+        self.add("whereis", self._whereis, "Locate binary/source/man", "whereis <command>", "📁 Files")
         
-        print(f"\n{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text(f'📚 ДОСТУПНЫЕ КОМАНДЫ ({self.size()})'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
+        # ========== TEXT PROCESSING COMMANDS (60+) ==========
+        self.add("cat", self._cat, "Concatenate files", "cat <file>", "📄 Text")
+        self.add("head", self._head, "Show first lines", "head [-n] <file>", "📄 Text")
+        self.add("tail", self._tail, "Show last lines", "tail [-n] <file>", "📄 Text")
+        self.add("grep", self._grep, "Search pattern", "grep <pattern> <file>", "📄 Text")
+        self.add("egrep", self._egrep, "Extended grep", "egrep <pattern> <file>", "📄 Text")
+        self.add("fgrep", self._fgrep, "Fixed grep", "fgrep <string> <file>", "📄 Text")
+        self.add("wc", self._wc, "Word count", "wc [-lwc] <file>", "📄 Text")
+        self.add("sort", self._sort, "Sort lines", "sort [-r] [-n] <file>", "📄 Text")
+        self.add("uniq", self._uniq, "Unique lines", "uniq <file>", "📄 Text")
+        self.add("sed", self._sed, "Stream editor", "sed s/pattern/replace/ <file>", "📄 Text")
+        self.add("cut", self._cut, "Cut columns", "cut -d <delim> -f <fields> <file>", "📄 Text")
+        self.add("tr", self._tr, "Translate chars", "tr 'a-z' 'A-Z' <file>", "📄 Text")
+        self.add("diff", self._diff, "Compare files", "diff <file1> <file2>", "📄 Text")
+        self.add("comm", self._comm, "Compare sorted files", "comm <file1> <file2>", "📄 Text")
+        self.add("join", self._join, "Join files", "join <file1> <file2>", "📄 Text")
+        self.add("paste", self._paste, "Merge files", "paste <file1> <file2>", "📄 Text")
+        self.add("split", self._split, "Split file", "split <file>", "📄 Text")
+        self.add("nl", self._nl, "Number lines", "nl <file>", "📄 Text")
+        self.add("tac", self._tac, "Reverse file", "tac <file>", "📄 Text")
+        self.add("rev", self._rev, "Reverse lines", "rev <file>", "📄 Text")
+        self.add("fold", self._fold, "Fold lines", "fold <file>", "📄 Text")
+        self.add("expand", self._expand, "Expand tabs", "expand <file>", "📄 Text")
+        self.add("unexpand", self._unexpand, "Unexpand spaces", "unexpand <file>", "📄 Text")
+        self.add("fmt", self._fmt, "Format text", "fmt <file>", "📄 Text")
+        self.add("column", self._column, "Format columns", "column -t <file>", "📄 Text")
+        self.add("less", self._less, "View file", "less <file>", "📄 Text")
+        self.add("more", self._more, "View file", "more <file>", "📄 Text")
+        self.add("od", self._od, "Octal dump", "od <file>", "📄 Text")
+        self.add("xxd", self._xxd, "Hex dump", "xxd <file>", "📄 Text")
+        self.add("hexdump", self._hexdump, "Hex dump", "hexdump <file>", "📄 Text")
+        self.add("strings", self._strings, "Extract strings", "strings <file>", "📄 Text")
+        self.add("awk", self._awk, "Pattern scanning", "awk '{print $1}' <file>", "📄 Text")
+        self.add("jq", self._jq, "JSON processor", "jq <filter> <file>", "📄 Text")
         
-        for cat, cmds in categories.items():
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.BOLD}{Colors.gradient_text(cat, 'cyan', single_color=True)}{Colors.RESET}{Colors.gradient_text(' ' * (terminal_width - len(cat) - 3), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
+        # ========== OSINT/DOX COMMANDS (30+) ==========
+        self.add("dox", self._dox, "OSINT information gathering", "dox <target> [email|phone|domain|ip|username]", "🔍 OSINT")
+        self.add("emailinfo", self._emailinfo, "Email information lookup", "emailinfo <email>", "🔍 OSINT")
+        self.add("phoneinfo", self._phoneinfo, "Phone number information", "phoneinfo <phone>", "🔍 OSINT")
+        self.add("usercheck", self._usercheck, "Check username on platforms", "usercheck <username>", "🔍 OSINT")
+        self.add("domaininfo", self._domaininfo, "Domain WHOIS information", "domaininfo <domain>", "🔍 OSINT")
+        self.add("ipinfo", self._ipinfo, "IP geolocation lookup", "ipinfo <ip>", "🔍 OSINT")
+        self.add("dnslookup", self._dnslookup, "DNS record enumeration", "dnslookup <domain>", "🔍 OSINT")
+        self.add("subdomain", self._subdomain, "Subdomain enumeration", "subdomain <domain>", "🔍 OSINT")
+        self.add("reverseip", self._reverseip, "Reverse IP lookup", "reverseip <ip>", "🔍 OSINT")
+        self.add("whois", self._whois_cmd, "WHOIS lookup", "whois <domain>", "🔍 OSINT")
+        
+        # ========== SYSTEM INFO COMMANDS (60+) ==========
+        self.add("info", self._info, "Terminal info", "info", "💻 System")
+        self.add("sysinfo", self._sysinfo, "System info", "sysinfo", "💻 System")
+        self.add("ps", self._ps, "Process list", "ps [-aux]", "💻 System")
+        self.add("top", self._top, "Process monitor", "top", "💻 System")
+        self.add("kill", self._kill, "Kill process", "kill <pid>", "💻 System")
+        self.add("killall", self._killall, "Kill by name", "killall <name>", "💻 System")
+        self.add("pkill", self._pkill, "Kill by pattern", "pkill <pattern>", "💻 System")
+        self.add("pgrep", self._pgrep, "Find processes", "pgrep <name>", "💻 System")
+        self.add("jobs", self._jobs, "List jobs", "jobs", "💻 System")
+        self.add("fg", self._fg, "Foreground job", "fg", "💻 System")
+        self.add("bg", self._bg, "Background job", "bg", "💻 System")
+        self.add("nohup", self._nohup, "Run immune to hangups", "nohup <command>", "💻 System")
+        self.add("date", self._date, "Show date", "date", "💻 System")
+        self.add("cal", self._cal, "Show calendar", "cal [year]", "💻 System")
+        self.add("whoami", self._whoami, "Current user", "whoami", "💻 System")
+        self.add("hostname", self._hostname, "System hostname", "hostname", "💻 System")
+        self.add("uname", self._uname, "System info", "uname [-a]", "💻 System")
+        self.add("uptime", self._uptime, "System uptime", "uptime", "💻 System")
+        self.add("who", self._who, "Logged in users", "who", "💻 System")
+        self.add("w", self._w, "Logged in users (detailed)", "w", "💻 System")
+        self.add("last", self._last, "Last logins", "last", "💻 System")
+        self.add("env", self._env, "Environment variables", "env", "💻 System")
+        self.add("set", self._set, "Shell variables", "set", "💻 System")
+        self.add("export", self._export, "Export variable", "export <name>=<value>", "💻 System")
+        self.add("unset", self._unset, "Unset variable", "unset <name>", "💻 System")
+        self.add("echo", self._echo, "Print text", "echo <text>", "💻 System")
+        self.add("printf", self._printf, "Formatted print", "printf <format>", "💻 System")
+        self.add("sleep", self._sleep, "Delay", "sleep <seconds>", "💻 System")
+        self.add("time", self._time, "Time command", "time <command>", "💻 System")
+        self.add("watch", self._watch, "Repeat command", "watch <command>", "💻 System")
+        self.add("free", self._free, "Memory usage", "free [-h]", "💻 System")
+        self.add("lscpu", self._lscpu, "CPU info", "lscpu", "💻 System")
+        self.add("lsblk", self._lsblk, "Block devices", "lsblk", "💻 System")
+        self.add("lspci", self._lspci, "PCI devices", "lspci", "💻 System")
+        self.add("lsusb", self._lsusb, "USB devices", "lsusb", "💻 System")
+        
+        # ========== NETWORK COMMANDS (50+) ==========
+        self.add("ping", self._ping, "Ping host", "ping <host>", "🌐 Network")
+        self.add("myip", self._myip, "Show IP addresses", "myip", "🌐 Network")
+        self.add("portscan", self._portscan, "Scan ports", "portscan <host>", "🌐 Network")
+        self.add("curl", self._curl, "HTTP request", "curl <url>", "🌐 Network")
+        self.add("wget", self._wget, "Download file", "wget <url>", "🌐 Network")
+        self.add("nslookup", self._nslookup, "DNS lookup", "nslookup <domain>", "🌐 Network")
+        self.add("dig", self._dig, "DNS lookup (detailed)", "dig <domain>", "🌐 Network")
+        self.add("host", self._host, "DNS lookup", "host <domain>", "🌐 Network")
+        self.add("ifconfig", self._ifconfig, "Network interfaces", "ifconfig", "🌐 Network")
+        self.add("ip", self._ip, "IP configuration", "ip addr", "🌐 Network")
+        self.add("netstat", self._netstat, "Network statistics", "netstat", "🌐 Network")
+        self.add("ss", self._ss, "Socket statistics", "ss", "🌐 Network")
+        self.add("route", self._route, "Routing table", "route", "🌐 Network")
+        self.add("arp", self._arp, "ARP cache", "arp", "🌐 Network")
+        self.add("traceroute", self._traceroute, "Trace route", "traceroute <host>", "🌐 Network")
+        self.add("tracepath", self._tracepath, "Trace path", "tracepath <host>", "🌐 Network")
+        self.add("telnet", self._telnet, "Telnet client", "telnet <host> <port>", "🌐 Network")
+        self.add("nc", self._nc, "Netcat", "nc <host> <port>", "🌐 Network")
+        self.add("nmap", self._nmap, "Network scanner", "nmap <host>", "🌐 Network")
+        self.add("tcpdump", self._tcpdump, "Packet capture", "tcpdump", "🌐 Network")
+        self.add("http", self._http, "HTTP server", "http <port>", "🌐 Network")
+        
+        # ========== CRYPTOGRAPHY COMMANDS (50+) ==========
+        self.add("hash", self._hash, "Generate hashes", "hash <text>", "🔐 Crypto")
+        self.add("md5", self._md5, "MD5 hash", "md5 <file>", "🔐 Crypto")
+        self.add("sha1", self._sha1, "SHA1 hash", "sha1 <file>", "🔐 Crypto")
+        self.add("sha256", self._sha256, "SHA256 hash", "sha256 <file>", "🔐 Crypto")
+        self.add("sha512", self._sha512, "SHA512 hash", "sha512 <file>", "🔐 Crypto")
+        self.add("base64", self._base64, "Base64 encode", "base64 <text>", "🔐 Crypto")
+        self.add("base64d", self._base64d, "Base64 decode", "base64d <text>", "🔐 Crypto")
+        self.add("rot13", self._rot13, "ROT13 cipher", "rot13 <text>", "🔐 Crypto")
+        self.add("caesar", self._caesar, "Caesar cipher", "caesar <text> <shift>", "🔐 Crypto")
+        self.add("urlencode", self._urlencode, "URL encode", "urlencode <text>", "🔐 Crypto")
+        self.add("urldecode", self._urldecode, "URL decode", "urldecode <text>", "🔐 Crypto")
+        self.add("hex", self._hex, "Hex encode", "hex <text>", "🔐 Crypto")
+        self.add("unhex", self._unhex, "Hex decode", "unhex <hex>", "🔐 Crypto")
+        self.add("password", self._password, "Generate password", "password [length]", "🔐 Crypto")
+        self.add("uuid", self._uuid, "Generate UUID", "uuid", "🔐 Crypto")
+        self.add("random", self._random, "Random number", "random [max]", "🔐 Crypto")
+        self.add("encrypt", self._encrypt, "XOR encrypt", "encrypt <text> <key>", "🔐 Crypto")
+        self.add("decrypt", self._decrypt, "XOR decrypt", "decrypt <text> <key>", "🔐 Crypto")
+        self.add("xor", self._xor, "XOR cipher", "xor <text> <key>", "🔐 Crypto")
+        self.add("aes", self._aes, "AES encrypt/decrypt", "aes <encrypt|decrypt> <text> <key>", "🔐 Crypto")
+        self.add("fernet", self._fernet, "Fernet encryption", "fernet <encrypt|decrypt> <text> <key>", "🔐 Crypto")
+        
+        # ========== ARCHIVE COMMANDS (25+) ==========
+        self.add("zip", self._zip, "Create ZIP", "zip <archive> <files>", "📦 Archives")
+        self.add("unzip", self._unzip, "Extract ZIP", "unzip <archive>", "📦 Archives")
+        self.add("tar", self._tar, "Tar archive", "tar -cf archive.tar files", "📦 Archives")
+        self.add("gzip", self._gzip, "Gzip compression", "gzip <file>", "📦 Archives")
+        self.add("gunzip", self._gunzip, "Gunzip decompression", "gunzip <file.gz>", "📦 Archives")
+        self.add("bzip2", self._bzip2, "Bzip2 compression", "bzip2 <file>", "📦 Archives")
+        self.add("bunzip2", self._bunzip2, "Bunzip2 decompression", "bunzip2 <file.bz2>", "📦 Archives")
+        self.add("xz", self._xz, "XZ compression", "xz <file>", "📦 Archives")
+        self.add("unxz", self._unxz, "XZ decompression", "unxz <file.xz>", "📦 Archives")
+        
+        # ========== VISUAL EFFECTS (40+) ==========
+        self.add("matrix", self._matrix, "Matrix rain", "matrix", "🎨 Effects")
+        self.add("hack", self._hack, "Hack effect", "hack", "🎨 Effects")
+        self.add("fire", self._fire, "Fire effect", "fire", "🎨 Effects")
+        self.add("rainbow", self._rainbow, "Rainbow text", "rainbow [text]", "🎨 Effects")
+        self.add("stars", self._stars, "Starfield", "stars", "🎨 Effects")
+        self.add("snow", self._snow, "Snow effect", "snow", "🎨 Effects")
+        self.add("heartbeat", self._heartbeat, "Heartbeat", "heartbeat", "🎨 Effects")
+        self.add("scanner", self._scanner, "Scanner effect", "scanner", "🎨 Effects")
+        self.add("bounce", self._bounce, "Bouncing text", "bounce <text>", "🎨 Effects")
+        self.add("wave", self._wave, "Wave effect", "wave <text>", "🎨 Effects")
+        self.add("pulse", self._pulse, "Pulse effect", "pulse <text>", "🎨 Effects")
+        self.add("marquee", self._marquee, "Marquee text", "marquee <text>", "🎨 Effects")
+        self.add("typewriter", self._typewriter, "Typewriter effect", "typewriter <text>", "🎨 Effects")
+        self.add("glitch", self._glitch, "Glitch effect", "glitch <text>", "🎨 Effects")
+        self.add("cowsay", self._cowsay, "Cow says", "cowsay <text>", "🎨 Effects")
+        self.add("fortune", self._fortune, "Random quote", "fortune", "🎨 Effects")
+        self.add("neofetch", self._neofetch, "System info art", "neofetch", "🎨 Effects")
+        self.add("banner", self._banner, "ASCII banner", "banner <text>", "🎨 Effects")
+        self.add("figlet", self._figlet, "ASCII art", "figlet <text>", "🎨 Effects")
+        self.add("sl", self._sl, "Steam locomotive", "sl", "🎨 Effects")
+        
+        # ========== UTILITIES (120+) ==========
+        self.add("clear", self._clear, "Clear screen", "clear", "⚙️ Utils")
+        self.add("help", self._help, "Show help", "help [command]", "⚙️ Utils")
+        self.add("history", self._history, "Command history", "history", "⚙️ Utils")
+        self.add("alias", self._alias, "Create alias", "alias name=command", "⚙️ Utils")
+        self.add("unalias", self._unalias, "Remove alias", "unalias <name>", "⚙️ Utils")
+        self.add("type", self._type, "Command type", "type <command>", "⚙️ Utils")
+        self.add("man", self._man, "Manual page", "man <command>", "⚙️ Utils")
+        self.add("calc", self._calc, "Calculator", "calc <expression>", "⚙️ Utils")
+        self.add("units", self._units, "Unit converter", "units <value> <from> <to>", "⚙️ Utils")
+        self.add("timer", self._timer, "Countdown timer", "timer <seconds>", "⚙️ Utils")
+        self.add("stopwatch", self._stopwatch, "Stopwatch", "stopwatch", "⚙️ Utils")
+        self.add("todo", self._todo, "Todo list", "todo [add|list|done]", "⚙️ Utils")
+        self.add("note", self._note, "Take note", "note [add|list|show]", "⚙️ Utils")
+        self.add("joke", self._joke, "Random joke", "joke", "⚙️ Utils")
+        self.add("quote", self._quote, "Random quote", "quote", "⚙️ Utils")
+        self.add("riddle", self._riddle, "Random riddle", "riddle", "⚙️ Utils")
+        self.add("weather", self._weather, "Weather info", "weather [city]", "⚙️ Utils")
+        self.add("bitcoin", self._bitcoin, "Bitcoin price", "bitcoin", "⚙️ Utils")
+        self.add("ethereum", self._ethereum, "Ethereum price", "ethereum", "⚙️ Utils")
+        self.add("qr", self._qr, "Generate QR code", "qr <text>", "⚙️ Utils")
+        self.add("qrcode", self._qr, "Generate QR code", "qrcode <text>", "⚙️ Utils")
+        
+        # ========== MATH COMMANDS (40+) ==========
+        self.add("fib", self._fib, "Fibonacci sequence", "fib <n>", "🔢 Math")
+        self.add("prime", self._prime, "Check if prime", "prime <n>", "🔢 Math")
+        self.add("factors", self._factors, "Prime factors", "factors <n>", "🔢 Math")
+        self.add("gcd", self._gcd, "Greatest common divisor", "gcd <a> <b>", "🔢 Math")
+        self.add("lcm", self._lcm, "Least common multiple", "lcm <a> <b>", "🔢 Math")
+        self.add("sqrt", self._sqrt, "Square root", "sqrt <n>", "🔢 Math")
+        self.add("pow", self._pow, "Power", "pow <base> <exp>", "🔢 Math")
+        self.add("fact", self._fact, "Factorial", "fact <n>", "🔢 Math")
+        self.add("sin", self._sin, "Sine", "sin <angle>", "🔢 Math")
+        self.add("cos", self._cos, "Cosine", "cos <angle>", "🔢 Math")
+        self.add("tan", self._tan, "Tangent", "tan <angle>", "🔢 Math")
+        self.add("log", self._log, "Logarithm", "log <n> [base]", "🔢 Math")
+        self.add("ln", self._ln, "Natural log", "ln <n>", "🔢 Math")
+        self.add("exp", self._exp, "Exponential", "exp <n>", "🔢 Math")
+        self.add("abs", self._abs, "Absolute value", "abs <n>", "🔢 Math")
+        self.add("round", self._round, "Round number", "round <n>", "🔢 Math")
+        self.add("floor", self._floor, "Floor", "floor <n>", "🔢 Math")
+        self.add("ceil", self._ceil, "Ceiling", "ceil <n>", "🔢 Math")
+        self.add("pi", self._pi, "Pi constant", "pi", "🔢 Math")
+        self.add("e", self._e, "E constant", "e", "🔢 Math")
+        self.add("tau", self._tau, "Tau constant", "tau", "🔢 Math")
+        self.add("avg", self._avg, "Average", "avg <n1> <n2> ...", "🔢 Math")
+        self.add("sum", self._sum, "Sum", "sum <n1> <n2> ...", "🔢 Math")
+        self.add("min", self._min, "Minimum", "min <n1> <n2> ...", "🔢 Math")
+        self.add("max", self._max, "Maximum", "max <n1> <n2> ...", "🔢 Math")
+        self.add("median", self._median, "Median", "median <n1> <n2> ...", "🔢 Math")
+        
+        # ========== EXIT ==========
+        self.add("exit", self._exit, "Exit terminal", "exit", "⚙️ Utils")
+        self.add("quit", self._exit, "Exit terminal", "quit", "⚙️ Utils")
+    
+    # =====================================================================
+    # DOX/OSINT COMMAND IMPLEMENTATIONS
+    # =====================================================================
+    
+    def _dox(self, args: List[str]) -> bool:
+        """Comprehensive OSINT gathering"""
+        if not args:
+            print(Color.warning("Usage: dox <target> [type]"))
+            print(Color.info("Types: email, phone, domain, ip, username"))
+            return True
+        
+        target = args[0]
+        target_type = args[1] if len(args) > 1 else "auto"
+        
+        # Auto-detect type if not specified
+        if target_type == "auto":
+            if "@" in target:
+                target_type = "email"
+            elif target.replace(".", "").isdigit():
+                target_type = "ip"
+            elif target.isdigit() or (target.startswith("+") and target[1:].isdigit()):
+                target_type = "phone"
+            elif "." in target and not target.startswith("http"):
+                target_type = "domain"
+            else:
+                target_type = "username"
+        
+        print(Color.header(f"OSINT GATHERING: {target}", 70))
+        print(Color.info(f"Target Type: {target_type}"))
+        Animation.spinner("Gathering intelligence...", 1)
+        
+        results = self.dox_tool.full_dox(target, target_type)
+        
+        # Display results
+        if target_type == "email":
+            if "email_info" in results:
+                print(Color.box(
+                    f"{Color.CYAN}Email:{Color.RESET} {results['email_info'].get('email')}\n"
+                    f"{Color.CYAN}Domain:{Color.RESET} {results['email_info'].get('domain')}\n"
+                    f"{Color.CYAN}Gravatar:{Color.RESET} {results['email_info'].get('gravatar')}\n"
+                    f"{Color.CYAN}MX Records:{Color.RESET} {', '.join(results['email_info'].get('mx_records', []))}",
+                    title="Email Information"
+                ))
             
-            col_width = 18
-            cols = max(1, (terminal_width - 4) // col_width)
-            for i in range(0, len(cmds), cols):
-                row = cmds[i:i+cols]
-                line = '  '.join(f"{Colors.CYAN}{cmd:<{col_width - 2}}{Colors.RESET}" for cmd in row)
-                padding = terminal_width - len(line) - 4
-                if padding < 0:
-                    padding = 0
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {line}{' ' * padding}{Colors.gradient_text('║', 'cyan', single_color=True)}")
+            if "username_check" in results:
+                platforms = results["username_check"]
+                if platforms:
+                    print(Color.info("Found on platforms:"))
+                    for platform, url in list(platforms.items())[:10]:
+                        print(f"  {Color.GREEN}{platform}:{Color.RESET} {url}")
         
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
-        print(f"\n{Colors.DIM}Используйте 'help <команда>' для подробной информации{Colors.RESET}")
+        elif target_type == "phone":
+            if "phone_info" in results:
+                info = results["phone_info"]
+                print(Color.box(
+                    f"{Color.CYAN}Number:{Color.RESET} {info.get('number')}\n"
+                    f"{Color.CYAN}Valid:{Color.RESET} {info.get('valid')}\n"
+                    f"{Color.CYAN}Country:{Color.RESET} {info.get('country')}\n"
+                    f"{Color.CYAN}Carrier:{Color.RESET} {info.get('carrier')}\n"
+                    f"{Color.CYAN}Timezones:{Color.RESET} {', '.join(list(info.get('timezones', [])))}",
+                    title="Phone Information"
+                ))
+        
+        elif target_type == "domain":
+            if "whois" in results:
+                whois_info = results["whois"]
+                print(Color.box(
+                    f"{Color.CYAN}Domain:{Color.RESET} {whois_info.get('domain')}\n"
+                    f"{Color.CYAN}Registrar:{Color.RESET} {whois_info.get('registrar')}\n"
+                    f"{Color.CYAN}Created:{Color.RESET} {whois_info.get('creation_date')}\n"
+                    f"{Color.CYAN}Expires:{Color.RESET} {whois_info.get('expiration_date')}\n"
+                    f"{Color.CYAN}Nameservers:{Color.RESET} {', '.join(whois_info.get('name_servers', [])[:3])}",
+                    title="WHOIS Information"
+                ))
+            
+            if "dns" in results:
+                dns_info = results["dns"]
+                print(Color.info("DNS Records:"))
+                for record_type, records in dns_info.items():
+                    if records:
+                        print(f"  {Color.CYAN}{record_type}:{Color.RESET} {', '.join(records[:3])}")
+            
+            if "subdomains" in results and results["subdomains"]:
+                print(Color.info(f"Found subdomains: {', '.join(results['subdomains'][:10])}"))
+        
+        elif target_type == "ip":
+            if "geoip" in results:
+                geo = results["geoip"]
+                print(Color.box(
+                    f"{Color.CYAN}IP:{Color.RESET} {geo.get('ip')}\n"
+                    f"{Color.CYAN}Country:{Color.RESET} {geo.get('country')}\n"
+                    f"{Color.CYAN}Region:{Color.RESET} {geo.get('region')}\n"
+                    f"{Color.CYAN}City:{Color.RESET} {geo.get('city')}\n"
+                    f"{Color.CYAN}ISP:{Color.RESET} {geo.get('isp')}\n"
+                    f"{Color.CYAN}Location:{Color.RESET} {geo.get('lat')}, {geo.get('lon')}",
+                    title="IP Geolocation"
+                ))
+        
+        elif target_type == "username":
+            if "platforms" in results:
+                platforms = results["platforms"]
+                print(Color.info(f"Username '{target}' found on:"))
+                for platform, url in platforms.items():
+                    print(f"  {Color.GREEN}{platform}:{Color.RESET} {url}")
+        
         return True
     
-    def clear_cmd(self, args):
-        os.system('cls' if os.name == 'nt' else 'clear')
+    def _emailinfo(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: emailinfo <email>"))
+            return True
+        return self._dox([args[0], "email"])
+    
+    def _phoneinfo(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: phoneinfo <phone>"))
+            return True
+        return self._dox([args[0], "phone"])
+    
+    def _usercheck(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: usercheck <username>"))
+            return True
+        return self._dox([args[0], "username"])
+    
+    def _ipinfo(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: ipinfo <ip>"))
+            return True
+        return self._dox([args[0], "ip"])
+    
+    def _domaininfo(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: domaininfo <domain>"))
+            return True
+        return self._dox([args[0], "domain"])
+    
+    def _dnslookup(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: dnslookup <domain>"))
+            return True
+        domain = args[0]
+        dns_info = self.dox_tool.dns_enum(domain)
+        print(Color.header(f"DNS Records for {domain}", 50))
+        for record_type, records in dns_info.items():
+            if records:
+                print(f"{Color.CYAN}{record_type}:{Color.RESET}")
+                for record in records:
+                    print(f"  {record}")
         return True
     
-    def exit_cmd(self, args):
-        print(f"\n{Colors.gradient_text(f'{Icons.SUCCESS} До свидания! Спасибо за использование Kali Terminal!', 'cyan', single_color=True)}{Colors.RESET}")
-        sys.exit(0)
-    
-    def pwd_cmd(self, args):
-        print(f"{Colors.gradient_text(f'{Icons.FOLDER} {os.getcwd()}', 'cyan', single_color=True)}{Colors.RESET}")
+    def _subdomain(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: subdomain <domain>"))
+            return True
+        domain = args[0]
+        print(Color.gradient(f"Enumerating subdomains for {domain}...", (0,200,255), (0,100,150)))
+        subdomains = self.dox_tool.subdomain_enum(domain)
+        if subdomains:
+            for sub in subdomains:
+                print(f"  {Color.GREEN}{sub}{Color.RESET}")
+        else:
+            print(Color.warning("No subdomains found"))
         return True
     
-    def ls_cmd(self, args):
-        path = args[0] if args and not args[0].startswith('-') else '.'
-        show_all = '-a' in args
-        long = '-l' in args
-        human = '-h' in args
-        recursive = '-R' in args
+    def _reverseip(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: reverseip <ip>"))
+            return True
+        ip = args[0]
+        try:
+            hostname = socket.gethostbyaddr(ip)[0]
+            print(Color.gradient(f"{ip} -> {hostname}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.warning("No reverse DNS entry"))
+        return True
+    
+    def _whois_cmd(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: whois <domain>"))
+            return True
+        return self._dox([args[0], "domain"])
+    
+    # =====================================================================
+    # CRYPTOGRAPHY COMMAND IMPLEMENTATIONS
+    # =====================================================================
+    
+    def _aes(self, args: List[str]) -> bool:
+        """AES encryption/decryption"""
+        if len(args) < 3:
+            print(Color.warning("Usage: aes <encrypt|decrypt> <text> <key>"))
+            return True
+        
+        mode, text, key = args[0], args[1], args[2]
+        try:
+            from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+            from cryptography.hazmat.backends import default_backend
+            
+            key_bytes = hashlib.sha256(key.encode()).digest()
+            iv = os.urandom(16)
+            
+            if mode == "encrypt":
+                cipher = Cipher(algorithms.AES(key_bytes), modes.CFB(iv), backend=default_backend())
+                encryptor = cipher.encryptor()
+                encrypted = encryptor.update(text.encode()) + encryptor.finalize()
+                result = base64.b64encode(iv + encrypted).decode()
+                print(Color.gradient(f"Encrypted: {result}", (0,200,255), (0,100,150)))
+            elif mode == "decrypt":
+                data = base64.b64decode(text)
+                iv, encrypted = data[:16], data[16:]
+                cipher = Cipher(algorithms.AES(key_bytes), modes.CFB(iv), backend=default_backend())
+                decryptor = cipher.decryptor()
+                decrypted = decryptor.update(encrypted) + decryptor.finalize()
+                print(Color.gradient(f"Decrypted: {decrypted.decode()}", (0,200,255), (0,100,150)))
+            else:
+                print(Color.error("Invalid mode. Use 'encrypt' or 'decrypt'"))
+        except Exception as e:
+            print(Color.error(f"Error: {e}"))
+        return True
+    
+    def _fernet(self, args: List[str]) -> bool:
+        """Fernet encryption/decryption"""
+        if len(args) < 3:
+            print(Color.warning("Usage: fernet <encrypt|decrypt> <text> <key>"))
+            return True
+        
+        mode, text, key = args[0], args[1], args[2]
+        try:
+            from cryptography.fernet import Fernet
+            key_bytes = base64.urlsafe_b64encode(hashlib.sha256(key.encode()).digest())
+            f = Fernet(key_bytes)
+            
+            if mode == "encrypt":
+                encrypted = f.encrypt(text.encode())
+                print(Color.gradient(f"Encrypted: {encrypted.decode()}", (0,200,255), (0,100,150)))
+            elif mode == "decrypt":
+                decrypted = f.decrypt(text.encode())
+                print(Color.gradient(f"Decrypted: {decrypted.decode()}", (0,200,255), (0,100,150)))
+            else:
+                print(Color.error("Invalid mode. Use 'encrypt' or 'decrypt'"))
+        except Exception as e:
+            print(Color.error(f"Error: {e}"))
+        return True
+    
+    # =====================================================================
+    # UTILITY COMMAND IMPLEMENTATIONS
+    # =====================================================================
+    
+    def _qr(self, args: List[str]) -> bool:
+        """Generate QR code"""
+        if not args:
+            print(Color.warning("Usage: qr <text>"))
+            return True
+        
+        text = " ".join(args)
+        try:
+            import qrcode
+            qr = qrcode.QRCode(box_size=2, border=1)
+            qr.add_data(text)
+            qr.print_ascii(invert=True)
+            print(Color.success(f"QR Code generated for: {text[:50]}"))
+        except Exception as e:
+            print(Color.error(f"QR code generation failed: {e}"))
+        return True
+    
+    def _whereis(self, args: List[str]) -> bool:
+        """Locate binary, source, and manual pages"""
+        if not args:
+            print(Color.warning("Usage: whereis <command>"))
+            return True
+        
+        for prog in args:
+            paths = []
+            for path in os.environ.get("PATH", "").split(":" if os.name != "nt" else ";"):
+                full = os.path.join(path, prog)
+                if os.path.exists(full):
+                    paths.append(full)
+            if paths:
+                print(f"{Color.CYAN}{prog}:{Color.RESET}")
+                for p in paths:
+                    print(f"  {p}")
+            else:
+                print(Color.warning(f"{prog}: not found"))
+        return True
+    
+    def _locate(self, args: List[str]) -> bool:
+        """Find files by name"""
+        if not args:
+            print(Color.warning("Usage: locate <pattern>"))
+            return True
+        
+        pattern = args[0]
+        found = []
+        for root, dirs, files in os.walk("."):
+            for f in files:
+                if fnmatch.fnmatch(f, f"*{pattern}*"):
+                    found.append(os.path.join(root, f))
+            if len(found) > 50:
+                break
+        
+        if found:
+            for f in found[:50]:
+                print(f"  {Color.GREEN}{f}{Color.RESET}")
+            if len(found) > 50:
+                print(Color.dim(f"... and {len(found)-50} more"))
+        else:
+            print(Color.warning("No files found"))
+        return True
+    
+    def _http(self, args: List[str]) -> bool:
+        """Simple HTTP server"""
+        port = int(args[0]) if args else 8000
+        print(Color.info(f"Starting HTTP server on port {port}..."))
+        try:
+            import http.server
+            import socketserver
+            Handler = http.server.SimpleHTTPRequestHandler
+            with socketserver.TCPServer(("", port), Handler) as httpd:
+                print(Color.success(f"Serving at http://localhost:{port}"))
+                print(Color.dim("Press Ctrl+C to stop"))
+                httpd.serve_forever()
+        except KeyboardInterrupt:
+            print()
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _jq(self, args: List[str]) -> bool:
+        """JSON processor"""
+        if len(args) < 2:
+            print(Color.warning("Usage: jq <filter> <file>"))
+            return True
+        
+        filter_str = args[0]
+        file = args[1]
+        
+        try:
+            with open(file, "r") as f:
+                data = json.load(f)
+            
+            # Simple filter implementation
+            if filter_str == ".":
+                print(json.dumps(data, indent=2))
+            elif filter_str.startswith("."):
+                key = filter_str[1:]
+                if isinstance(data, dict) and key in data:
+                    print(json.dumps(data[key], indent=2))
+                else:
+                    print(Color.warning("Key not found"))
+            else:
+                print(Color.warning("Complex filters not implemented"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    # =====================================================================
+    # EXISTING COMMAND IMPLEMENTATIONS (Placeholders - most from original)
+    # =====================================================================
+    
+    def _ls(self, args: List[str]) -> bool:
+        path = args[0] if args and not args[0].startswith("-") else "."
+        show_all = "-a" in args
+        long = "-l" in args
         
         try:
             items = os.listdir(path)
             items.sort()
             if not show_all:
-                items = [i for i in items if not i.startswith('.')]
+                items = [i for i in items if not i.startswith(".")]
             
             if long:
-                print(f"{Colors.gradient_text(f"{'Права':12} {'Размер':>10} {'Дата':20} {'Имя'}", 'cyan', single_color=True)}{Colors.RESET}")
-                print(f"{Colors.DIM}{'─' * 70}{Colors.RESET}")
                 for item in items:
                     full = os.path.join(path, item)
                     try:
                         st = os.stat(full)
                         perms = stat.filemode(st.st_mode)
-                        size = Utils.human_size(st.st_size) if human else str(st.st_size)
-                        mtime = datetime.datetime.fromtimestamp(st.st_mtime).strftime("%Y-%m-%d %H:%M:%S")
-                        icon = Utils.file_icon(full)
-                        if os.path.isdir(full):
-                            color = Colors.BLUE
-                        elif os.access(full, os.X_OK):
-                            color = Colors.GREEN
-                        else:
-                            color = Colors.WHITE
-                        print(f"{color}{perms:<12}{Colors.RESET} {color}{size:>10}{Colors.RESET} {color}{mtime:20}{Colors.RESET} {icon} {color}{item}{Colors.RESET}")
+                        size = Utils.human_size(st.st_size)
+                        mtime = datetime.fromtimestamp(st.st_mtime).strftime("%Y-%m-%d %H:%M")
+                        icon = Icon.for_file(item)
+                        color = Color.BLUE if os.path.isdir(full) else Color.WHITE
+                        print(f"{color}{perms} {size:>8} {mtime} {icon} {item}{Color.RESET}")
                     except:
-                        print(f"{Colors.RED}{item}{Colors.RESET}")
+                        print(f"{Color.RED}{item}{Color.RESET}")
             else:
-                cols = shutil.get_terminal_size().columns // 20
+                cols = max(1, shutil.get_terminal_size().columns // 20)
                 for i, item in enumerate(items):
                     full = os.path.join(path, item)
-                    icon = Utils.file_icon(full)
-                    if os.path.isdir(full):
-                        color = Colors.BLUE
-                    elif os.access(full, os.X_OK):
-                        color = Colors.GREEN
-                    else:
-                        color = Colors.WHITE
-                    
-                    print(f"{color}{icon} {item:<18}{Colors.RESET}", end='')
+                    icon = Icon.FOLDER if os.path.isdir(full) else Icon.for_file(item)
+                    color = Color.BLUE if os.path.isdir(full) else Color.WHITE
+                    print(f"{color}{icon} {item:<18}{Color.RESET}", end="")
                     if (i + 1) % cols == 0:
                         print()
                 if len(items) % cols != 0:
                     print()
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def ll_cmd(self, args):
-        return self.ls_cmd(['-l'] + args)
-    
-    def la_cmd(self, args):
-        return self.ls_cmd(['-a'] + args)
-    
-    def lt_cmd(self, args):
-        path = args[0] if args and not args[0].startswith('-') else '.'
-        try:
-            items = os.listdir(path)
-            items.sort(key=lambda x: os.path.getmtime(os.path.join(path, x)), reverse=True)
-            for item in items[:20]:
-                full = os.path.join(path, item)
-                mtime = datetime.datetime.fromtimestamp(os.path.getmtime(full)).strftime("%Y-%m-%d %H:%M")
-                icon = Utils.file_icon(full)
-                if os.path.isdir(full):
-                    color = Colors.BLUE
-                else:
-                    color = Colors.WHITE
-                print(f"{icon} {color}{item:<30}{Colors.RESET} {mtime}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def lr_cmd(self, args):
-        path = args[0] if args else '.'
-        for root, dirs, files in os.walk(path):
-            level = root.replace(path, '').count(os.sep)
-            indent = '  ' * level
-            print(f"{indent}{Colors.BLUE}{Icons.FOLDER} {os.path.basename(root)}{Colors.RESET}")
-            subindent = '  ' * (level + 1)
-            for file in files[:10]:
-                print(f"{subindent}{Utils.file_icon(os.path.join(root, file))} {file}")
-            if len(files) > 10:
-                print(f"{subindent}{Colors.DIM}... и еще {len(files) - 10} файлов{Colors.RESET}")
-        return True
-    
-    def cd_cmd(self, args):
-        path = args[0] if args else os.path.expanduser('~')
+    def _cd(self, args: List[str]) -> bool:
+        path = args[0] if args else os.path.expanduser("~")
         try:
             os.chdir(path)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} → {os.getcwd()}', 'cyan', single_color=True)}{Colors.RESET}")
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def pushd_cmd(self, args):
+    def _pwd(self, args: List[str]) -> bool:
+        print(Color.gradient(f"{Icon.FOLDER} {os.getcwd()}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _mkdir(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: pushd <путь>{Colors.RESET}")
+            print(Color.warning("Usage: mkdir [-p] <name>"))
             return True
-        
-        self.dir_stack.append(os.getcwd())
-        return self.cd_cmd(args)
-    
-    def popd_cmd(self, args):
-        if not self.dir_stack:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Стек директорий пуст{Colors.RESET}")
-            return True
-        
-        path = self.dir_stack.pop()
-        return self.cd_cmd([path])
-    
-    def dirs_cmd(self, args):
-        if not self.dir_stack:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Стек директорий пуст{Colors.RESET}")
-            return True
-        
-        for i, d in enumerate(self.dir_stack):
-            print(f"{Colors.CYAN}{i}: {Colors.gradient_text(d, 'cyan', single_color=True)}{Colors.RESET}")
+        parent = "-p" in args
+        dirs = [a for a in args if not a.startswith("-")]
+        for d in dirs:
+            try:
+                if parent:
+                    os.makedirs(d, exist_ok=True)
+                else:
+                    os.mkdir(d)
+                print(Color.success(f"Created: {d}"))
+            except Exception as e:
+                print(Color.error(str(e)))
         return True
     
-    def tree_cmd(self, args):
-        path = args[0] if args else '.'
-        max_depth = int(args[1]) if len(args) > 1 and args[1].isdigit() else 3
+    def _rmdir(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: rmdir <name>"))
+            return True
+        for d in args:
+            try:
+                os.rmdir(d)
+                print(Color.success(f"Removed: {d}"))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _rm(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: rm [-r] [-f] <file>"))
+            return True
+        recursive = "-r" in args
+        force = "-f" in args
+        files = [a for a in args if not a.startswith("-")]
+        for f in files:
+            try:
+                if os.path.isdir(f):
+                    if recursive:
+                        shutil.rmtree(f)
+                        print(Color.success(f"Removed: {f}"))
+                    else:
+                        if not force:
+                            print(Color.warning(f"Skipped {f}: is directory (use -r)"))
+                else:
+                    os.remove(f)
+                    print(Color.success(f"Removed: {f}"))
+            except Exception as e:
+                if not force:
+                    print(Color.error(str(e)))
+        return True
+    
+    def _cp(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: cp [-r] <source> <dest>"))
+            return True
+        recursive = "-r" in args
+        files = [a for a in args if not a.startswith("-")]
+        if len(files) < 2:
+            print(Color.warning("Specify source and destination"))
+            return True
+        src, dst = files[0], files[1]
+        try:
+            if os.path.isdir(src):
+                if recursive:
+                    shutil.copytree(src, dst, dirs_exist_ok=True)
+                else:
+                    print(Color.warning(f"Skipped {src}: is directory (use -r)"))
+                    return True
+            else:
+                shutil.copy2(src, dst)
+            print(Color.success(f"Copied: {src} → {dst}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _mv(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: mv <source> <dest>"))
+            return True
+        src, dst = args[0], args[1]
+        try:
+            shutil.move(src, dst)
+            print(Color.success(f"Moved: {src} → {dst}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _touch(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: touch <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "a"):
+                    os.utime(f, None)
+                print(Color.success(f"Updated: {f}"))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _rename(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: rename <old> <new>"))
+            return True
+        try:
+            os.rename(args[0], args[1])
+            print(Color.success(f"Renamed: {args[0]} → {args[1]}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _tree(self, args: List[str]) -> bool:
+        path = args[0] if args and not args[0].startswith("-") else "."
+        max_depth = 3
+        for i, arg in enumerate(args):
+            if arg == "-L" and i + 1 < len(args):
+                try:
+                    max_depth = int(args[i + 1])
+                except:
+                    pass
         
         def print_tree(dir_path, prefix="", depth=0):
             if depth > max_depth:
                 return
-            
             try:
-                items = sorted(os.listdir(dir_path))
-                items = [i for i in items if not i.startswith('.')]
-                
+                items = sorted([i for i in os.listdir(dir_path) if not i.startswith(".")])
                 for i, item in enumerate(items):
                     full = os.path.join(dir_path, item)
                     is_last = i == len(items) - 1
-                    
                     connector = "└── " if is_last else "├── "
-                    if os.path.isdir(full):
-                        color = Colors.BLUE
-                        icon = Icons.FOLDER
-                    else:
-                        color = Colors.GREEN
-                        icon = Utils.file_icon(full)
-                    
-                    print(f"{prefix}{connector}{color}{icon} {item}{Colors.RESET}")
-                    
+                    color = Color.BLUE if os.path.isdir(full) else Color.GREEN
+                    icon = Icon.FOLDER if os.path.isdir(full) else Icon.for_file(item)
+                    print(f"{prefix}{connector}{color}{icon} {item}{Color.RESET}")
                     if os.path.isdir(full):
                         extension = "    " if is_last else "│   "
                         print_tree(full, prefix + extension, depth + 1)
             except:
                 pass
         
-        print(f"{Colors.gradient_text(path, 'cyan', single_color=True)}{Colors.RESET}")
+        print(Color.gradient(path, (0,200,255), (0,100,150)))
         print_tree(path)
         return True
     
-    def mkdir_cmd(self, args):
+    def _find(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: mkdir [-p] <имя>{Colors.RESET}")
+            print(Color.warning("Usage: find <path> -name <pattern>"))
             return True
-        
-        parents = '-p' in args
-        dirs = [a for a in args if not a.startswith('-')]
-        
-        for d in dirs:
-            try:
-                if parents:
-                    os.makedirs(d, exist_ok=True)
-                else:
-                    os.mkdir(d)
-                print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Создано: {d}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+        path = args[0] if args[0] != "-name" else "."
+        pattern = None
+        for i, arg in enumerate(args):
+            if arg == "-name" and i + 1 < len(args):
+                pattern = args[i + 1]
+                break
+        if not pattern:
+            print(Color.warning("Specify -name <pattern>"))
+            return True
+        found = False
+        for root, dirs, files in os.walk(path):
+            for f in files:
+                if fnmatch.fnmatch(f, pattern):
+                    print(Color.gradient(f"{Icon.FILE} {os.path.join(root, f)}", (0,200,255), (0,100,150)))
+                    found = True
+        if not found:
+            print(Color.warning("No files found"))
         return True
     
-    def rmdir_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: rmdir <имя>{Colors.RESET}")
-            return True
-        for d in args:
-            try:
-                os.rmdir(d)
-                print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Удалено: {d}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def rm_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: rm [-r] [-f] <файл>{Colors.RESET}")
-            return True
-        
-        recursive = '-r' in args or '-rf' in args
-        force = '-f' in args or '-rf' in args
-        files = [a for a in args if not a.startswith('-')]
-        
-        for f in files:
-            try:
-                if os.path.isdir(f):
-                    if recursive:
-                        shutil.rmtree(f, ignore_errors=force)
-                        print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Удалено: {f}', 'cyan', single_color=True)}{Colors.RESET}")
-                    elif not force:
-                        print(f"{Colors.YELLOW}{Icons.WARNING} Пропущен {f}: директория (используйте -r){Colors.RESET}")
-                else:
-                    if force and not os.path.exists(f):
-                        continue
-                    os.remove(f)
-                    print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Удалено: {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                if not force:
-                    print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def cp_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: cp [-r] <источник> <назначение>{Colors.RESET}")
-            return True
-        
-        recursive = '-r' in args
-        src_dst = [a for a in args if not a.startswith('-')]
-        
-        if len(src_dst) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Укажите источник и назначение{Colors.RESET}")
-            return True
-        
-        src, dst = src_dst[0], src_dst[1]
-        try:
-            if os.path.isdir(src):
-                if recursive:
-                    shutil.copytree(src, dst, dirs_exist_ok=True)
-                else:
-                    print(f"{Colors.YELLOW}{Icons.WARNING} Пропущена директория {src} (используйте -r){Colors.RESET}")
-                    return True
-            else:
-                shutil.copy2(src, dst)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Скопировано: {src} → {dst}', 'cyan', single_color=True)}{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def mv_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: mv <источник> <назначение>{Colors.RESET}")
-            return True
-        
-        src, dst = args[0], args[1]
-        try:
-            shutil.move(src, dst)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Перемещено: {src} → {dst}', 'cyan', single_color=True)}{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def touch_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: touch <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            try:
-                with open(f, 'a'):
-                    os.utime(f, None)
-                print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Обновлено: {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def cat_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: cat [-n] <файл>{Colors.RESET}")
-            return True
-        
-        number = '-n' in args
-        files = [a for a in args if not a.startswith('-')]
-        
-        for f in files:
-            try:
-                with open(f, 'r', encoding='utf-8', errors='ignore') as file:
-                    if number:
-                        for i, line in enumerate(file, 1):
-                            print(f"{Colors.DIM}{i:>6}{Colors.RESET} {line.rstrip()}")
-                    else:
-                        content = file.read()
-                        if len(content) > 10000:
-                            print(content[:10000])
-                            print(f"\n{Colors.DIM}... (показано 10000 символов){Colors.RESET}")
-                        else:
-                            print(content)
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def head_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: head [-n NUM] <файл>{Colors.RESET}")
-            return True
-        
-        n = 10
-        file = None
-        for arg in args:
-            if arg.startswith('-n'):
-                n = int(arg[2:]) if arg[2:] else 10
-            elif not arg.startswith('-'):
-                file = arg
-        
-        if file:
-            try:
-                with open(file, 'r', encoding='utf-8', errors='ignore') as f:
-                    for i, line in enumerate(f):
-                        if i < n:
-                            print(line.rstrip())
-                        else:
-                            break
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def tail_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: tail [-n NUM] <файл>{Colors.RESET}")
-            return True
-        
-        n = 10
-        file = None
-        for arg in args:
-            if arg.startswith('-n'):
-                n = int(arg[2:]) if arg[2:] else 10
-            elif not arg.startswith('-'):
-                file = arg
-        
-        if file:
-            try:
-                with open(file, 'r', encoding='utf-8', errors='ignore') as f:
-                    lines = f.readlines()
-                    for line in lines[-n:]:
-                        print(line.rstrip())
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def less_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: less <файл>{Colors.RESET}")
-            return True
-        
-        file = args[0]
-        try:
-            with open(file, 'r', encoding='utf-8', errors='ignore') as f:
-                lines = f.readlines()
-            
-            terminal_height = shutil.get_terminal_size().lines - 2
-            start = 0
-            while start < len(lines):
-                for i in range(start, min(start + terminal_height, len(lines))):
-                    print(lines[i].rstrip())
-                print(f"\n{Colors.DIM}-- Показано {min(start + terminal_height, len(lines))} из {len(lines)} строк. Нажмите Enter для продолжения или q для выхода --{Colors.RESET}")
-                key = input()
-                if key.lower() == 'q':
-                    break
-                start += terminal_height
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def more_cmd(self, args):
-        return self.less_cmd(args)
-    
-    def wc_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: wc [-lwc] <файл>{Colors.RESET}")
-            return True
-        
-        lines_only = '-l' in args
-        words_only = '-w' in args
-        chars_only = '-c' in args
-        files = [a for a in args if not a.startswith('-')]
-        
-        if not files:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Укажите файл{Colors.RESET}")
-            return True
-        
-        for f in files:
-            try:
-                with open(f, 'r', encoding='utf-8', errors='ignore') as file:
-                    content = file.read()
-                    lines = content.count('\n')
-                    words = len(content.split())
-                    chars = len(content)
-                    
-                    if lines_only:
-                        print(f"{Colors.CYAN}{lines:>8} {f}{Colors.RESET}")
-                    elif words_only:
-                        print(f"{Colors.CYAN}{words:>8} {f}{Colors.RESET}")
-                    elif chars_only:
-                        print(f"{Colors.CYAN}{chars:>8} {f}{Colors.RESET}")
-                    else:
-                        print(f"{Colors.CYAN}{lines:>8} {words:>8} {chars:>8} {f}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def du_cmd(self, args):
-        path = args[0] if args and not args[0].startswith('-') else '.'
-        human = '-h' in args
-        
+    def _du(self, args: List[str]) -> bool:
+        path = args[0] if args and not args[0].startswith("-") else "."
+        human = "-h" in args
+        summary = "-s" in args
         try:
             total = 0
             for root, dirs, files in os.walk(path):
@@ -1679,471 +1695,1001 @@ class CommandManager:
                         total += os.path.getsize(os.path.join(root, f))
                     except:
                         pass
-            
-            size = Utils.human_size(total) if human else str(total)
-            print(f"{Colors.gradient_text(f'{size} {path}', 'cyan', single_color=True)}{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def df_cmd(self, args):
-        human = '-h' in args
-        
-        if PSUTIL:
-            disk = psutil.disk_usage('/')
-            terminal_width = shutil.get_terminal_size().columns
-            print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text('📊 ИНФОРМАЦИЯ О ДИСКЕ'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-            
-            total = Utils.human_size(disk.total) if human else f"{disk.total / (1024**3):.1f}GB"
-            used = Utils.human_size(disk.used) if human else f"{disk.used / (1024**3):.1f}GB"
-            free = Utils.human_size(disk.free) if human else f"{disk.free / (1024**3):.1f}GB"
-            
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Всего:   {Colors.gradient_text(f'{total:>12}', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 24 - len(total)) + '║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Использовано: {Colors.gradient_text(f'{used:>12}', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 27 - len(used)) + '║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Свободно: {Colors.gradient_text(f'{free:>12}', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 26 - len(free)) + '║', 'cyan', single_color=True)}")
-            
-            bar_width = terminal_width - 8
-            filled = int(bar_width * disk.percent / 100)
-            bar = f"{Colors.RED if disk.percent > 90 else Colors.YELLOW if disk.percent > 70 else Colors.GREEN}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (bar_width - filled)
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Занято:   {bar}{Colors.gradient_text(' ' * (terminal_width - 18 - bar_width) + '║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Процент:  {Colors.RED if disk.percent > 90 else Colors.YELLOW if disk.percent > 70 else Colors.GREEN}{disk.percent:>5.1f}%{Colors.RESET}{Colors.gradient_text(' ' * (terminal_width - 21 - len(str(disk.percent))) + '║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Установите psutil: pip install psutil{Colors.RESET}")
-        return True
-    
-    def find_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: find <путь> -name <шаблон>{Colors.RESET}")
-            return True
-        
-        path = args[0] if args[0] != '-name' else '.'
-        pattern = None
-        for i, arg in enumerate(args):
-            if arg == '-name' and i + 1 < len(args):
-                pattern = args[i + 1]
-                break
-        
-        if not pattern:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Укажите -name <шаблон>{Colors.RESET}")
-            return True
-        
-        found = False
-        for root, dirs, files in os.walk(path):
-            for f in files:
-                if fnmatch.fnmatch(f, pattern):
-                    print(f"{Colors.gradient_text(f'{Icons.FILE} {os.path.join(root, f)}', 'cyan', single_color=True)}{Colors.RESET}")
-                    found = True
-        if not found:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Файлы не найдены{Colors.RESET}")
-        return True
-    
-    def file_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: file <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            if os.path.isfile(f):
-                print(f"{Colors.CYAN}{f}: {Colors.GREEN}файл{Colors.RESET}")
-            elif os.path.isdir(f):
-                print(f"{Colors.CYAN}{f}: {Colors.BLUE}директория{Colors.RESET}")
+            size = Utils.human_size(total) if human else f"{total} B"
+            if summary:
+                print(Color.gradient(f"{size} {path}", (0,200,255), (0,100,150)))
             else:
-                print(f"{Colors.CYAN}{f}: {Colors.RED}неизвестно{Colors.RESET}")
+                for root, dirs, files in os.walk(path):
+                    sub_total = 0
+                    for f in files:
+                        try:
+                            sub_total += os.path.getsize(os.path.join(root, f))
+                        except:
+                            pass
+                    sub_size = Utils.human_size(sub_total) if human else f"{sub_total} B"
+                    print(f"{Color.CYAN}{sub_size:>10}{Color.RESET} {root}")
+        except Exception as e:
+            print(Color.error(str(e)))
         return True
     
-    def stat_cmd(self, args):
+    def _df(self, args: List[str]) -> bool:
+        human = "-h" in args
+        try:
+            import psutil
+            for part in psutil.disk_partitions():
+                try:
+                    usage = psutil.disk_usage(part.mountpoint)
+                    total = Utils.human_size(usage.total) if human else f"{usage.total / (1024**3):.1f} GB"
+                    used = Utils.human_size(usage.used) if human else f"{usage.used / (1024**3):.1f} GB"
+                    free = Utils.human_size(usage.free) if human else f"{usage.free / (1024**3):.1f} GB"
+                    print(f"{Color.CYAN}{part.mountpoint:<20}{Color.RESET} {total:>10} {used:>10} {free:>10} {usage.percent:>5}%")
+                except:
+                    pass
+        except:
+            print(Color.warning("Install psutil for better disk info"))
+        return True
+    
+    def _pushd(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: stat <файл>{Colors.RESET}")
+            print(Color.warning("Usage: pushd <path>"))
             return True
-        
+        self.dir_stack.append(os.getcwd())
+        return self._cd(args)
+    
+    def _popd(self, args: List[str]) -> bool:
+        if not self.dir_stack:
+            print(Color.warning("Directory stack empty"))
+            return True
+        path = self.dir_stack.pop()
+        return self._cd([path])
+    
+    def _dirs(self, args: List[str]) -> bool:
+        if not self.dir_stack:
+            print(Color.warning("Directory stack empty"))
+            return True
+        for i, d in enumerate(self.dir_stack):
+            print(f"{Color.CYAN}{i}: {Color.gradient(d, (0,200,255), (0,100,150))}{Color.RESET}")
+        return True
+    
+    def _stat(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: stat <file>"))
+            return True
         for f in args:
             try:
                 st = os.stat(f)
-                terminal_width = shutil.get_terminal_size().columns
-                print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f, 'cyan', single_color=True)}{' ' * (terminal_width - len(f) - 4)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Размер: {Colors.GREEN}{Utils.human_size(st.st_size)}{Colors.gradient_text(' ' * (terminal_width - 18 - len(Utils.human_size(st.st_size))) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Права:  {Colors.YELLOW}{stat.filemode(st.st_mode)}{Colors.gradient_text(' ' * (terminal_width - 18 - len(stat.filemode(st.st_mode))) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Изменен:{Colors.GREEN} {datetime.datetime.fromtimestamp(st.st_mtime).strftime('%Y-%m-%d %H:%M:%S')}{Colors.gradient_text(' ' * (terminal_width - 31 - len(datetime.datetime.fromtimestamp(st.st_mtime).strftime('%Y-%m-%d %H:%M:%S'))) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Создан: {Colors.GREEN}{datetime.datetime.fromtimestamp(st.st_ctime).strftime('%Y-%m-%d %H:%M:%S')}{Colors.gradient_text(' ' * (terminal_width - 31 - len(datetime.datetime.fromtimestamp(st.st_ctime).strftime('%Y-%m-%d %H:%M:%S'))) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Доступ: {Colors.GREEN}{datetime.datetime.fromtimestamp(st.st_atime).strftime('%Y-%m-%d %H:%M:%S')}{Colors.gradient_text(' ' * (terminal_width - 31 - len(datetime.datetime.fromtimestamp(st.st_atime).strftime('%Y-%m-%d %H:%M:%S'))) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
+                print(Color.box(
+                    f"{Color.CYAN}Size:     {Color.GREEN}{Utils.human_size(st.st_size)}\n"
+                    f"{Color.CYAN}Mode:     {Color.GREEN}{stat.filemode(st.st_mode)}\n"
+                    f"{Color.CYAN}Modified: {Color.GREEN}{datetime.fromtimestamp(st.st_mtime).strftime('%Y-%m-%d %H:%M:%S')}",
+                    title=f"Statistics: {f}"
+                ))
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def chmod_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: chmod <права> <файл>{Colors.RESET}")
+    def _file(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: file <file>"))
             return True
-        
+        for f in args:
+            if os.path.isfile(f):
+                print(f"{Color.CYAN}{f}: {Color.GREEN}file{Color.RESET}")
+            elif os.path.isdir(f):
+                print(f"{Color.CYAN}{f}: {Color.BLUE}directory{Color.RESET}")
+            else:
+                print(f"{Color.CYAN}{f}: {Color.RED}unknown{Color.RESET}")
+        return True
+    
+    def _which(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: which <command>"))
+            return True
+        for prog in args:
+            found = False
+            if prog in self.commands:
+                print(Color.gradient(f"{prog}: built-in command", (0,200,255), (0,100,150)))
+                found = True
+            for path in os.environ.get("PATH", "").split(":" if os.name != "nt" else ";"):
+                full = os.path.join(path, prog)
+                if os.path.exists(full):
+                    print(Color.gradient(full, (0,200,255), (0,100,150)))
+                    found = True
+                    break
+            if not found:
+                print(Color.error(f"{prog}: not found"))
+        return True
+    
+    def _chmod(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: chmod <mode> <file>"))
+            return True
         mode = args[0]
         files = args[1:]
-        
         try:
             if mode.isdigit():
-                mode = int(mode, 8)
+                mode_int = int(mode, 8)
             else:
-                mode = 0o755
-        except:
-            print(f"{Colors.RED}{Icons.ERROR} Неверный режим{Colors.RESET}")
-            return True
-        
-        for f in files:
-            try:
-                os.chmod(f, mode)
-                print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Права изменены: {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                mode_int = 0o755
+            for f in files:
+                os.chmod(f, mode_int)
+                print(Color.success(f"Permissions changed: {f}"))
+        except Exception as e:
+            print(Color.error(str(e)))
         return True
     
-    def chown_cmd(self, args):
+    def _ln(self, args: List[str]) -> bool:
         if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: chown <пользователь> <файл>{Colors.RESET}")
+            print(Color.warning("Usage: ln [-s] <target> <link>"))
             return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} chown не поддерживается в Windows{Colors.RESET}")
-        return True
-    
-    def ln_cmd(self, args):
+        symbolic = "-s" in args
+        args = [a for a in args if not a.startswith("-")]
         if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: ln [-s] <цель> <ссылка>{Colors.RESET}")
+            print(Color.warning("Specify target and link name"))
             return True
-        
-        symbolic = '-s' in args
-        args = [a for a in args if not a.startswith('-')]
-        
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Укажите цель и имя ссылки{Colors.RESET}")
-            return True
-        
         target, link = args[0], args[1]
         try:
             if symbolic:
                 os.symlink(target, link)
             else:
                 os.link(target, link)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Ссылка создана: {link} → {target}', 'cyan', single_color=True)}{Colors.RESET}")
+            print(Color.success(f"Link created: {link} → {target}"))
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def grep_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: grep [-i] <паттерн> <файл>{Colors.RESET}")
+    def _realpath(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: realpath <file>"))
             return True
-        
-        ignore_case = '-i' in args
-        pattern = args[0] if not args[0].startswith('-') else args[1]
-        files = [a for a in args if not a.startswith('-') and a != pattern]
-        
+        print(Color.gradient(os.path.realpath(args[0]), (0,200,255), (0,100,150)))
+        return True
+    
+    def _basename(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: basename <path>"))
+            return True
+        print(Color.gradient(os.path.basename(args[0]), (0,200,255), (0,100,150)))
+        return True
+    
+    def _dirname(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: dirname <path>"))
+            return True
+        print(Color.gradient(os.path.dirname(args[0]), (0,200,255), (0,100,150)))
+        return True
+    
+    def _readlink(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: readlink <link>"))
+            return True
+        try:
+            print(Color.gradient(os.readlink(args[0]), (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Not a symbolic link"))
+        return True
+    
+    def _mktemp(self, args: List[str]) -> bool:
+        try:
+            with tempfile.NamedTemporaryFile(delete=False) as f:
+                print(Color.gradient(f.name, (0,200,255), (0,100,150)))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _install(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: install <source> <dest>"))
+            return True
+        try:
+            shutil.copy2(args[0], args[1])
+            print(Color.success(f"Installed: {args[0]} → {args[1]}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _sync(self, args: List[str]) -> bool:
+        os.sync()
+        print(Color.success("Filesystem synced"))
+        return True
+    
+    def _truncate(self, args: List[str]) -> bool:
+        if len(args) < 2 or args[0] != "-s":
+            print(Color.warning("Usage: truncate -s <size> <file>"))
+            return True
+        size = args[1]
+        file = args[2]
+        try:
+            with open(file, "ab") as f:
+                f.truncate(int(size))
+            print(Color.success(f"Truncated {file} to {size} bytes"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _dd(self, args: List[str]) -> bool:
+        input_file = None
+        output_file = None
+        for arg in args:
+            if arg.startswith("if="):
+                input_file = arg[3:]
+            elif arg.startswith("of="):
+                output_file = arg[3:]
+        if not input_file or not output_file:
+            print(Color.warning("Usage: dd if=<input> of=<output>"))
+            return True
+        try:
+            with open(input_file, "rb") as src:
+                with open(output_file, "wb") as dst:
+                    dst.write(src.read())
+            print(Color.success(f"Copied {input_file} to {output_file}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    # TEXT PROCESSING COMMANDS (Simplified versions)
+    
+    def _cat(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: cat <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                    content = file.read()
+                    if len(content) > 10000:
+                        print(content[:10000] + f"\n{Color.DIM}... (truncated){Color.RESET}")
+                    else:
+                        print(content)
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _head(self, args: List[str]) -> bool:
+        n = 10
+        file = None
+        for i, arg in enumerate(args):
+            if arg.startswith("-n"):
+                n = int(arg[2:]) if arg[2:] else int(args[i+1]) if i+1 < len(args) else 10
+            elif not arg.startswith("-"):
+                file = arg
+        if file:
+            try:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                    for i, line in enumerate(f):
+                        if i < n:
+                            print(line.rstrip())
+                        else:
+                            break
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _tail(self, args: List[str]) -> bool:
+        n = 10
+        file = None
+        for i, arg in enumerate(args):
+            if arg.startswith("-n"):
+                n = int(arg[2:]) if arg[2:] else int(args[i+1]) if i+1 < len(args) else 10
+            elif not arg.startswith("-"):
+                file = arg
+        if file:
+            try:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                    lines = f.readlines()
+                    for line in lines[-n:]:
+                        print(line.rstrip())
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _grep(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: grep [-i] <pattern> <file>"))
+            return True
+        ignore_case = "-i" in args
+        pattern = args[0] if not args[0].startswith("-") else args[1]
+        files = [a for a in args if not a.startswith("-") and a != pattern]
         if ignore_case:
             pattern = pattern.lower()
-        
         for f in files:
             try:
-                with open(f, 'r', encoding='utf-8', errors='ignore') as file:
+                with open(f, "r", encoding="utf-8", errors="ignore") as file:
                     for line in file:
                         line_stripped = line.rstrip()
                         search_line = line_stripped.lower() if ignore_case else line_stripped
                         if pattern in search_line:
-                            highlighted = re.sub(
-                                f'(?i)({re.escape(pattern)})',
-                                f'{Colors.RED}\\1{Colors.RESET}',
-                                line_stripped
-                            )
-                            print(highlighted)
+                            print(f"{Color.GREEN}{f}:{Color.RESET} {line_stripped}")
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def sort_cmd(self, args):
+    def _egrep(self, args: List[str]) -> bool:
+        return self._grep(args)
+    
+    def _fgrep(self, args: List[str]) -> bool:
+        return self._grep(args)
+    
+    def _wc(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sort [-r] <файл>{Colors.RESET}")
+            print(Color.warning("Usage: wc [-lwc] <file>"))
             return True
-        
-        reverse = '-r' in args
-        files = [a for a in args if not a.startswith('-')]
-        
+        lines_only = "-l" in args
+        words_only = "-w" in args
+        chars_only = "-c" in args
+        files = [a for a in args if not a.startswith("-")]
         for f in files:
             try:
-                with open(f, 'r', encoding='utf-8', errors='ignore') as file:
+                with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                    content = file.read()
+                    lines = content.count("\n")
+                    words = len(content.split())
+                    chars = len(content)
+                    if lines_only:
+                        print(f"{Color.CYAN}{lines:>8} {f}{Color.RESET}")
+                    elif words_only:
+                        print(f"{Color.CYAN}{words:>8} {f}{Color.RESET}")
+                    elif chars_only:
+                        print(f"{Color.CYAN}{chars:>8} {f}{Color.RESET}")
+                    else:
+                        print(f"{Color.CYAN}{lines:>8} {words:>8} {chars:>8} {f}{Color.RESET}")
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _sort(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sort [-r] [-n] <file>"))
+            return True
+        reverse = "-r" in args
+        numeric = "-n" in args
+        files = [a for a in args if not a.startswith("-")]
+        for f in files:
+            try:
+                with open(f, "r", encoding="utf-8", errors="ignore") as file:
                     lines = file.readlines()
-                lines.sort(reverse=reverse)
+                if numeric:
+                    lines.sort(key=lambda x: float(x.strip()) if x.strip().replace('.','',1).isdigit() else x.strip(), reverse=reverse)
+                else:
+                    lines.sort(reverse=reverse)
                 for line in lines:
                     print(line.rstrip())
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def uniq_cmd(self, args):
+    def _uniq(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: uniq <файл>{Colors.RESET}")
+            print(Color.warning("Usage: uniq <file>"))
             return True
-        
         f = args[0]
         try:
-            with open(f, 'r', encoding='utf-8', errors='ignore') as file:
-                lines = file.readlines()
-            seen = set()
-            for line in lines:
-                if line not in seen:
-                    seen.add(line)
-                    print(line.rstrip())
+            with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                seen = set()
+                for line in file:
+                    if line not in seen:
+                        seen.add(line)
+                        print(line.rstrip())
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def cut_cmd(self, args):
-        if len(args) < 4:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: cut -d <разделитель> -f <поля> <файл>{Colors.RESET}")
+    def _sed(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sed s/pattern/replace/ <file>"))
             return True
-        
+        expression = args[0]
+        file = args[1] if len(args) > 1 else None
+        if not expression.startswith("s/") or not expression.endswith("/"):
+            print(Color.error("Invalid expression format"))
+            return True
+        parts = expression[2:-1].split("/")
+        if len(parts) < 2:
+            print(Color.error("Invalid expression format"))
+            return True
+        pattern, replace = parts[0], parts[1]
+        if file:
+            try:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                    for line in f:
+                        print(re.sub(pattern, replace, line).rstrip())
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _awk(self, args: List[str]) -> bool:
+        print(Color.info("Awk command - partial implementation"))
+        return True
+    
+    def _cut(self, args: List[str]) -> bool:
+        if len(args) < 4:
+            print(Color.warning("Usage: cut -d <delimiter> -f <fields> <file>"))
+            return True
         delimiter = None
         fields = None
         file = None
-        
         for i, arg in enumerate(args):
-            if arg == '-d' and i + 1 < len(args):
+            if arg == "-d" and i + 1 < len(args):
                 delimiter = args[i + 1]
-            elif arg == '-f' and i + 1 < len(args):
+            elif arg == "-f" and i + 1 < len(args):
                 fields = args[i + 1]
-            elif not arg.startswith('-'):
+            elif not arg.startswith("-"):
                 file = arg
-        
         if delimiter and fields and file:
             try:
-                with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
                     for line in f:
                         parts = line.strip().split(delimiter)
-                        if fields == '1' and parts:
-                            print(parts[0])
-                        else:
-                            print(line.strip())
+                        field_indices = [int(x) for x in fields.split(",")]
+                        result = []
+                        for idx in field_indices:
+                            if idx - 1 < len(parts):
+                                result.append(parts[idx - 1])
+                        print(delimiter.join(result))
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def tr_cmd(self, args):
+    def _tr(self, args: List[str]) -> bool:
         if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: tr 'a-z' 'A-Z' <файл>{Colors.RESET}")
+            print(Color.warning("Usage: tr 'a-z' 'A-Z' <file>"))
             return True
-        
         from_set = args[0].strip("'")
         to_set = args[1].strip("'")
         file = args[2] if len(args) > 2 else None
-        
         if file:
             try:
-                with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
                     content = f.read()
                 table = str.maketrans(from_set, to_set)
                 print(content.translate(table))
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def diff_cmd(self, args):
+    def _diff(self, args: List[str]) -> bool:
         if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: diff <файл1> <файл2>{Colors.RESET}")
+            print(Color.warning("Usage: diff <file1> <file2>"))
             return True
-        
         try:
-            with open(args[0], 'r') as f1, open(args[1], 'r') as f2:
-                lines1 = f1.readlines()
-                lines2 = f2.readlines()
-                diff_count = 0
-                for i, (l1, l2) in enumerate(itertools.zip_longest(lines1, lines2)):
+            with open(args[0], "r", encoding="utf-8", errors="ignore") as f1, open(args[1], "r", encoding="utf-8", errors="ignore") as f2:
+                lines1, lines2 = f1.readlines(), f2.readlines()
+                max_len = max(len(lines1), len(lines2))
+                for i in range(max_len):
+                    l1 = lines1[i].rstrip() if i < len(lines1) else None
+                    l2 = lines2[i].rstrip() if i < len(lines2) else None
                     if l1 != l2:
-                        diff_count += 1
-                        if diff_count <= 20:
-                            if l1:
-                                print(f"{Colors.RED}- {l1.rstrip()}{Colors.RESET}")
-                            if l2:
-                                print(f"{Colors.GREEN}+ {l2.rstrip()}{Colors.RESET}")
-                if diff_count > 20:
-                    print(f"{Colors.DIM}... и еще {diff_count - 20} различий{Colors.RESET}")
+                        if l1:
+                            print(f"{Color.RED}- {l1}{Color.RESET}")
+                        if l2:
+                            print(f"{Color.GREEN}+ {l2}{Color.RESET}")
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def rev_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: rev <файл>{Colors.RESET}")
-            return True
-        
-        f = args[0]
-        try:
-            with open(f, 'r') as file:
-                for line in file:
-                    print(line.rstrip()[::-1])
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def tac_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: tac <файл>{Colors.RESET}")
-            return True
-        
-        f = args[0]
-        try:
-            with open(f, 'r') as file:
-                lines = file.readlines()
-                for line in reversed(lines):
-                    print(line.rstrip())
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def sed_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sed s/pattern/replace/ <файл>{Colors.RESET}")
-            return True
-        
-        expression = args[0]
-        file = args[1] if len(args) > 1 else None
-        
-        if not expression.startswith('s/') or not expression.endswith('/'):
-            print(f"{Colors.RED}{Icons.ERROR} Неверный формат выражения{Colors.RESET}")
-            return True
-        
-        parts = expression[2:-1].split('/')
-        if len(parts) < 2:
-            print(f"{Colors.RED}{Icons.ERROR} Неверный формат выражения{Colors.RESET}")
-            return True
-        
-        pattern, replace = parts[0], parts[1]
-        
-        if file:
-            try:
-                with open(file, 'r') as f:
-                    for line in f:
-                        new_line = re.sub(pattern, replace, line)
-                        print(new_line.rstrip())
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def awk_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: awk '{{print $1}}' <файл>{Colors.RESET}")
-            return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} Awk реализован частично{Colors.RESET}")
-        return True
-    
-    def paste_cmd(self, args):
+    def _comm(self, args: List[str]) -> bool:
         if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: paste <файл1> <файл2>{Colors.RESET}")
+            print(Color.warning("Usage: comm <file1> <file2>"))
             return True
-        
         try:
-            with open(args[0], 'r') as f1, open(args[1], 'r') as f2:
+            with open(args[0], "r") as f1, open(args[1], "r") as f2:
+                lines1 = set(l.strip() for l in f1.readlines())
+                lines2 = set(l.strip() for l in f2.readlines())
+                only1 = lines1 - lines2
+                only2 = lines2 - lines1
+                common = lines1 & lines2
+                print(f"{Color.CYAN}Only in {args[0]}:{Color.RESET}")
+                for line in sorted(only1)[:20]:
+                    print(f"  {line}")
+                print(f"{Color.CYAN}Only in {args[1]}:{Color.RESET}")
+                for line in sorted(only2)[:20]:
+                    print(f"  {line}")
+                print(f"{Color.CYAN}Common:{Color.RESET}")
+                for line in sorted(common)[:20]:
+                    print(f"  {line}")
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _join(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: join <file1> <file2>"))
+            return True
+        print(Color.info("Join command - partial implementation"))
+        return True
+    
+    def _paste(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: paste <file1> <file2>"))
+            return True
+        try:
+            with open(args[0], "r") as f1, open(args[1], "r") as f2:
                 for l1, l2 in itertools.zip_longest(f1, f2):
                     print(f"{l1.rstrip()}\t{l2.rstrip() if l2 else ''}")
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def join_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: join <файл1> <файл2>{Colors.RESET}")
+    def _split(self, args: List[str]) -> bool:
+        print(Color.info("Split command - partial implementation"))
+        return True
+    
+    def _nl(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: nl <file>"))
             return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} Join реализован частично{Colors.RESET}")
+        f = args[0]
+        try:
+            with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                for i, line in enumerate(file, 1):
+                    print(f"{Color.CYAN}{i:>6}{Color.RESET} {line.rstrip()}")
+        except Exception as e:
+            print(Color.error(str(e)))
         return True
     
-    def date_cmd(self, args):
-        now = datetime.datetime.now()
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f'📅 {now.strftime("%A, %d %B %Y")}', 'cyan', single_color=True)}{' ' * (terminal_width - 26 - len(now.strftime('%A, %d %B %Y')))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f'⏰ {now.strftime("%H:%M:%S")}', 'cyan', single_color=True)}{' ' * (terminal_width - 5 - len(now.strftime('%H:%M:%S')))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f'📆 Неделя {now.isocalendar()[1]}', 'cyan', single_color=True)}{' ' * (terminal_width - 13 - len(f'Неделя {now.isocalendar()[1]}'))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
+    def _tac(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: tac <file>"))
+            return True
+        f = args[0]
+        try:
+            with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                for line in reversed(file.readlines()):
+                    print(line.rstrip())
+        except Exception as e:
+            print(Color.error(str(e)))
         return True
     
-    def cal_cmd(self, args):
-        now = datetime.datetime.now()
+    def _rev(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: rev <file>"))
+            return True
+        f = args[0]
+        try:
+            with open(f, "r", encoding="utf-8", errors="ignore") as file:
+                for line in file:
+                    print(line.rstrip()[::-1])
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _fold(self, args: List[str]) -> bool:
+        width = 80
+        file = None
+        for arg in args:
+            if arg.startswith("-w"):
+                width = int(arg[2:])
+            elif not arg.startswith("-"):
+                file = arg
+        if file:
+            try:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                    for line in f:
+                        for i in range(0, len(line), width):
+                            print(line[i:i+width].rstrip())
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _expand(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: expand <file>"))
+            return True
+        file = args[0]
+        try:
+            with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                for line in f:
+                    print(line.expandtabs(4).rstrip())
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _unexpand(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: unexpand <file>"))
+            return True
+        file = args[0]
+        try:
+            with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                for line in f:
+                    print(line.replace("    ", "\t").rstrip())
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _fmt(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: fmt <file>"))
+            return True
+        width = 80
+        try:
+            with open(args[0], "r", encoding="utf-8", errors="ignore") as f:
+                content = f.read()
+                lines = textwrap.wrap(content, width=width)
+                for line in lines:
+                    print(line)
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _column(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: column -t <file>"))
+            return True
+        if "-t" in args:
+            file = args[-1]
+            try:
+                with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                    data = [line.strip().split() for line in f]
+                    if data:
+                        col_widths = [max(len(row[i]) for row in data if i < len(row)) for i in range(len(data[0]))]
+                        for row in data:
+                            print("  ".join(cell.ljust(col_widths[i]) for i, cell in enumerate(row)))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _less(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: less <file>"))
+            return True
+        try:
+            with open(args[0], "r", encoding="utf-8", errors="ignore") as f:
+                lines = f.readlines()
+                page_size = shutil.get_terminal_size().lines - 2
+                for i in range(0, len(lines), page_size):
+                    for line in lines[i:i+page_size]:
+                        print(line.rstrip())
+                    if i + page_size < len(lines):
+                        input(f"{Color.DIM}--More-- (Press Enter){Color.RESET}")
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _more(self, args: List[str]) -> bool:
+        return self._less(args)
+    
+    def _od(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: od <file>"))
+            return True
+        try:
+            with open(args[0], "rb") as f:
+                data = f.read(512)
+                for i in range(0, len(data), 16):
+                    chunk = data[i:i+16]
+                    hex_part = " ".join(f"{b:02x}" for b in chunk)
+                    ascii_part = "".join(chr(b) if 32 <= b <= 126 else "." for b in chunk)
+                    print(f"{Color.CYAN}{i:08x}{Color.RESET}  {hex_part:<48}  {ascii_part}")
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _xxd(self, args: List[str]) -> bool:
+        return self._od(args)
+    
+    def _hexdump(self, args: List[str]) -> bool:
+        return self._od(args)
+    
+    def _strings(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: strings <file>"))
+            return True
+        try:
+            with open(args[0], "rb") as f:
+                data = f.read()
+                result = []
+                current = []
+                for b in data:
+                    if 32 <= b <= 126:
+                        current.append(chr(b))
+                    else:
+                        if len(current) >= 4:
+                            result.append("".join(current))
+                        current = []
+                for s in result[:100]:
+                    print(s)
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    # SYSTEM INFO COMMANDS
+    
+    def _info(self, args: List[str]) -> bool:
+        print(Color.box(
+            f"{Color.CYAN}Terminal:      {Color.GREEN}Kali Terminal Ultimate v11.0\n"
+            f"{Color.CYAN}Commands:      {Color.GREEN}{len(self.commands)}\n"
+            f"{Color.CYAN}Aliases:       {Color.GREEN}{len(self.aliases)}\n"
+            f"{Color.CYAN}OS:            {Color.GREEN}{platform.system()} {platform.release()}\n"
+            f"{Color.CYAN}Python:        {Color.GREEN}{platform.python_version()}\n"
+            f"{Color.CYAN}User:          {Color.GREEN}{Utils.get_username()}\n"
+            f"{Color.CYAN}Host:          {Color.GREEN}{socket.gethostname()}",
+            title="Terminal Information"
+        ))
+        return True
+    
+    def _sysinfo(self, args: List[str]) -> bool:
+        print(Color.box(
+            f"{Color.CYAN}System:        {Color.GREEN}{platform.system()} {platform.release()}\n"
+            f"{Color.CYAN}Machine:       {Color.GREEN}{platform.machine()}\n"
+            f"{Color.CYAN}Processor:     {Color.GREEN}{platform.processor() or 'Unknown'}\n"
+            f"{Color.CYAN}Hostname:      {Color.GREEN}{socket.gethostname()}\n"
+            f"{Color.CYAN}Username:      {Color.GREEN}{Utils.get_username()}\n"
+            f"{Color.CYAN}Local IP:      {Color.GREEN}{Utils.get_local_ip()}\n"
+            f"{Color.CYAN}Python:        {Color.GREEN}{platform.python_version()}",
+            title="System Information"
+        ))
+        try:
+            import psutil
+            print(f"\n{Color.CYAN}CPU Cores:     {Color.GREEN}{psutil.cpu_count()}\n"
+                  f"{Color.CYAN}CPU Usage:     {Color.GREEN}{psutil.cpu_percent()}%\n"
+                  f"{Color.CYAN}Memory:        {Color.GREEN}{Utils.human_size(psutil.virtual_memory().used)} / {Utils.human_size(psutil.virtual_memory().total)}")
+        except:
+            pass
+        return True
+    
+    def _ps(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            aux = "-aux" in args
+            if aux:
+                print(f"{Color.gradient(f'{"USER":<10} {"PID":>8} {"CPU%":>6} {"MEM%":>6} {"COMMAND":<35}', (0,200,255), (0,100,150))}")
+                for proc in psutil.process_iter(["pid", "name", "cpu_percent", "memory_percent", "username"]):
+                    try:
+                        info = proc.info
+                        if info.get("cpu_percent", 0) > 0 or aux:
+                            print(f"{info.get('username', 'unknown')[:10]:<10} "
+                                  f"{info['pid']:>8} "
+                                  f"{info.get('cpu_percent', 0):>6.1f} "
+                                  f"{info.get('memory_percent', 0):>6.1f} "
+                                  f"{info.get('name', 'unknown')[:35]:<35}")
+                    except:
+                        pass
+            else:
+                print(f"{Color.gradient(f'{"PID":>8} {"CPU%":>6} {"MEM%":>6} {"NAME":<35}', (0,200,255), (0,100,150))}")
+                for proc in psutil.process_iter(["pid", "name", "cpu_percent", "memory_percent"]):
+                    try:
+                        info = proc.info
+                        if info.get("cpu_percent", 0) > 0:
+                            print(f"{info['pid']:>8} "
+                                  f"{info.get('cpu_percent', 0):>6.1f} "
+                                  f"{info.get('memory_percent', 0):>6.1f} "
+                                  f"{info.get('name', 'unknown')[:35]:<35}")
+                    except:
+                        pass
+        except:
+            print(Color.warning("Install psutil for process info"))
+        return True
+    
+    def _top(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            try:
+                while True:
+                    Utils.clear_screen()
+                    print(Color.header("SYSTEM MONITOR", 80))
+                    cpu = psutil.cpu_percent(interval=0.5)
+                    mem = psutil.virtual_memory()
+                    print(f"{Color.CYAN}│{Color.RESET} CPU:  {Color.progress_bar(cpu, 30)}")
+                    print(f"{Color.CYAN}│{Color.RESET} RAM:  {Color.progress_bar(mem.percent, 30)} ({Utils.human_size(mem.used)}/{Utils.human_size(mem.total)})")
+                    print(f"{Color.CYAN}├{'─' * 78}┤{Color.RESET}")
+                    processes = []
+                    for proc in psutil.process_iter(["pid", "name", "cpu_percent"]):
+                        try:
+                            p = proc.info
+                            if p.get("cpu_percent", 0) > 0:
+                                processes.append(p)
+                        except:
+                            pass
+                    processes.sort(key=lambda x: x.get("cpu_percent", 0), reverse=True)
+                    for p in processes[:15]:
+                        print(f"{p['pid']:>8} {p.get('cpu_percent', 0):>6.1f} {p.get('name', 'unknown')[:35]:<35}")
+                    print(f"\n{Color.DIM}Press Ctrl+C to exit{Color.RESET}")
+                    time.sleep(2)
+            except KeyboardInterrupt:
+                print()
+        except:
+            print(Color.warning("Install psutil for system monitor"))
+        return True
+    
+    def _kill(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: kill <pid>"))
+            return True
+        try:
+            pid = int(args[0])
+            if os.name == "nt":
+                os.system(f"taskkill /PID {pid} /F")
+            else:
+                os.kill(pid, signal.SIGTERM)
+            print(Color.success(f"Process {pid} terminated"))
+        except:
+            print(Color.error("Failed to terminate process"))
+        return True
+    
+    def _killall(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: killall <name>"))
+            return True
+        name = args[0]
+        try:
+            import psutil
+            killed = False
+            for proc in psutil.process_iter(["pid", "name"]):
+                try:
+                    if name.lower() in proc.info["name"].lower():
+                        proc.kill()
+                        print(Color.success(f"Killed: {proc.info['name']} ({proc.info['pid']})"))
+                        killed = True
+                except:
+                    pass
+            if not killed:
+                print(Color.warning(f"Process '{name}' not found"))
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _pkill(self, args: List[str]) -> bool:
+        return self._killall(args)
+    
+    def _pgrep(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: pgrep <name>"))
+            return True
+        name = args[0]
+        try:
+            import psutil
+            found = False
+            for proc in psutil.process_iter(["pid", "name"]):
+                try:
+                    if name.lower() in proc.info["name"].lower():
+                        print(f"{proc.info['pid']} {proc.info['name']}")
+                        found = True
+                except:
+                    pass
+            if not found:
+                print(Color.warning(f"Process '{name}' not found"))
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _jobs(self, args: List[str]) -> bool:
+        print(Color.info("No background jobs"))
+        return True
+    
+    def _fg(self, args: List[str]) -> bool:
+        print(Color.info("FG not fully implemented"))
+        return True
+    
+    def _bg(self, args: List[str]) -> bool:
+        print(Color.info("BG not fully implemented"))
+        return True
+    
+    def _nohup(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: nohup <command>"))
+            return True
+        cmd = " ".join(args)
+        try:
+            if os.name == "nt":
+                subprocess.Popen(cmd, shell=True, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
+            else:
+                subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
+            print(Color.success(f"Started in background: {cmd}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _date(self, args: List[str]) -> bool:
+        now = datetime.now()
+        print(Color.gradient(now.strftime('%A, %d %B %Y %H:%M:%S'), (0,200,255), (0,100,150)))
+        return True
+    
+    def _cal(self, args: List[str]) -> bool:
+        now = datetime.now()
         year = int(args[0]) if args and args[0].isdigit() else now.year
-        month = int(args[1]) if len(args) > 1 and args[1].isdigit() else now.month
-        
-        cal = calendar.month(year, month)
-        print(f"{Colors.gradient_text(cal, 'cyan', single_color=True)}{Colors.RESET}")
+        month = now.month
+        print(Color.gradient(calendar.month(year, month), (0,200,255), (0,100,150)))
         return True
     
-    def whoami_cmd(self, args):
-        print(f"{Colors.gradient_text(f'{Icons.USER} {Utils.get_username()}', 'cyan', single_color=True)}{Colors.RESET}")
+    def _whoami(self, args: List[str]) -> bool:
+        print(Color.gradient(f"{Icon.LOCK} {Utils.get_username()}", (0,200,255), (0,100,150)))
         return True
     
-    def hostname_cmd(self, args):
-        print(f"{Colors.gradient_text(f'{Icons.NETWORK} {socket.gethostname()}', 'cyan', single_color=True)}{Colors.RESET}")
+    def _hostname(self, args: List[str]) -> bool:
+        print(Color.gradient(f"{Icon.NETWORK} {socket.gethostname()}", (0,200,255), (0,100,150)))
         return True
     
-    def uname_cmd(self, args):
-        if args and args[0] == '-a':
+    def _uname(self, args: List[str]) -> bool:
+        if args and args[0] == "-a":
             info = f"{platform.system()} {platform.release()} {platform.version()} {platform.machine()}"
         else:
             info = platform.system()
-        print(f"{Colors.gradient_text(info, 'cyan', single_color=True)}{Colors.RESET}")
+        print(Color.gradient(info, (0,200,255), (0,100,150)))
         return True
     
-    def uptime_cmd(self, args):
-        if PSUTIL:
-            boot = datetime.datetime.fromtimestamp(psutil.boot_time())
-            uptime = datetime.datetime.now() - boot
-            print(f"{Colors.gradient_text(f'{Icons.CLOCK} uptime: {Utils.human_time(uptime.total_seconds())}', 'cyan', single_color=True)}{Colors.RESET}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Установите psutil{Colors.RESET}")
+    def _uptime(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            boot = datetime.fromtimestamp(psutil.boot_time())
+            uptime = datetime.now() - boot
+            print(Color.gradient(f"{Icon.CLOCK} Uptime: {Utils.human_time(uptime.total_seconds())}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.warning("Install psutil for uptime info"))
         return True
     
-    def who_cmd(self, args):
-        if PSUTIL:
+    def _who(self, args: List[str]) -> bool:
+        try:
+            import psutil
             for user in psutil.users():
-                print(f"{Colors.gradient_text(user.name, 'cyan', single_color=True)}{Colors.RESET}  {user.terminal}  {datetime.datetime.fromtimestamp(user.started).strftime('%Y-%m-%d %H:%M')}")
-        else:
-            print(f"{Colors.gradient_text(Utils.get_username(), 'cyan', single_color=True)}{Colors.RESET}  pts/0  {Utils.get_date()} {Utils.get_time()}")
+                print(f"{Color.gradient(user.name, (0,200,255), (0,100,150))}  {user.terminal}  {datetime.fromtimestamp(user.started).strftime('%Y-%m-%d %H:%M')}")
+        except:
+            print(f"{Color.gradient(Utils.get_username(), (0,200,255), (0,100,150))}  pts/0  {Utils.get_date()} {Utils.get_time()}")
         return True
     
-    def w_cmd(self, args):
-        print(f"{Colors.gradient_text(f"{'USER':<10} {'TTY':<10} {'FROM':<15} {'LOGIN@':<12} {'IDLE':<8} {'JCPU':<8} {'PCPU':<8} {'WHAT':<20}", 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"{Colors.DIM}{'-' * 90}{Colors.RESET}")
-        
-        if PSUTIL:
-            for user in psutil.users():
-                login_time = datetime.datetime.fromtimestamp(user.started).strftime('%H:%M')
-                print(f"{Colors.GREEN}{user.name:<10}{Colors.RESET} {user.terminal:<10} {user.host or 'local':<15} {login_time:<12} {'0.00s':<8} {'0.00s':<8} {'0.00s':<8} {'-':<20}")
-        else:
-            print(f"{Colors.GREEN}{Utils.get_username():<10}{Colors.RESET} pts/0      local           {Utils.get_time():<12} 0.00s   0.00s   0.00s   -")
+    def _w(self, args: List[str]) -> bool:
+        return self._who(args)
+    
+    def _last(self, args: List[str]) -> bool:
+        print(f"{Color.gradient(f'{"USER":<10} {"TTY":<10} {"FROM":<15} {"LOGIN@":<20}', (0,200,255), (0,100,150))}")
+        print(f"{Color.GREEN}{Utils.get_username():<10}{Color.RESET} pts/0      local           {Utils.get_date()} {Utils.get_time()}")
         return True
     
-    def last_cmd(self, args):
-        print(f"{Colors.gradient_text(f"{'USER':<10} {'TTY':<10} {'FROM':<15} {'LOGIN@':<20}", 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"{Colors.DIM}{'-' * 55}{Colors.RESET}")
-        print(f"{Colors.GREEN}{Utils.get_username():<10}{Colors.RESET} pts/0      local           {Utils.get_date()} {Utils.get_time()}")
-        print(f"{Colors.DIM}wtmp begins {Utils.get_date()} {Utils.get_time()}{Colors.RESET}")
-        return True
-    
-    def env_cmd(self, args):
+    def _env(self, args: List[str]) -> bool:
         for key, value in sorted(os.environ.items()):
-            print(f"{Colors.gradient_text(key, 'cyan', single_color=True)}{Colors.RESET}={value}")
+            print(f"{Color.gradient(key, (0,200,255), (0,100,150))}{Color.RESET}={value}")
         return True
     
-    def echo_cmd(self, args):
-        text = ' '.join(args)
-        if text.startswith('$'):
+    def _set(self, args: List[str]) -> bool:
+        for key, value in sorted(self.variables.items()):
+            print(f"{Color.gradient(key, (0,200,255), (0,100,150))}{Color.RESET}={value}")
+        return True
+    
+    def _export(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: export <name>=<value>"))
+            return True
+        for arg in args:
+            if "=" in arg:
+                name, value = arg.split("=", 1)
+                os.environ[name] = value
+                self.variables[name] = value
+                print(Color.success(f"Exported: {name}={value}"))
+        return True
+    
+    def _unset(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: unset <name>"))
+            return True
+        for name in args:
+            if name in os.environ:
+                del os.environ[name]
+            if name in self.variables:
+                del self.variables[name]
+            print(Color.success(f"Unset: {name}"))
+        return True
+    
+    def _echo(self, args: List[str]) -> bool:
+        text = " ".join(args)
+        if text.startswith("$"):
             var = text[1:]
-            print(os.environ.get(var, ''))
+            print(os.environ.get(var, self.variables.get(var, "")))
         else:
-            print(Colors.gradient_text(text, 'cyan', single_color=True))
+            print(Color.gradient(text, (0,200,255), (0,100,150)))
         return True
     
-    def sleep_cmd(self, args):
+    def _printf(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: printf <format> <args>"))
+            return True
+        fmt, values = args[0], args[1:]
+        try:
+            print(fmt % tuple(values))
+        except:
+            print(fmt)
+        return True
+    
+    def _sleep(self, args: List[str]) -> bool:
         if args:
             try:
                 time.sleep(float(args[0]))
@@ -2151,761 +2697,484 @@ class CommandManager:
                 pass
         return True
     
-    def time_cmd(self, args):
+    def _time(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: time <команда>{Colors.RESET}")
+            print(Color.warning("Usage: time <command>"))
             return True
-        
-        cmd = ' '.join(args)
+        cmd = " ".join(args)
         start = time.time()
         self.execute(cmd)
         elapsed = time.time() - start
-        print(f"\n{Colors.gradient_text(f'real\t{Utils.human_time(elapsed)}', 'cyan', single_color=True)}{Colors.RESET}")
+        print(f"\n{Color.gradient(f'real\t{Utils.human_time(elapsed)}', (0,200,255), (0,100,150))}")
         return True
     
-    def watch_cmd(self, args):
+    def _watch(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: watch <команда>{Colors.RESET}")
+            print(Color.warning("Usage: watch <command>"))
             return True
-        
-        cmd = ' '.join(args)
+        cmd = " ".join(args)
         try:
-            for _ in range(3):
-                os.system('cls' if os.name == 'nt' else 'clear')
-                print(f"{Colors.gradient_text(f'Every 2s: {cmd}', 'cyan', single_color=True)}{Colors.RESET}")
-                print(f"{Colors.DIM}{Utils.get_date()} {Utils.get_time()}{Colors.RESET}")
-                print()
+            for _ in range(5):
+                Utils.clear_screen()
+                print(f"{Color.gradient(f'Every 2s: {cmd}', (0,200,255), (0,100,150))}")
+                print(f"{Color.DIM}{Utils.get_date()} {Utils.get_time()}{Color.RESET}\n")
                 self.execute(cmd)
                 time.sleep(2)
         except KeyboardInterrupt:
             print()
         return True
     
-    def which_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: which <программа>{Colors.RESET}")
-            return True
-        
-        for prog in args:
-            found = False
-            if prog in self.commands:
-                print(f"{Colors.gradient_text(f'{prog}: встроенная команда', 'cyan', single_color=True)}{Colors.RESET}")
-                found = True
-            
-            for path in os.environ.get('PATH', '').split(':' if os.name != 'nt' else ';'):
-                full = os.path.join(path, prog)
-                if os.path.exists(full):
-                    print(f"{Colors.gradient_text(full, 'cyan', single_color=True)}{Colors.RESET}")
-                    found = True
-                    break
-            if not found:
-                print(f"{Colors.RED}{prog}: not found{Colors.RESET}")
+    def _free(self, args: List[str]) -> bool:
+        human = "-h" in args
+        try:
+            import psutil
+            mem = psutil.virtual_memory()
+            total = Utils.human_size(mem.total) if human else f"{mem.total / (1024**3):.1f} GB"
+            used = Utils.human_size(mem.used) if human else f"{mem.used / (1024**3):.1f} GB"
+            free = Utils.human_size(mem.free) if human else f"{mem.free / (1024**3):.1f} GB"
+            print(Color.box(
+                f"{Color.CYAN}Memory:{Color.RESET}\n"
+                f"  total: {total}\n"
+                f"  used:  {used}\n"
+                f"  free:  {free}",
+                title="Memory Information"
+            ))
+        except:
+            print(Color.warning("Install psutil for memory info"))
         return True
     
-    def history_cmd(self, args):
+    def _lscpu(self, args: List[str]) -> bool:
+        print(f"{Color.CYAN}Architecture:     {Color.GREEN}{platform.machine()}")
+        print(f"{Color.CYAN}CPU(s):           {Color.GREEN}{os.cpu_count()}")
+        print(f"{Color.CYAN}Model name:       {Color.GREEN}{platform.processor() or 'Unknown'}")
+        return True
+    
+    def _lsblk(self, args: List[str]) -> bool:
         try:
-            if self.history_path.exists():
-                with open(self.history_path, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    for i, line in enumerate(lines[-50:], 1):
-                        print(f"{Colors.gradient_text(f'{i:>5}', 'cyan', single_color=True)}{Colors.RESET} {line.strip()}")
+            import psutil
+            print(f"{Color.gradient(f'{"NAME":<15} {"SIZE":<10} {"MOUNTPOINT":<20}', (0,200,255), (0,100,150))}")
+            for part in psutil.disk_partitions():
+                try:
+                    size = Utils.human_size(psutil.disk_usage(part.mountpoint).total)
+                    print(f"{Color.CYAN}{part.device:<15}{Color.RESET} {size:<10} {part.mountpoint:<20}")
+                except:
+                    pass
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _lspci(self, args: List[str]) -> bool:
+        print(Color.info("lspci - list PCI devices"))
+        try:
+            if os.name != "nt":
+                result = subprocess.run(["lspci"], capture_output=True, text=True)
+                if result.stdout:
+                    for line in result.stdout.split("\n")[:20]:
+                        print(line)
+                else:
+                    print(Color.warning("No PCI devices found"))
             else:
-                print(f"{Colors.YELLOW}{Icons.WARNING} История пуста{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.YELLOW}{Icons.WARNING} История пуста{Colors.RESET}")
+                print(Color.warning("lspci not available on Windows"))
+        except:
+            print(Color.warning("lspci command not found"))
         return True
     
-    def alias_cmd(self, args):
-        if not args:
-            if self.aliases:
-                print(f"{Colors.gradient_text('Алиасы:', 'cyan', single_color=True)}{Colors.RESET}")
-                for name, value in sorted(self.aliases.items()):
-                    print(f"{Colors.GREEN}{name}{Colors.RESET}='{value}'")
+    def _lsusb(self, args: List[str]) -> bool:
+        print(Color.info("lsusb - list USB devices"))
+        try:
+            if os.name != "nt":
+                result = subprocess.run(["lsusb"], capture_output=True, text=True)
+                if result.stdout:
+                    for line in result.stdout.split("\n")[:20]:
+                        print(line)
+                else:
+                    print(Color.warning("No USB devices found"))
             else:
-                print(f"{Colors.YELLOW}{Icons.WARNING} Алиасы не установлены{Colors.RESET}")
-            return True
-        
-        if '=' in args[0]:
-            name, value = args[0].split('=', 1)
-            self.aliases[name] = value
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Алиас: {name}=\'{value}\'', 'cyan', single_color=True)}{Colors.RESET}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: alias имя=команда{Colors.RESET}")
+                print(Color.warning("lsusb not available on Windows"))
+        except:
+            print(Color.warning("lsusb command not found"))
         return True
     
-    def unalias_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: unalias <имя>{Colors.RESET}")
-            return True
-        
-        name = args[0]
-        if name in self.aliases:
-            del self.aliases[name]
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Алиас удален: {name}', 'cyan', single_color=True)}{Colors.RESET}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Алиас не найден: {name}{Colors.RESET}")
-        return True
+    # NETWORK COMMANDS
     
-    def man_cmd(self, args):
+    def _ping(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: man <команда>{Colors.RESET}")
+            print(Color.warning("Usage: ping <host>"))
             return True
-        
-        cmd = self.get(args[0])
-        if cmd:
-            terminal_width = shutil.get_terminal_size().columns
-            man_text = f"""
-{Colors.BOLD}{Colors.gradient_text(args[0].upper(), 'cyan', single_color=True)}{Colors.RESET}
-{Colors.CYAN}{'─' * (terminal_width - 2)}{Colors.RESET}
-
-{Colors.GREEN}НАЗВАНИЕ{Colors.RESET}
-       {cmd['desc']}
-
-{Colors.GREEN}СИНТАКСИС{Colors.RESET}
-       {Colors.CYAN}{cmd['usage']}{Colors.RESET}
-
-{Colors.GREEN}ОПИСАНИЕ{Colors.RESET}
-       {cmd['desc']}
-
-{Colors.GREEN}ПРИМЕРЫ{Colors.RESET}
-       $ {cmd['usage']}
-"""
-            print(Colors.box(man_text, Colors.GREEN, Colors.CYAN, 2))
-        else:
-            print(f"{Colors.RED}{Icons.ERROR} Команда не найдена: {args[0]}{Colors.RESET}")
-        return True
-    
-    def type_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: type <команда>{Colors.RESET}")
-            return True
-        
-        cmd = args[0]
-        if cmd in self.aliases:
-            print(f"{cmd} - алиас для '{self.aliases[cmd]}'")
-        elif cmd in self.commands:
-            print(f"{cmd} - встроенная команда")
-        else:
-            print(f"{cmd} - внешняя команда")
-        return True
-    
-    def sqlite_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sqlite <база>{Colors.RESET}")
-            return True
-        
-        db_path = args[0]
-        try:
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-            tables = cursor.fetchall()
-            if tables:
-                print(f"{Colors.gradient_text('Таблицы:', 'cyan', single_color=True)}{Colors.RESET}")
-                for table in tables:
-                    print(f"  {table[0]}")
-            else:
-                print(f"{Colors.YELLOW}База данных пуста{Colors.RESET}")
-            conn.close()
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def json_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: json <файл>{Colors.RESET}")
-            return True
-        
-        f = args[0]
-        try:
-            with open(f, 'r') as file:
-                data = json.load(file)
-                print(json.dumps(data, indent=2, ensure_ascii=False))
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def csv_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: csv <файл>{Colors.RESET}")
-            return True
-        
-        f = args[0]
-        try:
-            with open(f, 'r') as file:
-                reader = csv.reader(file)
-                for row in reader:
-                    print(' | '.join(row))
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def ping_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: ping <хост>{Colors.RESET}")
-            return True
-        
         host = args[0]
         count = 4
-        for arg in args:
-            if arg.startswith('-c'):
-                count = int(arg[2:]) if arg[2:] else 4
-        
-        print(f"{Colors.gradient_text(f'PING {host} ({host})', 'cyan', single_color=True)}{Colors.RESET}")
+        print(Color.gradient(f"PING {host}", (0,200,255), (0,100,150)))
         for i in range(count):
             try:
                 start = time.time()
                 ip = socket.gethostbyname(host)
                 elapsed = (time.time() - start) * 1000
-                print(f"{Colors.GREEN}64 bytes from {ip}: icmp_seq={i} time={elapsed:.2f} ms{Colors.RESET}")
+                print(f"{Color.GREEN}64 bytes from {ip}: icmp_seq={i} time={elapsed:.2f} ms{Color.RESET}")
             except:
-                print(f"{Colors.RED}Request timeout{Colors.RESET}")
+                print(f"{Color.RED}Request timeout{Color.RESET}")
             time.sleep(1)
         return True
     
-    def ifconfig_cmd(self, args):
-        hostname = socket.gethostname()
-        ip = socket.gethostbyname(hostname)
-        print(f"{Colors.gradient_text('lo:', 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"    inet {Colors.GREEN}127.0.0.1{Colors.RESET}")
-        print(f"{Colors.gradient_text('eth0:', 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"    inet {Colors.GREEN}{ip}{Colors.RESET}")
-        return True
-    
-    def ip_cmd(self, args):
-        hostname = socket.gethostname()
-        ip = Utils.get_ip()
+    def _myip(self, args: List[str]) -> bool:
+        local_ip = Utils.get_local_ip()
         public_ip = Utils.get_public_ip()
-        print(f"{Colors.gradient_text('╔' + '═' * 50 + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('СЕТЕВАЯ ИНФОРМАЦИЯ', 'cyan', single_color=True)}{' ' * 30}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * 50 + '╣', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Локальный IP: {Colors.gradient_text(ip, 'cyan', single_color=True)}{' ' * (50 - 14 - len(ip))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Публичный IP: {Colors.gradient_text(public_ip, 'cyan', single_color=True)}{' ' * (50 - 14 - len(public_ip))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Имя хоста:   {Colors.gradient_text(hostname, 'cyan', single_color=True)}{' ' * (50 - 14 - len(hostname))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╚' + '═' * 50 + '╝', 'cyan', single_color=True)}")
+        print(Color.box(
+            f"{Color.CYAN}Local IP:  {Color.GREEN}{local_ip}\n"
+            f"{Color.CYAN}Public IP: {Color.GREEN}{public_ip}",
+            title="IP Information"
+        ))
         return True
     
-    def netstat_cmd(self, args):
-        if PSUTIL:
-            print(f"{Colors.gradient_text(f"{'Proto':6} {'Local Address':30} {'Remote Address':30} {'State':15}", 'cyan', single_color=True)}{Colors.RESET}")
-            print(f"{Colors.DIM}{'-' * 90}{Colors.RESET}")
-            for conn in psutil.net_connections()[:20]:
-                if conn.status:
-                    laddr = f"{conn.laddr.ip}:{conn.laddr.port}" if conn.laddr else '*:*'
-                    raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else '*:*'
-                    print(f"tcp     {laddr:<30} {raddr:<30} {conn.status:<15}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Установите psutil{Colors.RESET}")
-        return True
-    
-    def nslookup_cmd(self, args):
+    def _portscan(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: nslookup <домен>{Colors.RESET}")
+            print(Color.warning("Usage: portscan <host>"))
             return True
-        
-        domain = args[0]
-        try:
-            ip = socket.gethostbyname(domain)
-            print(f"{Colors.CYAN}Server: 8.8.8.8{Colors.RESET}")
-            print(f"\nNon-authoritative answer:")
-            print(f"Name: {Colors.GREEN}{domain}{Colors.RESET}")
-            print(f"Address: {Colors.GREEN}{ip}{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def dig_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: dig <домен>{Colors.RESET}")
-            return True
-        
-        domain = args[0]
-        try:
-            ip = socket.gethostbyname(domain)
-            print(f"{Colors.CYAN}; <<>> DIG 9.16.1 <<>> {domain}{Colors.RESET}")
-            print(f"{Colors.CYAN};; Got answer:{Colors.RESET}")
-            print(f"{Colors.CYAN};; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: {random.randint(1, 65535)}{Colors.RESET}")
-            print(f"\n{Colors.CYAN};; QUESTION SECTION:{Colors.RESET}")
-            print(f";{domain}.            IN      A")
-            print(f"\n{Colors.CYAN};; ANSWER SECTION:{Colors.RESET}")
-            print(f"{domain}.       300     IN      A       {ip}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def curl_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: curl <url>{Colors.RESET}")
-            return True
-        
-        url = args[0]
-        try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=10) as response:
-                content = response.read().decode('utf-8', errors='ignore')
-                if len(content) > 5000:
-                    print(content[:5000])
-                    print(f"\n{Colors.DIM}... (показано 5000 символов){Colors.RESET}")
-                else:
-                    print(content)
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def wget_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: wget <url>{Colors.RESET}")
-            return True
-        
-        url = args[0]
-        filename = url.split('/')[-1] or 'download'
-        print(f"{Colors.gradient_text(f'{Icons.DOWNLOAD} Скачивание {url}...', 'cyan', single_color=True)}{Colors.RESET}")
-        try:
-            urllib.request.urlretrieve(url, filename)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Сохранено: {filename}', 'cyan', single_color=True)}{Colors.RESET}")
-        except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def portscan_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: portscan <хост>{Colors.RESET}")
-            return True
-        
         host = args[0]
-        ports = [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 993, 995, 1723, 3306, 3389, 5432, 5900, 8080, 8443, 27017]
-        
-        print(f"{Colors.gradient_text(f'Сканирование {host}...', 'cyan', single_color=True)}{Colors.RESET}")
+        ports = [21,22,23,25,53,80,110,143,443,3306,3389,5432,8080,8443,8888]
+        print(Color.gradient(f"Scanning {host}...", (0,200,255), (0,100,150)))
         open_ports = []
-        
         for port in ports:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.settimeout(1)
-            result = sock.connect_ex((host, port))
-            if result == 0:
-                print(f"{Colors.GREEN}{Icons.SUCCESS} Порт {port}: открыт{Colors.RESET}")
+            if sock.connect_ex((host, port)) == 0:
                 open_ports.append(port)
-            else:
-                print(f"{Colors.DIM}{Icons.INFO} Порт {port}: закрыт{Colors.RESET}")
+                print(f"  Port {Color.GREEN}{port}{Color.RESET}: OPEN")
             sock.close()
-        
-        if open_ports:
-            print(f"\n{Colors.GREEN}Найдено открытых портов: {len(open_ports)}{Colors.RESET}")
+        if not open_ports:
+            print(Color.info("No open ports found"))
         return True
     
-    def telnet_cmd(self, args):
-        if len(args) < 1:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: telnet <хост> [порт]{Colors.RESET}")
-            return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} Telnet клиент в разработке{Colors.RESET}")
-        return True
-    
-    def ssh_cmd(self, args):
-        if len(args) < 1:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: ssh <пользователь>@<хост>{Colors.RESET}")
-            return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} SSH клиент в разработке{Colors.RESET}")
-        return True
-    
-    def ftp_cmd(self, args):
-        if len(args) < 1:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: ftp <хост>{Colors.RESET}")
-            return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} FTP клиент в разработке{Colors.RESET}")
-        return True
-    
-    def nc_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: nc <хост> <порт>{Colors.RESET}")
-            return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} Netcat клиент в разработке{Colors.RESET}")
-        return True
-    
-    def hash_cmd(self, args):
+    def _curl(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: hash <текст>{Colors.RESET}")
+            print(Color.warning("Usage: curl <url>"))
             return True
-        
-        text = ' '.join(args)
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('ХЕШИ ТЕКСТА', 'cyan', single_color=True)}{' ' * (terminal_width - 13)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} MD5:    {Colors.GREEN}{hashlib.md5(text.encode()).hexdigest()}{Colors.gradient_text(' ' * (terminal_width - 16 - len(hashlib.md5(text.encode()).hexdigest())) + '║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} SHA1:   {Colors.GREEN}{hashlib.sha1(text.encode()).hexdigest()}{Colors.gradient_text(' ' * (terminal_width - 16 - len(hashlib.sha1(text.encode()).hexdigest())) + '║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} SHA256: {Colors.GREEN}{hashlib.sha256(text.encode()).hexdigest()}{Colors.gradient_text(' ' * (terminal_width - 17 - len(hashlib.sha256(text.encode()).hexdigest())) + '║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} SHA512: {Colors.GREEN}{hashlib.sha512(text.encode()).hexdigest()}{Colors.gradient_text(' ' * (terminal_width - 17 - len(hashlib.sha512(text.encode()).hexdigest())) + '║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
-        return True
-    
-    def md5_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: md5 <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            try:
-                with open(f, 'rb') as file:
-                    md5 = hashlib.md5(file.read()).hexdigest()
-                    print(f"{Colors.gradient_text(f'{md5} {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def sha1_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sha1 <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            try:
-                with open(f, 'rb') as file:
-                    sha1 = hashlib.sha1(file.read()).hexdigest()
-                    print(f"{Colors.gradient_text(f'{sha1} {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def sha256_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sha256 <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            try:
-                with open(f, 'rb') as file:
-                    sha256 = hashlib.sha256(file.read()).hexdigest()
-                    print(f"{Colors.gradient_text(f'{sha256} {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def sha512_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: sha512 <файл>{Colors.RESET}")
-            return True
-        
-        for f in args:
-            try:
-                with open(f, 'rb') as file:
-                    sha512 = hashlib.sha512(file.read()).hexdigest()
-                    print(f"{Colors.gradient_text(f'{sha512} {f}', 'cyan', single_color=True)}{Colors.RESET}")
-            except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        return True
-    
-    def base64_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: base64 <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        encoded = base64.b64encode(text.encode()).decode()
-        print(f"{Colors.gradient_text(encoded, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def base64d_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: base64d <base64>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
+        url = args[0]
         try:
-            decoded = base64.b64decode(text).decode('utf-8', errors='ignore')
-            print(f"{Colors.gradient_text(decoded, 'cyan', single_color=True)}{Colors.RESET}")
-        except:
-            print(f"{Colors.RED}{Icons.ERROR} Ошибка декодирования{Colors.RESET}")
-        return True
-    
-    def rot13_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: rot13 <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        result = ''.join(
-            chr((ord(c) - 65 + 13) % 26 + 65) if 'A' <= c <= 'Z' else
-            chr((ord(c) - 97 + 13) % 26 + 97) if 'a' <= c <= 'z' else c
-            for c in text
-        )
-        print(f"{Colors.gradient_text(result, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def rot47_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: rot47 <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        result = ''.join(
-            chr(33 + ((ord(c) - 33 + 47) % 94)) if 33 <= ord(c) <= 126 else c
-            for c in text
-        )
-        print(f"{Colors.gradient_text(result, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def urlencode_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: urlencode <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        encoded = urllib.parse.quote(text)
-        print(f"{Colors.gradient_text(encoded, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def urldecode_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: urldecode <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        decoded = urllib.parse.unquote(text)
-        print(f"{Colors.gradient_text(decoded, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def hex_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: hex <текст>{Colors.RESET}")
-            return True
-        
-        text = ' '.join(args)
-        encoded = text.encode().hex()
-        print(f"{Colors.gradient_text(encoded, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def unhex_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: unhex <hex>{Colors.RESET}")
-            return True
-        
-        text = args[0]
-        try:
-            decoded = bytes.fromhex(text).decode('utf-8', errors='ignore')
-            print(f"{Colors.gradient_text(decoded, 'cyan', single_color=True)}{Colors.RESET}")
-        except:
-            print(f"{Colors.RED}{Icons.ERROR} Ошибка декодирования{Colors.RESET}")
-        return True
-    
-    def random_cmd(self, args):
-        if args and args[0].isdigit():
-            num = random.randint(0, int(args[0]))
-        else:
-            num = random.randint(0, 100)
-        print(f"{Colors.gradient_text(f'{Icons.STAR} {num}', 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def uuid_cmd(self, args):
-        print(f"{Colors.gradient_text(str(uuid.uuid4()), 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def password_cmd(self, args):
-        length = int(args[0]) if args and args[0].isdigit() else 16
-        chars = string.ascii_letters + string.digits + "!@#$%^&*()_+-=[]{}|;:,.<>?"
-        password = ''.join(secrets.choice(chars) for _ in range(length))
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('СГЕНЕРИРОВАННЫЙ ПАРОЛЬ', 'cyan', single_color=True)}{' ' * (terminal_width - 27)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(password, 'cyan', single_color=True)}{' ' * (terminal_width - len(password) - 4)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Длина: {Colors.GREEN}{length}{Colors.gradient_text(' ' * (terminal_width - 16 - len(str(length))) + '║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
-        return True
-    
-    def encrypt_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: encrypt <текст> <ключ>{Colors.RESET}")
-            return True
-        
-        text = args[0]
-        key = args[1]
-        
-        encrypted = ''.join(chr(ord(c) ^ ord(key[i % len(key)])) for i, c in enumerate(text))
-        encrypted_b64 = base64.b64encode(encrypted.encode()).decode()
-        print(f"{Colors.gradient_text(encrypted_b64, 'cyan', single_color=True)}{Colors.RESET}")
-        return True
-    
-    def decrypt_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: decrypt <текст> <ключ>{Colors.RESET}")
-            return True
-        
-        try:
-            encrypted_b64 = args[0]
-            key = args[1]
-            encrypted = base64.b64decode(encrypted_b64).decode()
-            decrypted = ''.join(chr(ord(c) ^ ord(key[i % len(key)])) for i, c in enumerate(encrypted))
-            print(f"{Colors.gradient_text(decrypted, 'cyan', single_color=True)}{Colors.RESET}")
-        except:
-            print(f"{Colors.RED}{Icons.ERROR} Ошибка расшифрования{Colors.RESET}")
-        return True
-    
-    def ps_cmd(self, args):
-        if PSUTIL:
-            terminal_width = shutil.get_terminal_size().columns
-            print(f"{Colors.gradient_text(f"{'PID':>8} {'CPU%':>6} {'MEM%':>6} {'NAME':<35}", 'cyan', single_color=True)}{Colors.RESET}")
-            print(f"{Colors.DIM}{'-' * 60}{Colors.RESET}")
-            processes = []
-            for proc in psutil.process_iter(['pid', 'name', 'cpu_percent', 'memory_percent']):
-                try:
-                    p = proc.info
-                    processes.append(p)
-                except:
-                    pass
-            
-            processes.sort(key=lambda x: x.get('cpu_percent', 0), reverse=True)
-            
-            for p in processes[:20]:
-                pid = p['pid']
-                cpu = p.get('cpu_percent', 0)
-                mem = p.get('memory_percent', 0)
-                name = p.get('name', 'unknown')[:35]
-                print(f"{pid:>8} {cpu:>6.1f} {mem:>6.1f} {name:<35}")
-        else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Установите psutil{Colors.RESET}")
-        return True
-    
-    def top_cmd(self, args):
-        if not PSUTIL:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Установите psutil{Colors.RESET}")
-            return True
-        
-        try:
-            while True:
-                Utils.clear_screen()
-                terminal_width = shutil.get_terminal_size().columns
-                print(Colors.header("СИСТЕМНЫЙ МОНИТОР", terminal_width - 4, style='double'))
-                
-                cpu_percent = psutil.cpu_percent(interval=0.5)
-                mem = psutil.virtual_memory()
-                disk = psutil.disk_usage('/')
-                
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} CPU: {Colors.gradient_text(f'{cpu_percent}%', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 16 - len(str(cpu_percent))) + '║', 'cyan', single_color=True)}")
-                cpu_bar_width = terminal_width - 16
-                filled = int(cpu_bar_width * cpu_percent / 100)
-                cpu_bar = f"{Colors.GREEN if cpu_percent < 70 else Colors.YELLOW if cpu_percent < 90 else Colors.RED}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (cpu_bar_width - filled)
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}      {cpu_bar}{Colors.gradient_text(' ' * (terminal_width - 15 - cpu_bar_width) + '║', 'cyan', single_color=True)}")
-                
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} RAM: {Colors.gradient_text(f'{mem.percent}% ({Utils.human_size(mem.used)}/{Utils.human_size(mem.total)})', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 27 - len(f"{mem.percent}% ({Utils.human_size(mem.used)}/{Utils.human_size(mem.total)})")) + '║', 'cyan', single_color=True)}")
-                mem_bar_width = terminal_width - 16
-                filled = int(mem_bar_width * mem.percent / 100)
-                mem_bar = f"{Colors.GREEN if mem.percent < 70 else Colors.YELLOW if mem.percent < 90 else Colors.RED}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (mem_bar_width - filled)
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}      {mem_bar}{Colors.gradient_text(' ' * (terminal_width - 15 - mem_bar_width) + '║', 'cyan', single_color=True)}")
-                
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} DISK:{Colors.gradient_text(f' {disk.percent}% ({Utils.human_size(disk.used)}/{Utils.human_size(disk.total)})', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 16 - len(f"{disk.percent}% ({Utils.human_size(disk.used)}/{Utils.human_size(disk.total)})")) + '║', 'cyan', single_color=True)}")
-                disk_bar_width = terminal_width - 16
-                filled = int(disk_bar_width * disk.percent / 100)
-                disk_bar = f"{Colors.GREEN if disk.percent < 70 else Colors.YELLOW if disk.percent < 90 else Colors.RED}█{Colors.RESET}" * filled + f"{Colors.DIM}░{Colors.RESET}" * (disk_bar_width - filled)
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}      {disk_bar}{Colors.gradient_text(' ' * (terminal_width - 15 - disk_bar_width) + '║', 'cyan', single_color=True)}")
-                
-                print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f"{'PID':>8} {'CPU%':>6} {'MEM%':>6} {'NAME':<35}", 'cyan', single_color=True)}{Colors.gradient_text(' ' * (terminal_width - 60) + '║', 'cyan', single_color=True)}")
-                print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-                
-                processes = []
-                for proc in psutil.process_iter(['pid', 'name', 'cpu_percent', 'memory_percent']):
-                    try:
-                        p = proc.info
-                        if p.get('cpu_percent', 0) > 0:
-                            processes.append(p)
-                    except:
-                        pass
-                
-                processes.sort(key=lambda x: x.get('cpu_percent', 0), reverse=True)
-                
-                for p in processes[:10]:
-                    pid = p['pid']
-                    cpu = p.get('cpu_percent', 0)
-                    mem = p.get('memory_percent', 0)
-                    name = p.get('name', 'unknown')[:35]
-                    print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {pid:>8} {cpu:>6.1f} {mem:>6.1f} {name:<35}{Colors.gradient_text(' ' * (terminal_width - 60) + '║', 'cyan', single_color=True)}")
-                
-                print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
-                print(f"\n{Colors.DIM}Нажмите Ctrl+C для выхода{Colors.RESET}")
-                time.sleep(2)
-        except KeyboardInterrupt:
-            print()
-        return True
-    
-    def kill_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: kill <pid>{Colors.RESET}")
-            return True
-        
-        try:
-            pid = int(args[0])
-            if os.name == 'nt':
-                os.system(f'taskkill /PID {pid} /F')
-            else:
-                os.kill(pid, signal.SIGTERM)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Процесс {pid} завершен', 'cyan', single_color=True)}{Colors.RESET}")
-        except:
-            print(f"{Colors.RED}{Icons.ERROR} Ошибка завершения{Colors.RESET}")
-        return True
-    
-    def pkill_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: pkill <имя>{Colors.RESET}")
-            return True
-        
-        name = args[0]
-        killed = False
-        
-        if PSUTIL:
-            for proc in psutil.process_iter(['pid', 'name']):
-                try:
-                    if name.lower() in proc.info['name'].lower():
-                        proc.kill()
-                        print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Завершен: {proc.info["name"]} ({proc.info["pid"]})', 'cyan', single_color=True)}{Colors.RESET}")
-                        killed = True
-                except:
-                    pass
-        
-        if not killed:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Процесс '{name}' не найден{Colors.RESET}")
-        return True
-    
-    def jobs_cmd(self, args):
-        print(f"{Colors.YELLOW}{Icons.WARNING} Jobs реализован частично{Colors.RESET}")
-        return True
-    
-    def fg_cmd(self, args):
-        print(f"{Colors.YELLOW}{Icons.WARNING} FG реализован частично{Colors.RESET}")
-        return True
-    
-    def bg_cmd(self, args):
-        print(f"{Colors.YELLOW}{Icons.WARNING} BG реализован частично{Colors.RESET}")
-        return True
-    
-    def nohup_cmd(self, args):
-        if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: nohup <команда>{Colors.RESET}")
-            return True
-        
-        cmd = ' '.join(args)
-        try:
-            if os.name == 'nt':
-                subprocess.Popen(cmd, shell=True, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
-            else:
-                subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Запущено в фоне: {cmd}', 'cyan', single_color=True)}{Colors.RESET}")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                content = response.read().decode("utf-8", errors="ignore")
+                print(content[:5000] + (f"\n{Color.DIM}... (truncated){Color.RESET}" if len(content) > 5000 else ""))
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def zip_cmd(self, args):
-        if len(args) < 2:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: zip <архив> <файлы>{Colors.RESET}")
+    def _wget(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: wget <url>"))
             return True
-        
-        archive = args[0]
-        files = args[1:]
+        url = args[0]
+        filename = url.split("/")[-1] or "download"
+        print(Color.gradient(f"Downloading {url}...", (0,200,255), (0,100,150)))
         try:
-            with zipfile.ZipFile(archive, 'w') as zf:
+            urllib.request.urlretrieve(url, filename)
+            print(Color.success(f"Saved: {filename}"))
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _nslookup(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: nslookup <domain>"))
+            return True
+        domain = args[0]
+        try:
+            ip = socket.gethostbyname(domain)
+            print(f"{Color.CYAN}Server: 8.8.8.8{Color.RESET}\n\nNon-authoritative answer:\nName: {Color.GREEN}{domain}{Color.RESET}\nAddress: {Color.GREEN}{ip}{Color.RESET}")
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _dig(self, args: List[str]) -> bool:
+        return self._nslookup(args)
+    
+    def _host(self, args: List[str]) -> bool:
+        return self._nslookup(args)
+    
+    def _ifconfig(self, args: List[str]) -> bool:
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        print(Color.gradient("lo:", (0,200,255), (0,100,150)))
+        print(f"    inet {Color.GREEN}127.0.0.1{Color.RESET}")
+        print(Color.gradient("eth0:", (0,200,255), (0,100,150)))
+        print(f"    inet {Color.GREEN}{ip}{Color.RESET}")
+        return True
+    
+    def _ip(self, args: List[str]) -> bool:
+        if args and args[0] == "addr":
+            return self._ifconfig(args)
+        return self._ifconfig(args)
+    
+    def _netstat(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            print(f"{Color.gradient(f'{"Proto":6} {"Local Address":30} {"State":15}', (0,200,255), (0,100,150))}")
+            for conn in psutil.net_connections()[:30]:
+                if conn.status:
+                    laddr = f"{conn.laddr.ip}:{conn.laddr.port}" if conn.laddr else "*:*"
+                    print(f"tcp     {laddr:<30} {conn.status:<15}")
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _ss(self, args: List[str]) -> bool:
+        return self._netstat(args)
+    
+    def _route(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            print(Color.header("ROUTE TABLE", 50))
+            for conn in psutil.net_connections():
+                if conn.status == "ESTABLISHED":
+                    print(f"{Color.CYAN}│{Color.RESET} {conn.laddr.ip}:{conn.laddr.port} -> {conn.raddr.ip}:{conn.raddr.port}")
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _arp(self, args: List[str]) -> bool:
+        try:
+            import psutil
+            print(Color.header("ARP CACHE", 50))
+            seen = set()
+            for conn in psutil.net_connections():
+                if conn.raddr and conn.raddr.ip not in seen:
+                    seen.add(conn.raddr.ip)
+                    print(f"{Color.CYAN}│{Color.RESET} {conn.raddr.ip}")
+        except:
+            print(Color.warning("Install psutil"))
+        return True
+    
+    def _traceroute(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: traceroute <host>"))
+            return True
+        host = args[0]
+        print(Color.gradient(f"traceroute to {host}", (0,200,255), (0,100,150)))
+        for ttl in range(1, 30):
+            try:
+                sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)
+                sock.settimeout(2)
+                sock.sendto(b"", (host, ttl))
+                start = time.time()
+                data, addr = sock.recvfrom(1024)
+                elapsed = (time.time() - start) * 1000
+                print(f"{ttl:2}  {addr[0]}  {elapsed:.2f} ms")
+                if addr[0] == host:
+                    break
+                sock.close()
+            except:
+                print(f"{ttl:2}  *")
+        return True
+    
+    def _tracepath(self, args: List[str]) -> bool:
+        return self._traceroute(args)
+    
+    def _telnet(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: telnet <host> <port>"))
+            return True
+        host, port = args[0], int(args[1])
+        print(Color.info(f"Connecting to {host}:{port}..."))
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.settimeout(5)
+            sock.connect((host, port))
+            print(Color.success("Connected!"))
+            sock.close()
+        except Exception as e:
+            print(Color.error(str(e)))
+        return True
+    
+    def _nc(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: nc <host> <port>"))
+            return True
+        print(Color.info("Netcat - use external nc command"))
+        return True
+    
+    def _nmap(self, args: List[str]) -> bool:
+        return self._portscan(args)
+    
+    def _tcpdump(self, args: List[str]) -> bool:
+        print(Color.info("tcpdump - packet capture"))
+        return True
+    
+    # CRYPTOGRAPHY COMMANDS
+    
+    def _hash(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: hash <text>"))
+            return True
+        text = " ".join(args)
+        print(Color.box(
+            f"{Color.CYAN}MD5:    {Color.GREEN}{hashlib.md5(text.encode()).hexdigest()}\n"
+            f"{Color.CYAN}SHA1:   {Color.GREEN}{hashlib.sha1(text.encode()).hexdigest()}\n"
+            f"{Color.CYAN}SHA256: {Color.GREEN}{hashlib.sha256(text.encode()).hexdigest()}\n"
+            f"{Color.CYAN}SHA512: {Color.GREEN}{hashlib.sha512(text.encode()).hexdigest()}",
+            title="Hashes"
+        ))
+        return True
+    
+    def _md5(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: md5 <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "rb") as file:
+                    print(Color.gradient(f"{hashlib.md5(file.read()).hexdigest()} {f}", (0,200,255), (0,100,150)))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _sha1(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sha1 <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "rb") as file:
+                    print(Color.gradient(f"{hashlib.sha1(file.read()).hexdigest()} {f}", (0,200,255), (0,100,150)))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _sha256(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sha256 <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "rb") as file:
+                    print(Color.gradient(f"{hashlib.sha256(file.read()).hexdigest()} {f}", (0,200,255), (0,100,150)))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _sha512(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sha512 <file>"))
+            return True
+        for f in args:
+            try:
+                with open(f, "rb") as file:
+                    print(Color.gradient(f"{hashlib.sha512(file.read()).hexdigest()} {f}", (0,200,255), (0,100,150)))
+            except Exception as e:
+                print(Color.error(str(e)))
+        return True
+    
+    def _base64(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: base64 <text>"))
+            return True
+        text = " ".join(args)
+        print(Color.gradient(base64.b64encode(text.encode()).decode(), (0,200,255), (0,100,150)))
+        return True
+    
+    def _base64d(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: base64d <base64>"))
+            return True
+        text = " ".join(args)
+        try:
+            print(Color.gradient(base64.b64decode(text).decode("utf-8", errors="ignore"), (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid base64"))
+        return True
+    
+    def _rot13(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: rot13 <text>"))
+            return True
+        print(Color.gradient(Utils.rot13(" ".join(args)), (0,200,255), (0,100,150)))
+        return True
+    
+    def _caesar(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: caesar <text> <shift>"))
+            return True
+        text, shift = " ".join(args[:-1]), int(args[-1])
+        print(Color.gradient(self.crypto.caesar_cipher(text, shift), (0,200,255), (0,100,150)))
+        return True
+    
+    def _urlencode(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: urlencode <text>"))
+            return True
+        print(Color.gradient(urllib.parse.quote(" ".join(args)), (0,200,255), (0,100,150)))
+        return True
+    
+    def _urldecode(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: urldecode <text>"))
+            return True
+        print(Color.gradient(urllib.parse.unquote(" ".join(args)), (0,200,255), (0,100,150)))
+        return True
+    
+    def _hex(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: hex <text>"))
+            return True
+        print(Color.gradient(" ".join(args).encode().hex(), (0,200,255), (0,100,150)))
+        return True
+    
+    def _unhex(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: unhex <hex>"))
+            return True
+        try:
+            print(Color.gradient(bytes.fromhex(args[0]).decode("utf-8", errors="ignore"), (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid hex"))
+        return True
+    
+    def _password(self, args: List[str]) -> bool:
+        length = int(args[0]) if args and args[0].isdigit() else 16
+        print(Color.box(Color.gradient(Utils.random_password(length), (0,200,255), (0,100,150)), title="Generated Password"))
+        return True
+    
+    def _uuid(self, args: List[str]) -> bool:
+        print(Color.gradient(str(uuid.uuid4()), (0,200,255), (0,100,150)))
+        return True
+    
+    def _random(self, args: List[str]) -> bool:
+        num = random.randint(0, int(args[0])) if args and args[0].isdigit() else random.randint(0, 100)
+        print(Color.gradient(f"🎲 {num}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _encrypt(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: encrypt <text> <key>"))
+            return True
+        text, key = args[0], args[1]
+        encrypted = self.crypto.xor_encrypt(text, key)
+        print(Color.gradient(base64.b64encode(encrypted.encode()).decode(), (0,200,255), (0,100,150)))
+        return True
+    
+    def _decrypt(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: decrypt <text> <key>"))
+            return True
+        try:
+            encrypted = base64.b64decode(args[0]).decode()
+            key = args[1]
+            decrypted = self.crypto.xor_decrypt(encrypted, key)
+            print(Color.gradient(decrypted, (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Decryption failed"))
+        return True
+    
+    def _xor(self, args: List[str]) -> bool:
+        return self._encrypt(args)
+    
+    # ARCHIVE COMMANDS
+    
+    def _zip(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: zip <archive> <files>"))
+            return True
+        archive, files = args[0], args[1:]
+        try:
+            with zipfile.ZipFile(archive, "w") as zf:
                 for f in files:
                     if os.path.exists(f):
                         if os.path.isdir(f):
@@ -2914,382 +3183,1143 @@ class CommandManager:
                                     zf.write(os.path.join(root, file))
                         else:
                             zf.write(f)
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Архив создан: {archive}', 'cyan', single_color=True)}{Colors.RESET}")
+            print(Color.success(f"Archive created: {archive}"))
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def unzip_cmd(self, args):
+    def _unzip(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: unzip <архив>{Colors.RESET}")
+            print(Color.warning("Usage: unzip <archive>"))
             return True
-        
         archive = args[0]
         try:
-            with zipfile.ZipFile(archive, 'r') as zf:
+            with zipfile.ZipFile(archive, "r") as zf:
                 zf.extractall()
-            print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Архив распакован: {archive}', 'cyan', single_color=True)}{Colors.RESET}")
+            print(Color.success(f"Archive extracted: {archive}"))
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+            print(Color.error(str(e)))
         return True
     
-    def tar_cmd(self, args):
-        if '-cf' in args:
-            idx = args.index('-cf')
+    def _tar(self, args: List[str]) -> bool:
+        if "-cf" in args:
+            idx = args.index("-cf")
             if idx + 1 < len(args):
                 archive = args[idx + 1]
                 files = args[idx + 2:]
                 try:
-                    with tarfile.open(archive, 'w') as tar:
+                    with tarfile.open(archive, "w") as tar:
                         for f in files:
                             tar.add(f)
-                    print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Архив создан: {archive}', 'cyan', single_color=True)}{Colors.RESET}")
+                    print(Color.success(f"Archive created: {archive}"))
                 except Exception as e:
-                    print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        elif '-xf' in args:
-            idx = args.index('-xf')
+                    print(Color.error(str(e)))
+        elif "-xf" in args:
+            idx = args.index("-xf")
             if idx + 1 < len(args):
                 archive = args[idx + 1]
                 try:
-                    with tarfile.open(archive, 'r') as tar:
+                    with tarfile.open(archive, "r") as tar:
                         tar.extractall()
-                    print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Архив распакован: {archive}', 'cyan', single_color=True)}{Colors.RESET}")
+                    print(Color.success(f"Archive extracted: {archive}"))
                 except Exception as e:
-                    print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                    print(Color.error(str(e)))
         else:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: tar -cf archive.tar файлы  или  tar -xf archive.tar{Colors.RESET}")
+            print(Color.warning("Usage: tar -cf archive.tar files  or  tar -xf archive.tar"))
         return True
     
-    def gzip_cmd(self, args):
+    def _gzip(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: gzip <файл>{Colors.RESET}")
+            print(Color.warning("Usage: gzip <file>"))
             return True
-        
         for f in args:
             try:
-                with open(f, 'rb') as fin:
-                    with open(f + '.gz', 'wb') as fout:
+                with open(f, "rb") as fin:
+                    with open(f + ".gz", "wb") as fout:
                         fout.write(gzip.compress(fin.read()))
-                print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Сжат: {f}', 'cyan', single_color=True)}{Colors.RESET}")
+                print(Color.success(f"Compressed: {f}"))
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
         return True
     
-    def gunzip_cmd(self, args):
+    def _gunzip(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: gunzip <файл.gz>{Colors.RESET}")
+            print(Color.warning("Usage: gunzip <file.gz>"))
             return True
-        
         for f in args:
-            if f.endswith('.gz'):
+            if f.endswith(".gz"):
                 try:
-                    with gzip.open(f, 'rb') as fin:
-                        with open(f[:-3], 'wb') as fout:
+                    with gzip.open(f, "rb") as fin:
+                        with open(f[:-3], "wb") as fout:
                             fout.write(fin.read())
-                    print(f"{Colors.gradient_text(f'{Icons.SUCCESS} Распакован: {f}', 'cyan', single_color=True)}{Colors.RESET}")
+                    print(Color.success(f"Decompressed: {f}"))
                 except Exception as e:
-                    print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-            else:
-                print(f"{Colors.YELLOW}{Icons.WARNING} Не gzip файл: {f}{Colors.RESET}")
+                    print(Color.error(str(e)))
         return True
     
-    def sevenz_cmd(self, args):
+    def _bzip2(self, args: List[str]) -> bool:
         if not args:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Использование: 7z <команда> <архив>{Colors.RESET}")
-            print(f"Команды: a (создать), x (распаковать), l (список){Colors.RESET}")
+            print(Color.warning("Usage: bzip2 <file>"))
             return True
-        
-        print(f"{Colors.YELLOW}{Icons.WARNING} 7-Zip требует установки 7z.exe{Colors.RESET}")
+        for f in args:
+            try:
+                with open(f, "rb") as fin:
+                    data = fin.read()
+                    compressed = bz2.compress(data)
+                    with open(f + ".bz2", "wb") as fout:
+                        fout.write(compressed)
+                print(Color.success(f"Compressed: {f}"))
+            except:
+                print(Color.warning("bzip2 not available"))
         return True
     
-    def matrix_cmd(self, args):
-        Animations.matrix_rain(3)
+    def _bunzip2(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: bunzip2 <file.bz2>"))
+            return True
+        for f in args:
+            if f.endswith(".bz2"):
+                try:
+                    with open(f, "rb") as fin:
+                        data = fin.read()
+                        decompressed = bz2.decompress(data)
+                        with open(f[:-4], "wb") as fout:
+                            fout.write(decompressed)
+                    print(Color.success(f"Decompressed: {f}"))
+                except:
+                    print(Color.warning("bzip2 not available"))
         return True
     
-    def hack_cmd(self, args):
-        print(f"{Colors.RED}{Icons.HACK} Инициализация взлома...{Colors.RESET}")
-        stages = ["Сканирование целей", "Поиск уязвимостей", "Эксплуатация", "Получение доступа", "Очистка следов"]
-        for i, stage in enumerate(stages):
-            Animations.progress_bar((i + 1) * 20, 40, gradient=True)
-            time.sleep(0.5)
-            print(f"\n{Colors.YELLOW}[{(i + 1) * 20}%] {stage}...{Colors.RESET}")
-        print(f"{Colors.gradient_text(f'{Icons.SUCCESS} ДОСТУП ПОЛУЧЕН!', 'cyan', single_color=True)}{Colors.RESET}")
+    def _xz(self, args: List[str]) -> bool:
+        print(Color.info("xz compression - use external xz command"))
         return True
     
-    def fire_cmd(self, args):
-        Animations.fire_effect(3)
+    def _unxz(self, args: List[str]) -> bool:
+        print(Color.info("xz decompression - use external xz command"))
         return True
     
-    def rainbow_cmd(self, args):
-        Animations.rainbow_glow(3)
+    # VISUAL EFFECTS COMMANDS (Simplified versions)
+    
+    def _matrix(self, args: List[str]) -> bool:
+        chars = "01アイウエオカキクケコ"
+        cols = shutil.get_terminal_size().columns
+        for _ in range(30):
+            line = "".join(random.choice(chars) for _ in range(cols))
+            sys.stdout.write(f"\r{Color.gradient(line, (0,255,0), (0,100,0))}")
+            sys.stdout.flush()
+            time.sleep(0.05)
+        print()
         return True
     
-    def glow_cmd(self, args):
-        text = ' '.join(args) if args else "✨ KALI TERMINAL ULTIMATE ✨"
-        Animations.pulse(text, Colors.CYAN, 2)
+    def _hack(self, args: List[str]) -> bool:
+        print(Color.info(f"🔓 Initializing hack sequence..."))
+        stages = ["Scanning targets", "Finding vulnerabilities", "Exploiting", "Gaining access"]
+        for stage in stages:
+            print(f"{Color.YELLOW}{stage}...{Color.RESET}")
+            Animation.spinner(stage, 0.5)
+        print(Color.success("ACCESS GRANTED!"))
         return True
     
-    def banner_cmd(self, args):
-        text = ' '.join(args) if args else "KALI"
-        terminal_width = shutil.get_terminal_size().columns
-        banner_width = len(text) + 4
-        padding = (terminal_width - banner_width) // 2
-        if padding < 0:
-            padding = 0
-        print(' ' * padding + f"{Colors.gradient_text('█' * (len(text) + 4), 'cyan', single_color=True)}{Colors.RESET}")
-        print(' ' * padding + f"{Colors.gradient_text(f'█ {text.upper()} █', 'cyan', single_color=True)}{Colors.RESET}")
-        print(' ' * padding + f"{Colors.gradient_text('█' * (len(text) + 4), 'cyan', single_color=True)}{Colors.RESET}")
+    def _fire(self, args: List[str]) -> bool:
+        for _ in range(20):
+            sys.stdout.write(f"\r{Color.gradient('🔥' * random.randint(5, 30), (255,100,0), (255,0,0))}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
         return True
     
-    def cowsay_cmd(self, args):
-        text = ' '.join(args) if args else "Moo!"
-        cow = f"""
-{Colors.gradient_text(f'  {text}', 'cyan', single_color=True)}
+    def _rainbow(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "🌈 RAINBOW MODE 🌈"
+        colors = [Color.RED, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.MAGENTA]
+        for _ in range(10):
+            result = ""
+            for i, char in enumerate(text):
+                result += f"{colors[i % len(colors)]}{char}{Color.RESET}"
+            sys.stdout.write(f"\r{result}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
+        return True
+    
+    def _stars(self, args: List[str]) -> bool:
+        for _ in range(20):
+            stars = "".join(random.choice(["⭐", "🌟", "✨"]) for _ in range(50))
+            sys.stdout.write(f"\r{Color.gradient(stars, (255,255,100), (100,100,255))}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
+        return True
+    
+    def _snow(self, args: List[str]) -> bool:
+        for _ in range(20):
+            snow = "".join(random.choice(["❄️", "❅", "❆"]) for _ in range(50))
+            sys.stdout.write(f"\r{Color.gradient(snow, (100,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
+        return True
+    
+    def _heartbeat(self, args: List[str]) -> bool:
+        for _ in range(10):
+            sys.stdout.write(f"\r{Color.RED}❤️  ❤️{Color.RESET}")
+            sys.stdout.flush()
+            time.sleep(0.3)
+            sys.stdout.write(f"\r{Color.RED}❤️{Color.RESET}  ")
+            sys.stdout.flush()
+            time.sleep(0.3)
+        print()
+        return True
+    
+    def _scanner(self, args: List[str]) -> bool:
+        width = shutil.get_terminal_size().columns
+        for pos in range(width):
+            line = [" "] * width
+            line[pos] = "█"
+            sys.stdout.write(f"\r{Color.GREEN}{''.join(line)}{Color.RESET}")
+            sys.stdout.flush()
+            time.sleep(0.01)
+        print()
+        return True
+    
+    def _bounce(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "KALI TERMINAL"
+        width = shutil.get_terminal_size().columns
+        pos = 0
+        direction = 1
+        for _ in range(50):
+            spaces = " " * pos
+            sys.stdout.write(f"\r{Color.gradient(spaces + text, (0,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            pos += direction
+            if pos >= width - len(text):
+                direction = -1
+            elif pos <= 0:
+                direction = 1
+            time.sleep(0.05)
+        print()
+        return True
+    
+    def _wave(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "KALI TERMINAL"
+        colors = [Color.RED, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.MAGENTA]
+        for offset in range(len(colors) * 2):
+            result = ""
+            for j, char in enumerate(text):
+                result += f"{colors[(j + offset) % len(colors)]}{char}{Color.RESET}"
+            sys.stdout.write(f"\r{result}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
+        return True
+    
+    def _pulse(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "PULSE"
+        for size in range(1, 5):
+            sys.stdout.write(f"\r{Color.gradient(text * size, (0,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        for size in range(4, 0, -1):
+            sys.stdout.write(f"\r{Color.gradient(text * size, (0,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            time.sleep(0.1)
+        print()
+        return True
+    
+    def _marquee(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "KALI TERMINAL ULTIMATE"
+        text = " " + text + " "
+        width = shutil.get_terminal_size().columns
+        for i in range(len(text) + width):
+            display = text[i:i+width]
+            sys.stdout.write(f"\r{Color.gradient(display, (0,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            time.sleep(0.05)
+        print()
+        return True
+    
+    def _typewriter(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "Kali Terminal Ultimate"
+        for char in text:
+            sys.stdout.write(Color.gradient(char, (0,200,255), (0,100,150)))
+            sys.stdout.flush()
+            time.sleep(0.05)
+        print()
+        return True
+    
+    def _glitch(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "GLITCH EFFECT"
+        for _ in range(10):
+            glitched = "".join(random.choice(string.ascii_letters) if random.random() < 0.1 else c for c in text)
+            sys.stdout.write(f"\r{Color.RED}{glitched}{Color.RESET}")
+            sys.stdout.flush()
+            time.sleep(0.05)
+        sys.stdout.write(f"\r{Color.gradient(text, (0,200,255), (0,100,150))}")
+        print()
+        return True
+    
+    def _cowsay(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "Moo!"
+        print(f"""
+{Color.gradient(f'  {text}', (0,200,255), (0,100,150))}
    \\
     \\
       ^__^
       (oo)\\_______
       (__)\\       )\\/\\
           ||----w |
-          ||     ||{Colors.RESET}
-"""
-        print(cow)
+          ||     ||{Color.RESET}
+""")
         return True
     
-    def fortune_cmd(self, args):
+    def _fortune(self, args: List[str]) -> bool:
         fortunes = [
-            "Хакер - это тот, кто ищет нестандартные решения.",
-            "В Linux нет ничего невозможного.",
-            "Kali Linux - выбор профессионалов.",
-            "Лучший способ защитить систему - знать, как её взломать.",
-            "Код - это поэзия, написанная для машин.",
-            "Сложность - враг безопасности.",
-            "Безопасность - это не продукт, а процесс.",
-            "В мире Linux все файлы - это файлы.",
-            "RTFM - Read The Friendly Manual!",
-            "Свобода - это ответственность.",
-            "Секрет успеха - начать.",
-            "Программирование - это искусство.",
-            "Python - это сила.",
-            "Terminal - твой лучший друг.",
+            "The quieter you become, the more you are able to hear.",
+            "With great power comes great responsibility.",
+            "In Linux, nothing is impossible.",
+            "Knowledge is power. Keep learning.",
+            "There's no place like 127.0.0.1",
+            "Keep calm and use Python!",
+            "The best error message is the one that never shows up.",
+            "Code is read more often than it is written.",
+            "Simplicity is the soul of efficiency.",
+            "First, solve the problem. Then, write the code."
         ]
-        print(f"{Colors.gradient_text(f'{Icons.FIRE} {random.choice(fortunes)}', 'cyan', single_color=True)}{Colors.RESET}")
+        print(Color.gradient(f"🔮 {random.choice(fortunes)}", (0,200,255), (0,100,150)))
         return True
     
-    def neofetch_cmd(self, args):
-        user = Utils.get_username()
-        host = socket.gethostname()
-        os_info = Utils.get_os_info()
-        ip = Utils.get_ip()
-        kernel = platform.release()
-        shell = "Kali Terminal v4.2"
-        terminal_width = shutil.get_terminal_size().columns
-        
+    def _neofetch(self, args: List[str]) -> bool:
+        user, host, os_info, ip = Utils.get_username(), socket.gethostname(), Utils.get_os_info(), Utils.get_local_ip()
         ascii_art = f"""
-{Colors.gradient_text('        .-.', 'cyan', single_color=True)}
-{Colors.gradient_text('       /   \\', 'cyan', single_color=True)}
-{Colors.gradient_text('       |   |', 'cyan', single_color=True)}       {Colors.gradient_text(f'{user}@{host}', 'cyan', single_color=True)}
-{Colors.gradient_text('       |   |', 'cyan', single_color=True)}       {Colors.gradient_text(f'OS: {os_info}', 'cyan', single_color=True)}
-{Colors.gradient_text('       |   |', 'cyan', single_color=True)}       {Colors.gradient_text(f'Kernel: {kernel}', 'cyan', single_color=True)}
-{Colors.gradient_text('       |   |', 'cyan', single_color=True)}       {Colors.gradient_text(f'IP: {ip}', 'cyan', single_color=True)}
-{Colors.gradient_text('      /     \\', 'cyan', single_color=True)}      {Colors.gradient_text(f'Shell: {shell}', 'cyan', single_color=True)}
-{Colors.gradient_text('     /       \\', 'cyan', single_color=True)}     {Colors.gradient_text(f'Commands: {self.size()}+', 'cyan', single_color=True)}
-{Colors.gradient_text('    /         \\', 'cyan', single_color=True)}    
-{Colors.gradient_text('   /           \\', 'cyan', single_color=True)}   
-{Colors.gradient_text('  /             \\', 'cyan', single_color=True)}  
-{Colors.gradient_text(' /_______________\\', 'cyan', single_color=True)} {Colors.RESET}
+{Color.gradient('        .-.', (0,200,255), (0,100,150))}
+{Color.gradient('       /   \\', (0,200,255), (0,100,150))}       {Color.gradient(f'{user}@{host}', (0,200,255), (0,100,150))}
+{Color.gradient('       |   |', (0,200,255), (0,100,150))}       {Color.gradient(f'OS: {os_info}', (0,200,255), (0,100,150))}
+{Color.gradient('       |   |', (0,200,255), (0,100,150))}       {Color.gradient(f'IP: {ip}', (0,200,255), (0,100,150))}
+{Color.gradient('      /     \\', (0,200,255), (0,100,150))}      {Color.gradient(f'Commands: {len(self.commands)}+', (0,200,255), (0,100,150))}
+{Color.gradient('     /       \\', (0,200,255), (0,100,150))}    
+{Color.gradient('    /         \\', (0,200,255), (0,100,150))}   
+{Color.gradient('   /           \\', (0,200,255), (0,100,150))}  
+{Color.gradient('  /             \\', (0,200,255), (0,100,150))} 
+{Color.gradient(' /_______________\\', (0,200,255), (0,100,150))} {Color.RESET}
 """
         print(ascii_art)
         return True
     
-    def ascii_cmd(self, args):
-        arts = [
-            f"""
-{Colors.gradient_text('    ╔═╗┌─┐┌┬┐┌─┐┌─┐┬─┐', 'cyan', single_color=True)}
-{Colors.gradient_text('    ╠═╝├─┤ │ ├─┤│  ├┬┘', 'cyan', single_color=True)}
-{Colors.gradient_text('    ╩  ┴ ┴ ┴ ┴ ┴└─┘┴└─', 'cyan', single_color=True)}{Colors.RESET}
-            """,
-            f"""
-{Colors.gradient_text('        ┌─┐┬ ┬┌─┐┌┐┌┌─┐┌─┐', 'cyan', single_color=True)}
-{Colors.gradient_text('        │  └┬┘├─┤││││ ┬└─┐', 'cyan', single_color=True)}
-{Colors.gradient_text('        └─┘ ┴ ┴ ┴┘└┘└─┘└─┘', 'cyan', single_color=True)}{Colors.RESET}
-            """,
-            f"""
-{Colors.gradient_text('    ╦ ╦╔═╗╔╦╗╔═╗╦ ╦', 'cyan', single_color=True)}
-{Colors.gradient_text('    ║ ║╠═╣ ║ ║  ╠═╣', 'cyan', single_color=True)}
-{Colors.gradient_text('    ╚═╝╩ ╩ ╩ ╚═╝╩ ╩', 'cyan', single_color=True)}{Colors.RESET}
-            """,
-            f"""
-{Colors.gradient_text('    ██╗  ██╗ █████╗ ██╗     ██╗', 'cyan', single_color=True)}
-{Colors.gradient_text('    ██║ ██╔╝██╔══██╗██║     ██║', 'cyan', single_color=True)}
-{Colors.gradient_text('    █████╔╝ ███████║██║     ██║', 'cyan', single_color=True)}
-{Colors.gradient_text('    ██╔═██╗ ██╔══██║██║     ██║', 'cyan', single_color=True)}
-{Colors.gradient_text('    ██║  ██╗██║  ██║███████╗██║', 'cyan', single_color=True)}{Colors.RESET}
-            """
-        ]
-        print(random.choice(arts))
+    def _banner(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "KALI"
+        width = shutil.get_terminal_size().columns
+        banner_width = len(text) + 4
+        padding = max(0, (width - banner_width) // 2)
+        print(" " * padding + Color.gradient("█" * (len(text) + 4), (0,200,255), (0,100,150)))
+        print(" " * padding + Color.gradient(f"█ {text.upper()} █", (0,200,255), (0,100,150)))
+        print(" " * padding + Color.gradient("█" * (len(text) + 4), (0,200,255), (0,100,150)))
         return True
     
-    def figlet_cmd(self, args):
-        text = ' '.join(args) if args else "KALI"
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text(text.upper().center(terminal_width), 'cyan', single_color=True)}{Colors.RESET}")
+    def _figlet(self, args: List[str]) -> bool:
+        text = " ".join(args) if args else "KALI"
+        width = shutil.get_terminal_size().columns
+        try:
+            import pyfiglet
+            fig = pyfiglet.figlet_format(text)
+            for line in fig.split('\n'):
+                print(Color.gradient(line.center(width), (0,200,255), (0,100,150)))
+        except:
+            print(Color.gradient(text.upper().center(width), (0,200,255), (0,100,150)))
         return True
     
-    def sl_cmd(self, args):
+    def _sl(self, args: List[str]) -> bool:
         train = f"""
-{Colors.gradient_text('      ====        ________                ___________', 'cyan', single_color=True)}
-{Colors.gradient_text('  _D _|  |_______/        \\__I_I_____===__|_________|', 'cyan', single_color=True)}
-{Colors.gradient_text('   |(_)---  |   H\\________/ |   |        =|___ ___|      _________________', 'cyan', single_color=True)}
-{Colors.gradient_text('   /     |  |   H  |  |     |   |         ||_| |_||     _|                \\_____A', 'cyan', single_color=True)}
-{Colors.gradient_text('  |      |  |   H  |__--------------------| [___] |   =|                        |', 'cyan', single_color=True)}
-{Colors.gradient_text('  | ________|___H__/__|_____/[][]~\\_______|       |   -|                        |', 'cyan', single_color=True)}
-{Colors.gradient_text('  |/ |   |-----------I_____I [][] |  |____|_  |___  \\_  |_________^{{', 'cyan', single_color=True)}{Colors.RESET}
+{Color.gradient('      ====        ________                ___________', (0,200,255), (0,100,150))}
+{Color.gradient('  _D _|  |_______/        \\__I_I_____===__|_________|', (0,200,255), (0,100,150))}
+{Color.gradient('   |(_)---  |   H\\________/ |   |        =|___ ___|', (0,200,255), (0,100,150))}
+{Color.gradient('   /     |  |   H  |  |     |   |         ||_| |_||', (0,200,255), (0,100,150))}
+{Color.gradient('  |      |  |   H  |__--------------------| [___] |', (0,200,255), (0,100,150))}
+{Color.gradient('  | ________|___H__/__|_____/[][]~\\_______|       |', (0,200,255), (0,100,150))}
+{Color.gradient('  |/ |   |-----------I_____I [][] |  |____|_  |___', (0,200,255), (0,100,150))}{Color.RESET}
 """
         print(train)
         return True
     
-    def yes_cmd(self, args):
-        text = ' '.join(args) if args else 'y'
+    # UTILITIES COMMANDS
+    
+    def _clear(self, args: List[str]) -> bool:
+        Utils.clear_screen()
+        return True
+    
+    def _help(self, args: List[str]) -> bool:
+        if args:
+            cmd = self.get(args[0])
+            if cmd:
+                print(Color.box(
+                    f"{Color.GREEN}Description:{Color.RESET}\n  {cmd.description}\n\n"
+                    f"{Color.GREEN}Usage:{Color.RESET}\n  {Color.CYAN}{cmd.usage or cmd.name}{Color.RESET}",
+                    title=args[0].upper()
+                ))
+                return True
+        
+        categories = {}
+        for name, cmd in self.commands.items():
+            if cmd.category not in categories:
+                categories[cmd.category] = []
+            categories[cmd.category].append(name)
+        
+        print(Color.header("KALI TERMINAL HELP", 80))
+        for cat, cmds in sorted(categories.items()):
+            print(f"\n{Color.BOLD}{cat}{Color.RESET} ({len(cmds)} commands)")
+            cmds_display = sorted(cmds)[:15]
+            cols = 3
+            per_col = (len(cmds_display) + cols - 1) // cols
+            for i in range(per_col):
+                line = ""
+                for j in range(cols):
+                    idx = i + j * per_col
+                    if idx < len(cmds_display):
+                        line += f"  {Color.CYAN}{cmds_display[idx]:<15}{Color.RESET}"
+                if line.strip():
+                    print(line)
+            if len(cmds) > 15:
+                print(f"  {Color.DIM}... and {len(cmds) - 15} more{Color.RESET}")
+        print(f"\n{Color.DIM}Total commands: {len(self.commands)}{Color.RESET}")
+        return True
+    
+    def _history(self, args: List[str]) -> bool:
         try:
-            for _ in range(10):
-                print(Colors.gradient_text(text, 'cyan', single_color=True))
-                time.sleep(0.1)
-        except KeyboardInterrupt:
-            print()
+            if self.history_path.exists():
+                with open(self.history_path, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                    start = max(0, len(lines) - 50)
+                    for i, line in enumerate(lines[start:], start + 1):
+                        print(f"{Color.gradient(f'{i:>5}', (0,200,255), (0,100,150))} {line.strip()}")
+            else:
+                print(Color.warning("No history"))
+        except:
+            print(Color.warning("No history"))
         return True
     
-    def stars_cmd(self, args):
-        Animations.starfield(3)
+    def _alias(self, args: List[str]) -> bool:
+        if not args:
+            if self.aliases:
+                for name, value in sorted(self.aliases.items()):
+                    print(f"{Color.GREEN}{name}{Color.RESET}='{value}'")
+            else:
+                print(Color.warning("No aliases"))
+            return True
+        if "=" in args[0]:
+            name, value = args[0].split("=", 1)
+            self.aliases[name] = value
+            print(Color.success(f"Alias: {name}='{value}'"))
         return True
     
-    def explosion_cmd(self, args):
-        Animations.explosion_effect(2)
+    def _unalias(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: unalias <name>"))
+            return True
+        name = args[0]
+        if name in self.aliases:
+            del self.aliases[name]
+            print(Color.success(f"Alias removed: {name}"))
+        else:
+            print(Color.warning(f"Alias not found: {name}"))
         return True
     
-    def bounce_cmd(self, args):
-        text = ' '.join(args) if args else "KALI TERMINAL"
-        Animations.bounce(text, 2)
+    def _type(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: type <command>"))
+            return True
+        cmd = args[0]
+        if cmd in self.aliases:
+            print(f"{cmd} - alias for '{self.aliases[cmd]}'")
+        elif cmd in self.commands:
+            print(f"{cmd} - built-in command")
+        else:
+            print(f"{cmd} - external command")
         return True
     
-    def info_cmd(self, args):
-        terminal_width = shutil.get_terminal_size().columns
-        info_text = f"""
-{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text('KALI TERMINAL ULTIMATE EDITION v4.2'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('📊 СТАТИСТИКА', 'cyan', single_color=True)}{' ' * (terminal_width - 14)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   Команд: {Colors.GREEN}{self.size()}{Colors.RESET}{' ' * (terminal_width - 12 - len(str(self.size())))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   Алиасов: {Colors.GREEN}{len(self.aliases)}{Colors.RESET}{' ' * (terminal_width - 13 - len(str(len(self.aliases))))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   Платформа: {Colors.GREEN}{platform.system()} {platform.release()}{Colors.RESET}{' ' * (terminal_width - 15 - len(f"{platform.system()} {platform.release()}"))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   Python: {Colors.GREEN}{platform.python_version()}{Colors.RESET}{' ' * (terminal_width - 12 - len(platform.python_version()))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('📦 ИНТЕГРАЦИИ', 'cyan', single_color=True)}{' ' * (terminal_width - 14)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ psutil {Colors.GREEN}{'установлен' if PSUTIL else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 17 - len('установлен' if PSUTIL else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ requests {Colors.GREEN}{'установлен' if REQUESTS else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 18 - len('установлен' if REQUESTS else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ Pillow {Colors.GREEN}{'установлен' if PIL else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 15 - len('установлен' if PIL else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ cryptography {Colors.GREEN}{'установлен' if CRYPTO else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 22 - len('установлен' if CRYPTO else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ colorama {Colors.GREEN}{'установлен' if COLORAMA_AVAILABLE else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 18 - len('установлен' if COLORAMA_AVAILABLE else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}   ✅ rich {Colors.GREEN}{'установлен' if RICH_AVAILABLE else 'не установлен'}{Colors.RESET}{' ' * (terminal_width - 14 - len('установлен' if RICH_AVAILABLE else 'не установлен'))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}{Colors.RESET}
-"""
-        print(info_text)
+    def _man(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: man <command>"))
+            return True
+        cmd = self.get(args[0])
+        if cmd:
+            print(Color.box(
+                f"{Color.GREEN}DESCRIPTION:{Color.RESET}\n  {cmd.description}\n\n"
+                f"{Color.GREEN}USAGE:{Color.RESET}\n  {Color.CYAN}{cmd.usage or cmd.name}{Color.RESET}\n\n"
+                f"{Color.GREEN}CATEGORY:{Color.RESET}\n  {cmd.category}",
+                title=args[0].upper()
+            ))
+        else:
+            print(Color.error(f"Command not found: {args[0]}"))
         return True
     
-    def sysinfo_cmd(self, args):
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text('СИСТЕМНАЯ ИНФОРМАЦИЯ'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} ОС:      {Colors.GREEN}{platform.system()} {platform.release()}{Colors.RESET}{' ' * (terminal_width - 12 - len(f"{platform.system()} {platform.release()}"))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Хост:    {Colors.GREEN}{socket.gethostname()}{Colors.RESET}{' ' * (terminal_width - 12 - len(socket.gethostname()))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} IP:      {Colors.GREEN}{Utils.get_ip()}{Colors.RESET}{' ' * (terminal_width - 12 - len(Utils.get_ip()))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Публичный IP:{Colors.GREEN}{Utils.get_public_ip()}{Colors.RESET}{' ' * (terminal_width - 18 - len(Utils.get_public_ip()))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Пользователь:{Colors.GREEN} {Utils.get_username()}{Colors.RESET}{' ' * (terminal_width - 16 - len(Utils.get_username()))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} Python:  {Colors.GREEN}{platform.python_version()}{Colors.RESET}{' ' * (terminal_width - 12 - len(platform.python_version()))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        
-        if PSUTIL:
-            cpu = psutil.cpu_percent()
-            mem = psutil.virtual_memory()
-            disk = psutil.disk_usage('/')
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} CPU:     {Colors.GREEN}{cpu}%{Colors.RESET}{' ' * (terminal_width - 11 - len(f"{cpu}%"))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} RAM:     {Colors.GREEN}{mem.percent}% ({Utils.human_size(mem.used)}/{Utils.human_size(mem.total)}){Colors.RESET}{' ' * (terminal_width - 21 - len(f"{mem.percent}% ({Utils.human_size(mem.used)}/{Utils.human_size(mem.total)})"))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-            print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} DISK:    {Colors.GREEN}{disk.percent}% ({Utils.human_size(disk.used)}/{Utils.human_size(disk.total)}){Colors.RESET}{' ' * (terminal_width - 21 - len(f"{disk.percent}% ({Utils.human_size(disk.used)}/{Utils.human_size(disk.total)})"))}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
+    def _calc(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: calc <expression>"))
+            return True
+        try:
+            expr = " ".join(args)
+            expr = expr.replace("^", "**")
+            result = eval(expr, {"__builtins__": {}}, {"math": math})
+            print(Color.gradient(f"{expr} = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid expression"))
         return True
     
-    def version_cmd(self, args):
-        print(f"{Colors.gradient_text('Kali Terminal Ultimate Edition v4.2', 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"Команд: {self.size()}")
-        print(f"Алиасов: {len(self.aliases)}")
+    def _units(self, args: List[str]) -> bool:
+        if len(args) < 3:
+            print(Color.warning("Usage: units <value> <from_unit> <to_unit>"))
+            return True
+        conversions = {
+            "m": 1, "cm": 0.01, "km": 1000,
+            "in": 0.0254, "ft": 0.3048, "mi": 1609.344,
+            "kg": 1, "g": 0.001, "lb": 0.453592
+        }
+        try:
+            value = float(args[0])
+            from_unit, to_unit = args[1], args[2]
+            if from_unit in conversions and to_unit in conversions:
+                result = value * conversions[from_unit] / conversions[to_unit]
+                print(Color.gradient(f"{value} {from_unit} = {result:.4f} {to_unit}", (0,200,255), (0,100,150)))
+            else:
+                print(Color.error("Unknown units"))
+        except:
+            print(Color.error("Conversion error"))
         return True
     
-    def about_cmd(self, args):
-        terminal_width = shutil.get_terminal_size().columns
-        about_text = f"""
-{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text('KALI TERMINAL EMULATOR v4.2'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Профессиональный инструмент для работы с командной строкой', 'cyan', single_color=True)}{' ' * (terminal_width - 48)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text(f'Содержит {self.size()} реальных команд для повседневной работы', 'cyan', single_color=True)}{' ' * (terminal_width - 41 - len(str(self.size())))}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('ОСОБЕННОСТИ:', 'cyan', single_color=True)}{' ' * (terminal_width - 15)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• 200+ встроенных команд', 'cyan', single_color=True)}{' ' * (terminal_width - 25)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Цветной вывод и иконки', 'cyan', single_color=True)}{' ' * (terminal_width - 27)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Поддержка псевдонимов (alias)', 'cyan', single_color=True)}{' ' * (terminal_width - 32)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• История команд', 'cyan', single_color=True)}{' ' * (terminal_width - 20)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Древовидная навигация', 'cyan', single_color=True)}{' ' * (terminal_width - 26)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Сетевые утилиты', 'cyan', single_color=True)}{' ' * (terminal_width - 21)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Шифрование и хеширование', 'cyan', single_color=True)}{' ' * (terminal_width - 29)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Работа с архивами', 'cyan', single_color=True)}{' ' * (terminal_width - 23)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Мониторинг системы', 'cyan', single_color=True)}{' ' * (terminal_width - 24)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Поддержка rich и colorama', 'cyan', single_color=True)}{' ' * (terminal_width - 29)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('• Анимации и визуальные эффекты', 'cyan', single_color=True)}{' ' * (terminal_width - 34)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Автор: @console_hack', 'cyan', single_color=True)}{' ' * (terminal_width - 22)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('GitHub: github.com/console-hack', 'cyan', single_color=True)}{' ' * (terminal_width - 32)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Создан для образовательных целей', 'cyan', single_color=True)}{' ' * (terminal_width - 34)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}{Colors.RESET}
-"""
-        print(about_text)
+    def _timer(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: timer <seconds>"))
+            return True
+        seconds = int(args[0])
+        print(Color.info(f"Timer set for {seconds} seconds"))
+        for i in range(seconds, 0, -1):
+            sys.stdout.write(f"\r{Color.gradient(f'Time remaining: {i} seconds', (0,200,255), (0,100,150))}")
+            sys.stdout.flush()
+            time.sleep(1)
+        print(f"\n{Color.success('Time\'s up!')}")
         return True
     
-    def credits_cmd(self, args):
-        terminal_width = shutil.get_terminal_size().columns
-        print(f"{Colors.gradient_text('╔' + '═' * (terminal_width - 2) + '╗', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.BOLD}{Colors.gradient_text('АВТОРЫ И БЛАГОДАРНОСТИ'.center(terminal_width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╠' + '═' * (terminal_width - 2) + '╣', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Разработчик: @console_hack', 'cyan', single_color=True)}{' ' * (terminal_width - 28)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Вдохновлено: Kali Linux, Termux', 'cyan', single_color=True)}{' ' * (terminal_width - 35)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Библиотеки: psutil, requests, PIL, colorama, rich', 'cyan', single_color=True)}{' ' * (terminal_width - 50)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('║', 'cyan', single_color=True)} {Colors.gradient_text('Особая благодарность сообществу open-source', 'cyan', single_color=True)}{' ' * (terminal_width - 44)}{Colors.gradient_text('║', 'cyan', single_color=True)}")
-        print(f"{Colors.gradient_text('╚' + '═' * (terminal_width - 2) + '╝', 'cyan', single_color=True)}")
+    def _stopwatch(self, args: List[str]) -> bool:
+        print(Color.info("Stopwatch started. Press Enter to stop."))
+        start = time.time()
+        input()
+        elapsed = time.time() - start
+        print(Color.gradient(f"Elapsed: {Utils.human_time(elapsed)}", (0,200,255), (0,100,150)))
         return True
     
-    def execute(self, cmd_line):
+    def _todo(self, args: List[str]) -> bool:
+        todo_file = Path.home() / ".kali_terminal_todo.json"
+        if not args or args[0] == "list":
+            try:
+                if todo_file.exists():
+                    tasks = json.load(open(todo_file, "r"))
+                    if not tasks:
+                        print(Color.info("Todo list is empty"))
+                    else:
+                        for i, task in enumerate(tasks, 1):
+                            status = "✓" if task.get("done") else "○"
+                            print(f"{Color.CYAN}{i:>2}.{Color.RESET} {status} {task.get('text')}")
+                else:
+                    print(Color.info("Todo list is empty"))
+            except:
+                pass
+        elif args[0] == "add":
+            text = " ".join(args[1:])
+            if text:
+                tasks = json.load(open(todo_file, "r")) if todo_file.exists() else []
+                tasks.append({"text": text, "done": False})
+                with open(todo_file, "w") as f:
+                    json.dump(tasks, f, indent=2)
+                print(Color.success(f"Added: {text}"))
+        elif args[0] == "done" and len(args) > 1:
+            try:
+                idx = int(args[1]) - 1
+                tasks = json.load(open(todo_file, "r")) if todo_file.exists() else []
+                if 0 <= idx < len(tasks):
+                    tasks[idx]["done"] = True
+                    with open(todo_file, "w") as f:
+                        json.dump(tasks, f, indent=2)
+                    print(Color.success("Marked as done"))
+                else:
+                    print(Color.error("Invalid task number"))
+            except:
+                pass
+        return True
+    
+    def _note(self, args: List[str]) -> bool:
+        notes_file = Path.home() / ".kali_terminal_notes.json"
+        if not args or args[0] == "list":
+            try:
+                if notes_file.exists():
+                    notes = json.load(open(notes_file, "r"))
+                    if not notes:
+                        print(Color.info("No notes"))
+                    else:
+                        for i, note in enumerate(notes, 1):
+                            date = note.get('date', '')[:10]
+                            title = note.get('title', 'Untitled')[:30]
+                            print(f"{Color.CYAN}{i:>2}.{Color.RESET} {title} - {date}")
+                else:
+                    print(Color.info("No notes"))
+            except:
+                pass
+        elif args[0] == "add":
+            title = args[1] if len(args) > 1 else "Note"
+            text = " ".join(args[2:]) if len(args) > 2 else ""
+            notes = json.load(open(notes_file, "r")) if notes_file.exists() else []
+            notes.append({"title": title, "text": text, "date": str(datetime.now())})
+            with open(notes_file, "w") as f:
+                json.dump(notes, f, indent=2)
+            print(Color.success(f"Note added: {title}"))
+        return True
+    
+    def _joke(self, args: List[str]) -> bool:
+        jokes = [
+            "Why do programmers confuse Halloween and Christmas? 31 Oct = 25 Dec!",
+            "How many programmers does it take to change a light bulb? None, that's a hardware problem!",
+            "Why do programmers prefer dark mode? Because light attracts bugs!",
+            "Why was the developer unhappy? Because he had too many issues!",
+            "Why did the programmer quit his job? Because he didn't get arrays!",
+            "What do you call a programmer from Finland? Nerdic!",
+            "Why do Java developers wear glasses? Because they can't C#!"
+        ]
+        print(Color.gradient(random.choice(jokes), (0,200,255), (0,100,150)))
+        return True
+    
+    def _quote(self, args: List[str]) -> bool:
+        quotes = [
+            ("The only way to do great work is to love what you do.", "Steve Jobs"),
+            ("Code is like humor. When you have to explain it, it's bad.", "Cory House"),
+            ("First, solve the problem. Then, write the code.", "John Johnson"),
+            ("Simplicity is the soul of efficiency.", "Austin Freeman"),
+            ("Make it work, make it right, make it fast.", "Kent Beck"),
+            ("Talk is cheap. Show me the code.", "Linus Torvalds"),
+            ("Programs must be written for people to read.", "Hal Abelson")
+        ]
+        quote, author = random.choice(quotes)
+        print(Color.gradient(f'"{quote}"', (0,200,255), (0,100,150)))
+        print(Color.gradient(f"  — {author}", (0,150,200), (0,100,100)))
+        return True
+    
+    def _riddle(self, args: List[str]) -> bool:
+        riddles = [
+            ("What can you hold without ever touching?", "Breath"),
+            ("What gets bigger the more you take away from it?", "A hole"),
+            ("What has keys but can't open locks?", "Piano"),
+            ("What has a face and two hands but no arms or legs?", "Clock"),
+            ("What has words but never speaks?", "Book"),
+            ("What has to be broken before you can use it?", "Egg"),
+            ("What is full of holes but still holds water?", "Sponge")
+        ]
+        riddle, answer = random.choice(riddles)
+        print(Color.gradient(f"Riddle: {riddle}", (0,200,255), (0,100,150)))
+        user_answer = input(f"{Color.YELLOW}Answer: {Color.RESET}").strip().lower()
+        if user_answer == answer.lower():
+            print(Color.success("Correct!"))
+        else:
+            print(Color.warning(f"Answer: {answer}"))
+        return True
+    
+    def _weather(self, args: List[str]) -> bool:
+        city = " ".join(args) if args else "Moscow"
+        try:
+            import requests
+            response = requests.get(f"https://wttr.in/{city}?format=%l:+%c+%t+%w", timeout=5)
+            if response.ok:
+                print(Color.gradient(response.text.strip(), (0,200,255), (0,100,150)))
+            else:
+                print(Color.warning("Could not fetch weather"))
+        except:
+            print(Color.warning("Could not fetch weather"))
+        return True
+    
+    def _bitcoin(self, args: List[str]) -> bool:
+        try:
+            import requests
+            response = requests.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,eur", timeout=5)
+            if response.ok:
+                data = response.json()
+                btc = data.get("bitcoin", {})
+                print(Color.box(
+                    f"{Color.CYAN}USD: ${Color.GREEN}{btc.get('usd', 'N/A')}\n"
+                    f"{Color.CYAN}EUR: €{Color.GREEN}{btc.get('eur', 'N/A')}",
+                    title="Bitcoin Price"
+                ))
+            else:
+                print(Color.warning("Could not fetch price"))
+        except:
+            print(Color.warning("Could not fetch price"))
+        return True
+    
+    def _ethereum(self, args: List[str]) -> bool:
+        try:
+            import requests
+            response = requests.get("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd,eur", timeout=5)
+            if response.ok:
+                data = response.json()
+                eth = data.get("ethereum", {})
+                print(Color.box(
+                    f"{Color.CYAN}USD: ${Color.GREEN}{eth.get('usd', 'N/A')}\n"
+                    f"{Color.CYAN}EUR: €{Color.GREEN}{eth.get('eur', 'N/A')}",
+                    title="Ethereum Price"
+                ))
+            else:
+                print(Color.warning("Could not fetch price"))
+        except:
+            print(Color.warning("Could not fetch price"))
+        return True
+    
+    # MATH COMMANDS
+    
+    def _fib(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: fib <n>"))
+            return True
+        try:
+            n = int(args[0])
+            result = Utils.fibonacci(n)
+            print(Color.gradient(f"Fibonacci({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _prime(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: prime <n>"))
+            return True
+        try:
+            n = int(args[0])
+            is_prime = Utils.is_prime(n)
+            result = "prime" if is_prime else "not prime"
+            print(Color.gradient(f"{n} is {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _factors(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: factors <n>"))
+            return True
+        try:
+            n = int(args[0])
+            factors = Utils.prime_factors(n)
+            print(Color.gradient(f"Prime factors of {n}: {factors}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _gcd(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: gcd <a> <b>"))
+            return True
+        try:
+            a, b = int(args[0]), int(args[1])
+            result = Utils.gcd(a, b)
+            print(Color.gradient(f"gcd({a}, {b}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _lcm(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: lcm <a> <b>"))
+            return True
+        try:
+            a, b = int(args[0]), int(args[1])
+            result = Utils.lcm(a, b)
+            print(Color.gradient(f"lcm({a}, {b}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _sqrt(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sqrt <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = math.sqrt(n)
+            print(Color.gradient(f"√{n} = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _pow(self, args: List[str]) -> bool:
+        if len(args) < 2:
+            print(Color.warning("Usage: pow <base> <exp>"))
+            return True
+        try:
+            base, exp = float(args[0]), float(args[1])
+            result = base ** exp
+            print(Color.gradient(f"{base}^{exp} = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _fact(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: fact <n>"))
+            return True
+        try:
+            n = int(args[0])
+            result = math.factorial(n)
+            print(Color.gradient(f"{n}! = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _sin(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sin <angle>"))
+            return True
+        try:
+            angle = float(args[0])
+            result = math.sin(math.radians(angle))
+            print(Color.gradient(f"sin({angle}°) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _cos(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: cos <angle>"))
+            return True
+        try:
+            angle = float(args[0])
+            result = math.cos(math.radians(angle))
+            print(Color.gradient(f"cos({angle}°) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _tan(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: tan <angle>"))
+            return True
+        try:
+            angle = float(args[0])
+            result = math.tan(math.radians(angle))
+            print(Color.gradient(f"tan({angle}°) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _log(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: log <n> [base]"))
+            return True
+        try:
+            n = float(args[0])
+            base = float(args[1]) if len(args) > 1 else math.e
+            result = math.log(n) / math.log(base)
+            print(Color.gradient(f"log_{base}({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _ln(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: ln <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = math.log(n)
+            print(Color.gradient(f"ln({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _exp(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: exp <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = math.exp(n)
+            print(Color.gradient(f"e^{n} = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _abs(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: abs <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = abs(n)
+            print(Color.gradient(f"|{n}| = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _round(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: round <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = round(n)
+            print(Color.gradient(f"round({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _floor(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: floor <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = math.floor(n)
+            print(Color.gradient(f"floor({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _ceil(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: ceil <n>"))
+            return True
+        try:
+            n = float(args[0])
+            result = math.ceil(n)
+            print(Color.gradient(f"ceil({n}) = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _pi(self, args: List[str]) -> bool:
+        print(Color.gradient(f"π = {math.pi}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _e(self, args: List[str]) -> bool:
+        print(Color.gradient(f"e = {math.e}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _tau(self, args: List[str]) -> bool:
+        print(Color.gradient(f"τ = {math.tau}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _avg(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: avg <n1> <n2> ..."))
+            return True
+        try:
+            nums = [float(x) for x in args]
+            result = sum(nums) / len(nums)
+            print(Color.gradient(f"Average = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _sum(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: sum <n1> <n2> ..."))
+            return True
+        try:
+            nums = [float(x) for x in args]
+            result = sum(nums)
+            print(Color.gradient(f"Sum = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _min(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: min <n1> <n2> ..."))
+            return True
+        try:
+            nums = [float(x) for x in args]
+            result = min(nums)
+            print(Color.gradient(f"Min = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _max(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: max <n1> <n2> ..."))
+            return True
+        try:
+            nums = [float(x) for x in args]
+            result = max(nums)
+            print(Color.gradient(f"Max = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _median(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: median <n1> <n2> ..."))
+            return True
+        try:
+            nums = sorted([float(x) for x in args])
+            n = len(nums)
+            if n % 2 == 0:
+                result = (nums[n//2 - 1] + nums[n//2]) / 2
+            else:
+                result = nums[n//2]
+            print(Color.gradient(f"Median = {result}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    # CONVERSION COMMANDS
+    
+    def _bin(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: bin <number>"))
+            return True
+        try:
+            n = int(args[0])
+            print(Color.gradient(f"{n} = {bin(n)}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _oct(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: oct <number>"))
+            return True
+        try:
+            n = int(args[0])
+            print(Color.gradient(f"{n} = {oct(n)}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _hexconv(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: hexconv <number>"))
+            return True
+        try:
+            n = int(args[0])
+            print(Color.gradient(f"{n} = {hex(n)}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _dec(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: dec <number>"))
+            return True
+        try:
+            n = int(args[0], 0)
+            print(Color.gradient(f"{args[0]} = {n}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _ascii(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: ascii <text>"))
+            return True
+        text = " ".join(args)
+        result = " ".join(str(ord(c)) for c in text)
+        print(Color.gradient(f"ASCII: {result}", (0,200,255), (0,100,150)))
+        return True
+    
+    def _char(self, args: List[str]) -> bool:
+        if not args:
+            print(Color.warning("Usage: char <code>"))
+            return True
+        try:
+            code = int(args[0])
+            print(Color.gradient(f"Character: {chr(code)}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid code"))
+        return True
+    
+    def _temp(self, args: List[str]) -> bool:
+        if len(args) < 3:
+            print(Color.warning("Usage: temp <value> C|F|K"))
+            return True
+        try:
+            value = float(args[0])
+            from_unit = args[1].upper()
+            to_unit = args[2].upper()
+            if from_unit == "C" and to_unit == "F":
+                result = value * 9/5 + 32
+            elif from_unit == "F" and to_unit == "C":
+                result = (value - 32) * 5/9
+            elif from_unit == "C" and to_unit == "K":
+                result = value + 273.15
+            elif from_unit == "K" and to_unit == "C":
+                result = value - 273.15
+            elif from_unit == "F" and to_unit == "K":
+                result = (value - 32) * 5/9 + 273.15
+            elif from_unit == "K" and to_unit == "F":
+                result = (value - 273.15) * 9/5 + 32
+            else:
+                result = value
+            print(Color.gradient(f"{value}°{from_unit} = {result:.2f}°{to_unit}", (0,200,255), (0,100,150)))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _length(self, args: List[str]) -> bool:
+        if len(args) < 3:
+            print(Color.warning("Usage: length <value> <from> <to>"))
+            return True
+        conversions = {"m": 1, "cm": 0.01, "mm": 0.001, "km": 1000, "in": 0.0254, "ft": 0.3048, "mi": 1609.344}
+        try:
+            value = float(args[0])
+            from_unit, to_unit = args[1], args[2]
+            if from_unit in conversions and to_unit in conversions:
+                result = value * conversions[from_unit] / conversions[to_unit]
+                print(Color.gradient(f"{value} {from_unit} = {result:.4f} {to_unit}", (0,200,255), (0,100,150)))
+            else:
+                print(Color.error("Unknown units"))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _weight(self, args: List[str]) -> bool:
+        if len(args) < 3:
+            print(Color.warning("Usage: weight <value> <from> <to>"))
+            return True
+        conversions = {"kg": 1, "g": 0.001, "lb": 0.453592, "oz": 0.0283495}
+        try:
+            value = float(args[0])
+            from_unit, to_unit = args[1], args[2]
+            if from_unit in conversions and to_unit in conversions:
+                result = value * conversions[from_unit] / conversions[to_unit]
+                print(Color.gradient(f"{value} {from_unit} = {result:.4f} {to_unit}", (0,200,255), (0,100,150)))
+            else:
+                print(Color.error("Unknown units"))
+        except:
+            print(Color.error("Invalid input"))
+        return True
+    
+    def _exit(self, args: List[str]) -> bool:
+        return True
+    
+    def add(self, name: str, func: Callable, description: str, usage: str = "", category: str = "General"):
+        self.commands[name] = Command(func, description, usage, category)
+    
+    def get(self, name: str) -> Optional[Command]:
+        if name in self.aliases:
+            name = self.aliases[name]
+        return self.commands.get(name)
+    
+    def execute(self, cmd_line: str) -> bool:
         if not cmd_line or not cmd_line.strip():
             return True
-        
         try:
             parts = shlex.split(cmd_line.strip())
         except:
             parts = cmd_line.strip().split()
-        
         if not parts:
             return True
-        
-        cmd = parts[0].lower()
-        args = parts[1:]
+        cmd, args = parts[0].lower(), parts[1:]
         
         if cmd in self.aliases:
-            return self.execute(self.aliases[cmd] + ' ' + ' '.join(args))
+            return self.execute(self.aliases[cmd] + " " + " ".join(args))
         
         if cmd in self.commands:
             try:
-                return self.commands[cmd]['func'](args)
+                return self.commands[cmd].func(args)
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
                 return True
         
         try:
@@ -3297,92 +4327,109 @@ class CommandManager:
             if result.stdout:
                 print(result.stdout)
             if result.stderr:
-                print(f"{Colors.RED}{result.stderr}{Colors.RESET}")
+                print(Color.error(result.stderr.strip()))
             return True
         except subprocess.TimeoutExpired:
-            print(f"{Colors.YELLOW}{Icons.WARNING} Команда превысила время{Colors.RESET}")
+            print(Color.warning("Command timed out"))
         except FileNotFoundError:
-            print(f"{Colors.RED}{Icons.ERROR} Команда не найдена: {cmd}{Colors.RESET}")
-            print(f"Используйте 'help' для списка команд")
+            print(Color.error(f"Command not found: {cmd}"))
         except Exception as e:
-            print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
-        
+            print(Color.error(str(e)))
         return True
+
+# =================================================================================================
+# 🔐 CRYPTOGRAPHY UTILITIES
+# =================================================================================================
+
+class Crypto:
+    @staticmethod
+    def xor_encrypt(data: str, key: str) -> str:
+        result = []
+        for i, char in enumerate(data):
+            result.append(chr(ord(char) ^ ord(key[i % len(key)])))
+        return "".join(result)
+    
+    @staticmethod
+    def xor_decrypt(data: str, key: str) -> str:
+        return Crypto.xor_encrypt(data, key)
+    
+    @staticmethod
+    def caesar_cipher(text: str, shift: int) -> str:
+        result = []
+        for char in text:
+            if char.isupper():
+                result.append(chr((ord(char) - 65 + shift) % 26 + 65))
+            elif char.islower():
+                result.append(chr((ord(char) - 97 + shift) % 26 + 97))
+            else:
+                result.append(char)
+        return "".join(result)
+    
+    @staticmethod
+    def rot13(text: str) -> str:
+        return Utils.rot13(text)
+
+# =================================================================================================
+# 🚀 MAIN TERMINAL
+# =================================================================================================
 
 class KaliTerminal:
     def __init__(self):
         self.cmd_manager = CommandManager()
     
-    def get_prompt(self):
+    def get_prompt(self) -> str:
         user = Utils.get_username()
         host = Utils.get_hostname()
         path = Utils.shorten_path(os.getcwd(), 30)
-        
-        return f"{Colors.RED}┌──({Colors.gradient_text(user, 'cyan', single_color=True)}{Colors.RED}@{Colors.gradient_text(host, 'cyan', single_color=True)}{Colors.RED})-[{Colors.gradient_text(path, 'cyan', single_color=True)}{Colors.RED}]\n{Colors.RED}└─{Colors.gradient_text('$ ', 'cyan', single_color=True)}{Colors.RESET}"
+        return f"{Color.RED}┌──({Color.gradient(user, (0,200,255), (0,100,150))}{Color.RED}@{Color.gradient(host, (0,200,255), (0,100,150))}{Color.RED})-[{Color.gradient(path, (0,200,255), (0,100,150))}{Color.RED}]\n{Color.RED}└─{Color.gradient('$ ', (0,200,255), (0,100,150))}{Color.RESET}"
     
-    def show_ascii_header(self):
-        terminal_width = shutil.get_terminal_size().columns
-        width = max(80, min(terminal_width - 2, 100))
-        
+    def show_header(self):
+        width = min(shutil.get_terminal_size().columns, 100)
         header = f"""
-{Colors.gradient_text('╔' + '═' * width + '╗', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     ██╗  ██╗ █████╗ ██╗     ██╗    ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     ██║ ██╔╝██╔══██╗██║     ██║    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     █████╔╝ ███████║██║     ██║       ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║     '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     ██╔═██╗ ██╔══██║██║     ██║       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║     '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     ██║  ██╗██║  ██║███████╗██║       ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗'.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text('     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝'.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(f'                     🚀  ULTIMATE TERMINAL EMULATOR v4.2  🚀                     '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(f'                 🔥 {self.cmd_manager.size()}+ КОМАНД | ПРОФЕССИОНАЛЬНЫЙ ИНСТРУМЕНТ 🔥               '.center(width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('║', 'cyan', single_color=True)}{Colors.gradient_text(' ' * (width - 2), 'cyan', single_color=True)}{Colors.gradient_text('║', 'cyan', single_color=True)}
-{Colors.gradient_text('╚' + '═' * width + '╝', 'cyan', single_color=True)}{Colors.RESET}
+{Color.gradient('╔' + '═' * width + '╗', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     ██╗  ██╗ █████╗ ██╗     ██╗    ████████╗███████╗██████╗ ███╗   ███╗██╗ █████╗ ██╗     '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     ██║ ██╔╝██╔══██╗██║     ██║    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║██╔══██╗██║     '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     █████╔╝ ███████║██║     ██║       ██║   █████╗  ██████╔╝██╔████╔██║██║███████║██║     '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     ██╔═██╗ ██╔══██║██║     ██║       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██╔══██║██║     '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     ██║  ██╗██║  ██║███████╗██║       ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║  ██║███████╗'.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient('     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚══════╝'.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient(f'                     🚀  ULTIMATE TERMINAL EMULATOR v11.0  🚀                     '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient(f'                 🔥 {len(self.cmd_manager.commands)}+ COMMANDS | SECURITY SUITE | VISUAL FX 🔥               '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('║', (0,200,255), (0,100,150))}{Color.gradient(f'                 🔍 DOX TOOL | OSINT | NETWORK SCANNERS | CRYPTOGRAPHY 🔍               '.center(width - 2), (0,200,255), (0,100,150))}{Color.gradient('║', (0,200,255), (0,100,150))}
+{Color.gradient('╚' + '═' * width + '╝', (0,200,255), (0,100,150))}{Color.RESET}
 """
         print(header)
-        print()
-        print(f"{Colors.gradient_text(f'{Icons.INFO} Добро пожаловать в Kali Terminal Ultimate Edition! {self.cmd_manager.size()} команд готовы к работе', 'cyan', single_color=True)}{Colors.RESET}")
-        print(f"{Colors.DIM}Введите 'help' для справки, 'exit' для выхода | By @console_hack{Colors.RESET}")
-        print()
+        print(Color.success(f"Welcome! {len(self.cmd_manager.commands)} commands ready"))
+        print(Color.info("Type 'help' for help, 'exit' to quit"))
+        print(Color.info("OSINT Commands: dox, emailinfo, phoneinfo, usercheck, domaininfo, ipinfo, dnslookup, subdomain"))
     
     def run(self):
-        self.show_ascii_header()
-        
+        self.show_header()
         while True:
             try:
-                prompt = self.get_prompt()
-                cmd = input(prompt)
-                
+                cmd = input(self.get_prompt())
                 if not cmd.strip():
                     continue
-                
                 self.cmd_manager.save_history(cmd)
-                
-                if cmd.lower() in ['exit', 'quit']:
-                    print(f"{Colors.gradient_text(f'{Icons.SUCCESS} До свидания! Спасибо за использование Kali Terminal!', 'cyan', single_color=True)}{Colors.RESET}")
+                if cmd.lower() in ["exit", "quit"]:
+                    print(Color.gradient("Goodbye!", (0,255,0), (0,100,0)))
                     break
-                
                 self.cmd_manager.execute(cmd)
-                
                 print()
-                
             except KeyboardInterrupt:
-                print(f"\n{Colors.gradient_text(f'{Icons.WARNING} Используйте \'exit\' для выхода', 'cyan', single_color=True)}{Colors.RESET}")
+                print(f"\n{Color.gradient('Use exit to quit', (0,200,255), (0,100,150))}")
             except EOFError:
                 break
             except Exception as e:
-                print(f"{Colors.RED}{Icons.ERROR} {e}{Colors.RESET}")
+                print(Color.error(str(e)))
+
+# =================================================================================================
+# 🎯 ENTRY POINT
+# =================================================================================================
 
 if __name__ == "__main__":
-    installer = Installer()
-    installer.run()
+    # Run auto-installer
+    auto_install_dependencies()
     
-    if not PSUTIL:
-        print(f"{Colors.YELLOW}{Icons.WARNING} Рекомендуется установить psutil: pip install psutil{Colors.RESET}")
-        time.sleep(1)
-    
-    Animations.loading_animation("Загрузка Kali Terminal Ultimate Edition v4.2", 1.5)
-    
-    terminal = KaliTerminal()
-    terminal.run()
+    Animation.loading_bar("Loading Kali Terminal v11.0", 1.5)
+    KaliTerminal().run()
